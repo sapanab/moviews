@@ -1,0 +1,40 @@
+/* Empty. Add your own CSS if you like */
+.tac{text-align: center;}
+#profile .profilepic{border-radius: 50%;height:45%;width:45%;border:2px solid #fff;}
+.bg{background-color:teal;}
+.bar-header {
+top: 0;
+border-top-width: 0;
+border-bottom-width: 0;
+}
+#profile .pl5{padding-left:5px;}
+#profile .pname{font-size:20px;}
+.menu-item .item {
+border-color: #ddd;
+background-color: teal;
+color: #fff;
+position: relative;
+z-index: 2;
+display: block;
+margin: -1px;
+padding: 16px;
+border-width: 1px;
+border-style: solid;
+font-size: 16px;
+}
+.menu-item .item-content{
+position: relative;
+z-index: 2;
+padding: 16px 16px 16px 16px;
+border: none;
+background-color: teal;
+color:#fff;
+}
+.menu-item .ml5
+{
+margin-left:5px;
+}
+.menu-item .ml35
+{
+margin-left:35px;
+}
