@@ -47,6 +47,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+  
+  .state('app.details', {
+    url: "/details",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/details.html"
+      }
+    }
+  })
     .state('app.playlists', {
       url: "/playlists",
       views: {
@@ -57,15 +66,23 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.single', {
-    url: "/playlists/:playlistId",
+  
+    .state('app.featured', {
+    url: "/featured",
     views: {
       'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
+        templateUrl: "templates/featured.html",
+        controller: 'FeaturedCtrl'
       }
     }
-  });
+  })
+  /**** static pages****/
+   .state('connect', {
+    url: "/connect",
+        templateUrl: "templates/connect.html",
+        controller: 'ConnectCtrl'
+  })
+  ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });

@@ -1,40 +1,187 @@
 /* Empty. Add your own CSS if you like */
-.tac{text-align: center;}
-#profile .profilepic{border-radius: 50%;height:45%;width:45%;border:2px solid #fff;}
-.bg{background-color:teal;}
+
+.tac {
+    text-align: center;
+}
+#profile .profilepic {
+    border-radius: 50%;
+    height: 45%;
+    width: 45%;
+    border: 2px solid #fff;
+}
+.bg {
+    background-color: teal;
+}
 .bar-header {
-top: 0;
-border-top-width: 0;
-border-bottom-width: 0;
+    top: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
 }
-#profile .pl5{padding-left:5px;}
-#profile .pname{font-size:20px;}
+.circle {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    top: 10%;
+    left: 65%;
+}
+#profile .bgpink {
+    background: pink;
+}
+#profile {
+    position: relative;
+}
+#profile .pl5 {
+    padding-left: 5px;
+}
+#profile .pname {
+    font-size: 20px;
+}
 .menu-item .item {
-border-color: #ddd;
-background-color: teal;
-color: #fff;
-position: relative;
-z-index: 2;
-display: block;
-margin: -1px;
-padding: 16px;
-border-width: 1px;
-border-style: solid;
-font-size: 16px;
+    border-color: #ddd;
+    background-color: teal;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -12px;
+    padding: 10% 0px 5px 15%;
+    border-width: 0;
+    border-style: solid;
+    font-size: 16px;
 }
-.menu-item .item-content{
-position: relative;
-z-index: 2;
-padding: 16px 16px 16px 16px;
-border: none;
-background-color: teal;
-color:#fff;
+.pos {
+    position: relative;
 }
-.menu-item .ml5
-{
-margin-left:5px;
+.menu-item .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 16px 16px 16px;
+    border: none;
+    background-color: teal;
+    color: #fff;
 }
-.menu-item .ml35
-{
-margin-left:35px;
+.menu-item .ml5 {
+    margin-left: 15px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.pl20 {
+    padding-left: 20%;
+}
+.fr {
+    margin-left: 25%;
+}
+.pl5 {
+    padding-left: 5px;
+}
+.f14 {
+    font-size: 10px;
+}
+.f12 {
+    font-size: 12px;
+}
+.bold {
+    font-weight: bold;
+}
+.bgwhite {
+    background: white;
+}
+.detail {
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+#signout {
+    position: absolute;
+    top: 200%;
+}
+#signout .pd {
+    padding: 20px 15px 0 14px;
+}
+.twitter {
+    position: absolute;
+    top: 480px;
+    background: #9AE4E8;
+}
+.facebook {
+    position: absolute;
+    top: 550px;
+    background: #3b5999;
+}
+.movies {
+    position: absolute;
+    top: 200px;
+    left: 30%;
+}
+.mtitle {
+    position: absolute;
+    bottom: 0;
+}
+.darkbg {
+    background: #444;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.darkbg:hover {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+.hdtitle {
+    margin: 3% 5% -2%;
+}
+.ratebtn {
+    background: teal;
+    padding: 3% 5%;
+    color: #fff;
+    line-height: 15px;
+    min-height: 0px;
+}
+.bdrleft {
+    border-left: 1px solid #f8f8f8;
+    margin: -1% 7% 0 5%;
+}
+.floatright {
+    float: right;
+}
+.bghover {
+    padding: 10px 2px;
+}
+.bghover:hover {
+    background: #f8f8f8;
+}
+.mt17{margin-top: 17%;}
+.item-avatar > img:first-child {
+    border-radius: 0px;
+}
+.detailsicon {
+    top: 43px;
+    background: #fff;
+    left: -4%;
+    border: 1px solid #f8f8f8;
+}
+.expicon {
+    top: 365px;
+    background: #fff;
+    left: -4%;
+    border: 1px solid #f8f8f8;
+}
+.twittericon {
+    top: 565px;
+    background: #fff;
+    left: -4%;
+    border: 1px solid #f8f8f8;
+}
+.cmticon{
+    top: 920px;
+    background: #fff;
+    left: -4%;
+    border: 1px solid #f8f8f8;
+
+}
+.ml7 {
+    margin-left: 7%;
 }

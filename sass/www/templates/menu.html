@@ -22,21 +22,26 @@
     <ion-header-bar class="bar-positive">
     
     </ion-header-bar>
-    <ion-content>
+    <ion-content class="bg">
       <div id="profile" class="tac bg">
-            <img class="profilepic" src="img/pp.jpg"/>
+            <img class="profilepic" src="img/pp.jpg"/><div class="circle bgpink">20</div>
              <div class="light"><p class="pname">Andrea Pinter</p><p><i class="icon ion-location"><span class="pl5">Miami Beach,FL</span></i></p>              </div>
      </div>
       <ion-list>
-       <div class="menu-item">
+       <div class="menu-item pos">
+<!--
         <ion-item nav-clear menu-close ng-click="login()">
           <span class="ml35">Login</span>
         </ion-item>
+-->
         <ion-item nav-clear menu-close href="#/app/playlists">
-            <i class="icon ion-person"><span class="ml5">Profile</span></i>
+            <i class="icon ion-person"><span class="ml5">PROFILE</span></i>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-             <i class="icon ion-film-marker"><span class="ml5">Movies</span></i>
+        <ion-item nav-clear menu-close href="#/app/featured">
+             <i class="icon ion-film-marker"><span class="ml5">MOVIES</span></i>
+        </ion-item>
+        <ion-item id="signout" nav-clear menu-close ng-click="login()">
+          <span class="pd"><img src="img/signout.jpg" height="15px" width="15px"/></span><span class="pl5">SIGN OUT</span>
         </ion-item>
         </div>
       </ion-list>
