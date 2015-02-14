@@ -153,7 +153,9 @@
 .bghover:hover {
     background: #f8f8f8;
 }
-.mt17{margin-top: 17%;}
+.mt17 {
+    margin-top: 17%;
+}
 .item-avatar > img:first-child {
     border-radius: 0px;
 }
@@ -175,32 +177,39 @@
     left: -4%;
     border: 1px solid #f8f8f8;
 }
-.cmticon{
+.cmticon {
     top: 920px;
     background: #fff;
     left: -4%;
     border: 1px solid #f8f8f8;
-
 }
 .ml7 {
     margin-left: 7%;
 }
-.cmtbox
-{padding: 20px;
-background: #EDEDED;}
+.cmtbox {
+    padding: 20px;
+    background: #EDEDED;
+}
 .cmtbox .item-input-inset .item-input-wrapper input {
-padding-left: 4px;
-height: 29px;
-background:#fff;
-line-height: 18px;
+    padding-left: 4px;
+    height: 29px;
+    background: #fff;
+    line-height: 18px;
 }
-.cmtbox .item{background-color: transparent;border-width:0px;}
-.cmtbox button{background: #387ef5;color:#fff;}
-.cmtbox button:hover{color:#fff;}
-.cmtbox .item-input-wrapper{
-background: #fff;
+.cmtbox .item {
+    background-color: transparent;
+    border-width: 0px;
 }
-.cmtbox .item-input-inset
-{
-padding:0px
+.cmtbox button {
+    background: #387ef5;
+    color: #fff;
+}
+.cmtbox button:hover {
+    color: #fff;
+}
+.cmtbox .item-input-wrapper {
+    background: #fff;
+}
+.cmtbox .item-input-inset {
+    padding: 0px
 }
