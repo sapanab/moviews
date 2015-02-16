@@ -10,7 +10,7 @@
     border: 2px solid #fff;
 }
 .bg {
-    background-color: teal;
+    background-color: #0d2123;
 }
 .bar-header {
     top: 0;
@@ -105,17 +105,19 @@
 .twitter {
     position: absolute;
     top: 480px;
-    background: #9AE4E8;
+    left:5%;
+    background: #14a1a0;
 }
 .facebook {
     position: absolute;
     top: 550px;
-    background: #3b5999;
+    left:5%;
+    background: #45639f;
 }
 .movies {
     position: absolute;
     top: 200px;
-    left: 42%;
+    width:100%;
 }
 .mtitle {
     position: absolute;
@@ -212,4 +214,26 @@
 }
 .cmtbox .item-input-inset {
     padding: 0px
+}
+#socialicon button
+{
+padding:0;
+border-width:0;
+width:90%;
+}
+#socialicon button:hover
+{
+color:#fff;
+}
+#socialicon .button.icon-left:before {
+float: left;
+padding-right: 0.3em;
+padding: 3px 10px;
+}
+#socialicon .button.icon-left.twittbgicon:before {
+background: #097f7e;
+}
+#socialicon .button.icon-left.fbbgicon:before {
+background: #3b5590;
+padding:3px 17px;
 }
