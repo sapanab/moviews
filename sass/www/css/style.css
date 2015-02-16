@@ -12,6 +12,18 @@
 .bg {
     background-color: #0d2123;
 }
+.menupic
+{
+border-radius: 50%;
+    height: 35%;
+    width: 35%;
+    border: 2px solid #fff;
+}
+.menu-circle{
+
+    top:8%!important;
+    left:61%!important;
+}
 .bar-header {
     top: 0;
     border-top-width: 0;
@@ -28,8 +40,11 @@
     top: 10%;
     left: 65%;
 }
-#profile .bgpink {
-    background: pink;
+.bgpink {
+    background: #831c51;
+    color:#fff;
+    font-size: 13px;
+padding: 3px 0 3px 2px;
 }
 #profile {
     position: relative;
@@ -37,12 +52,12 @@
 #profile .pl5 {
     padding-left: 5px;
 }
-#profile .pname {
+.pname {
     font-size: 20px;
 }
 .menu-item .item {
     border-color: #ddd;
-    background-color: teal;
+    background-color: transparent;
     color: #fff;
     position: relative;
     z-index: 2;
@@ -59,9 +74,9 @@
 .menu-item .item-content {
     position: relative;
     z-index: 2;
-    padding: 16px 16px 16px 16px;
+    padding: 16px 16px 16px 26px;
     border: none;
-    background-color: teal;
+    background-color:transparent;
     color: #fff;
 }
 .menu-item .ml5 {
@@ -98,6 +113,9 @@
 #signout {
     position: absolute;
     top: 200%;
+}
+#signout .pd i:before{
+-webkit-transform: rotate(-90deg);
 }
 #signout .pd {
     padding: 20px 15px 0 14px;
@@ -236,4 +254,10 @@ background: #097f7e;
 #socialicon .button.icon-left.fbbgicon:before {
 background: #3b5590;
 padding:3px 17px;
+}
+.hrline
+{
+border-bottom: 1px solid #fff;
+width:60%;
+margin:0 auto;
 }
