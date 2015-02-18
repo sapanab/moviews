@@ -53,6 +53,10 @@ h6,p {
     font-family:'Lato';
     font-weight: normal;
 }
+.gradientbg
+{
+    background: -webkit-linear-gradient(rgba(145, 124, 77, 0), #000000);
+}
 .latobold{
     font-family: 'Lato';
     font-weight: 500;
@@ -240,7 +244,7 @@ h6,p {
 }
 .mtitle {
     position:absolute;
-    bottom:-8px;
+    bottom:0;
 }
 .darkbg {
     background-color: rgba(0, 0, 0, 0.24);
@@ -370,10 +374,10 @@ h6,p {
 .tab-menu .row{
     padding:5px 0px;
 }
-.menu-list .row{
+.menu-list .row,.moviebg .row{
     padding:0px 5px;
 }
-.menu-list .row .col{
+.menu-list .row .col,.moviebg .row .col{
     padding:0px 5px;
 }
 .tab-menu .row .col{
