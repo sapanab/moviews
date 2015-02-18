@@ -2,25 +2,40 @@
 
 @font-face{
 
-font-family:'Open Sans';
- src:url('../fonts/OpenSans-Regular.ttf');
+font-family:'Lato';
+ src:url('../fonts/Lato-Regular.ttf');
  font-weight:normal;
 
 }
 @font-face{
 
-font-family:'Open Sans';
- src:url('../fonts/OpenSans-Light.ttf');
+font-family:'Lato';
+ src:url('../fonts/Lato-Light.ttf');
  font-weight:100;
 
 }
 @font-face{
 
-font-family:'Open Sans';
- src:url('../fonts/OpenSans-Bold.ttf');
+font-family:'Lato';
+ src:url('../fonts/Lato-Bold.ttf');
  font-weight:500;
 
 }
+@font-face{
+
+font-family:'Lato';
+ src:url('../fonts/Lato-Thin.ttf');
+ font-weight:50;
+
+}
+@font-face{
+
+font-family:'Lato';
+ src:url('../fonts/Lato-Semibold.ttf');
+ font-weight:200;
+
+}
+
 .bghome {
     background: url('../img/bg.jpg') no-repeat;
     -webkit-background-size: 100% 100%;
@@ -35,16 +50,24 @@ h3,
 h4,
 h5,
 h6,p {
-    font-family:'Open Sans';
+    font-family:'Lato';
     font-weight: normal;
 }
-.osansbold{
-    font-family: 'Open Sans';
+.latobold{
+    font-family: 'Lato';
     font-weight: 500;
 }
-.osanslight{
-    font-family: 'Open Sans';
+.latolight{
+    font-family: 'Lato';
     font-weight: 100;
+}
+.latothin{
+    font-family: 'Lato';
+    font-weight: 50;
+}
+.latosemibold{
+    font-family: 'Lato';
+    font-weight: 200;
 }
 .tac {
     text-align:center;
@@ -67,8 +90,8 @@ h6,p {
 }
 .menupic {
     border-radius:50%;
-    height:35%;
-    width:35%;
+    height:30%;
+    width:30%;
     border:2px solid #fff;
 }
 .menu-circle {
@@ -98,6 +121,13 @@ h6,p {
     color:#fff;
     font-size:13px;
 }
+.heart{
+    position: absolute;
+    right:10%;
+    top:10%;
+    color:#f37365;
+    font-size: x-large;
+}
 #profile {
     position:relative;
     margin-top:10%;
@@ -107,7 +137,8 @@ h6,p {
 }
 .pname {
     font-size:20px;
-    font-weight:normal;
+    font-weight:200;
+    font-family: 'Lato';
     color:#fff;
     margin-bottom: 0;
 }
@@ -328,4 +359,7 @@ h6,p {
 .cards .row
 {
     margin-top: -5px;
+}
+.list .menu-item ion-item:hover{
+    background-color: rgba(0, 0, 0, 0.24);
 }

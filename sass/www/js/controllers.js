@@ -4,7 +4,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('PlaylistsCtrl', function($scope, $stateParams) {
+.controller('HomeCtrl', function($scope, $stateParams) {
     
 })
 .controller('ConnectCtrl', function($scope, $stateParams) {
