@@ -263,19 +263,32 @@ h6,p,span {
     border-bottom:1px solid rgba(255, 255, 255, 0.51);
    
 }
+.display-in{
+    display:inline-block;
+}
 .hdtitle {
     padding: 10px 0px 0px 20px;
     margin:0px;
 }
 .ratebtn {
-    background:teal;
-    padding:3% 5%;
+    background:#165f55;
+    padding:3% 15%;
     color:#fff;
     line-height:15px;
     min-height:0px;
+    font-size:14px;
+    border-width:0px;
+    border-radius:0px;
+}
+.ratebtn:hover
+{
+    color:white;
+}
+.share-icon{
+    color:#165f55;
 }
 .bdrleft {
-    border-left:1px solid #f8f8f8;
+    border-left:1px solid #e6e6e6;
     margin:-1% 7% 0 5%;
 }
 .floatright {
@@ -297,7 +310,7 @@ h6,p,span {
     top:43px;
     background:#fff;
     left:-4%;
-    border:1px solid #f8f8f8;
+    border:1px solid #e6e6e6;
 }
 .expicon {
     top:365px;
