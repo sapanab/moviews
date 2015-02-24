@@ -35,13 +35,12 @@ font-family:'Lato';
  font-weight:200;
 
 }
-
 .bghome {
-    background: url('../img/bg.jpg') no-repeat;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
+    background:url('../img/bg.jpg') no-repeat;
+    -webkit-background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    -o-background-size:100% 100%;
+    background-size:100% 100%;
 }
 body,
 h1,
@@ -49,34 +48,39 @@ h2,
 h3,
 h4,
 h5,
-h6,p,span {
+h6,
+p,
+span {
     font-family:'Lato';
-    font-weight: normal;
+    font-weight:normal;
 }
-.gradientbg
-{
-    background: -webkit-linear-gradient(rgba(145, 124, 77, 0), #000000);
+.gradientbg {
+    background:-webkit-linear-gradient(rgba(145,
+    124,
+    77,
+    0),
+    #000000);
 }
-.latobold{
-    font-family: 'Lato';
-    font-weight: 500;
+.latobold {
+    font-family:'Lato';
+    font-weight:500;
 }
-.latolight{
-    font-family: 'Lato';
-    font-weight: 100;
+.latolight {
+    font-family:'Lato';
+    font-weight:100;
 }
-.latothin{
-    font-family: 'Lato';
-    font-weight: 50;
+.latothin {
+    font-family:'Lato';
+    font-weight:50;
 }
-.latosemibold{
-    font-family: 'Lato';
-    font-weight: 200;
+.latosemibold {
+    font-family:'Lato';
+    font-weight:200;
 }
 .tac {
     text-align:center;
 }
-.margin-0{
+.margin-0 {
     margin:0;
 }
 #profile .profilepic {
@@ -88,9 +92,11 @@ h6,p,span {
 .bg {
     background-color:#0d2123;
 }
-.bgopacity
-{
-    background-color: rgba(0, 0, 0, 0.24);
+.bgopacity {
+    background-color:rgba(0,
+    0,
+    0,
+    0.24);
 }
 .menupic {
     border-radius:50%;
@@ -107,7 +113,6 @@ h6,p,span {
     border-top-width:0;
     border-bottom-width:0;
     background:transparent;
-    
 }
 .circle {
     width:20px;
@@ -125,14 +130,14 @@ h6,p,span {
     color:#fff;
     font-size:13px;
 }
-.heart{
+.heart {
     background:url('../img/icons.png') 189px -10px;
     height:34px;
     width:37px;
-    position: absolute;
+    position:absolute;
     right:10%;
     top:10%;
-    }
+}
 #profile {
     position:relative;
     margin-top:10%;
@@ -143,9 +148,9 @@ h6,p,span {
 .pname {
     font-size:20px;
     font-weight:200;
-    font-family: 'Lato';
+    font-family:'Lato';
     color:#fff;
-    margin-bottom: 0;
+    margin-bottom:0;
 }
 .menu-item .item {
     border-color:#ddd;
@@ -177,18 +182,17 @@ h6,p,span {
 .mt10 {
     margin-top:10px;
 }
-.mt-10
-{
+.mt-10 {
     margin-top:10%;
 }
 .pl20 {
     padding-left:20%;
 }
-.pl10{
-    padding-left: 10px;
+.pl10 {
+    padding-left:10px;
 }
-.p5{
-    padding: 4px 0;
+.p5 {
+    padding:4px 0;
 }
 .fr {
     margin-left:25%;
@@ -196,11 +200,11 @@ h6,p,span {
 .pl5 {
     padding-left:5px;
 }
-.fsmaller{
+.fsmaller {
     font-size:smaller;
 }
-.fxsmall{
-    font-size: x-small;
+.fxsmall {
+    font-size:x-small;
 }
 .f12 {
     font-size:12px;
@@ -211,8 +215,7 @@ h6,p,span {
 .bgwhite {
     background:white;
 }
-.font-black
-{
+.font-black {
     color:black;
 }
 .detail {
@@ -251,24 +254,32 @@ h6,p,span {
     bottom:0;
 }
 .darkbg {
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color:rgba(0,
+    0,
+    0,
+    0.24);
     padding:7px;
     font-size:10px;
     margin-bottom:10px;
-    border-bottom: 1px solid transparent;
-    border-right: 1px solid rgba(255, 255, 255, 0.21);
+    border-bottom:1px solid transparent;
+    border-right:1px solid rgba(255,
+    255,
+    255,
+    0.21);
 }
 .darkbg:hover {
     padding:7px;
     font-size:10px;
-    border-bottom:1px solid rgba(255, 255, 255, 0.51);
-   
+    border-bottom:1px solid rgba(255,
+    255,
+    255,
+    0.51);
 }
-.display-in{
+.display-in {
     display:inline-block;
 }
 .hdtitle {
-    padding: 10px 0px 0px 20px;
+    padding:10px 0px 0px 20px;
     margin:0px;
 }
 .ratebtn {
@@ -281,11 +292,10 @@ h6,p,span {
     border-width:0px;
     border-radius:0px;
 }
-.ratebtn:hover
-{
+.ratebtn:hover {
     color:white;
 }
-.share-icon{
+.share-icon {
     color:#165f55;
 }
 .bdrleft {
@@ -308,54 +318,53 @@ h6,p,span {
     border-radius:0px;
 }
 .detailsicon {
-background: url('../img/icons.png') -10px -7px;
-height: 30px;
-width: 30px;
-position: absolute;
-border: 1px solid #e6e6e6;
-border-radius: 50px;
-top: 32px;
-left: -17px;
+    background:url('../img/icons.png') -10px -7px;
+    height:30px;
+    width:30px;
+    position:absolute;
+    border:1px solid #e6e6e6;
+    border-radius:50px;
+    top:32px;
+    left:-17px;
 }
 .expicon {
-background: url('../img/icons.png') 70px -12px;
-height: 30px;
-width: 30px;
-position: absolute;
-border: 1px solid #e6e6e6;
-border-radius: 50px;
-top: 31%;
-left: -17px
+    background:url('../img/icons.png') 70px -12px;
+    height:30px;
+    width:30px;
+    position:absolute;
+    border:1px solid #e6e6e6;
+    border-radius:50px;
+    top:30%;
+    left:-17px
 }
 .twittericon {
-background: url('../img/icons.png') 139px -11px;
-height: 30px;
-width: 30px;
-position: absolute;
-border: 1px solid #e6e6e6;
-border-radius: 50px;
-top: 48.5%;
-left: -17px;
+    background:url('../img/icons.png') 139px -11px;
+    height:30px;
+    width:30px;
+    position:absolute;
+    border:1px solid #e6e6e6;
+    border-radius:50px;
+    top:47.5%;
+    left:-17px;
 }
 .cmticon {
-background: url('../img/icons.png') 37px -12px;
-height: 30px;
-width: 30px;
-position: absolute;
-border: 1px solid #e6e6e6;
-border-radius: 50px;
-top: 78.3%;
-left: -17px;
+    background:url('../img/icons.png') 37px -12px;
+    height:30px;
+    width:30px;
+    position:absolute;
+    border:1px solid #e6e6e6;
+    border-radius:50px;
+    top:78.3%;
+    left:-17px;
 }
-.chatimg
-{
-background: url('../img/icons.png') 64px 1px;
-height: 30px;
-width: 30px;
-position: absolute;
-top: -5.7%;
-background-size: cover;
-left: -1px;
+.chatimg {
+    background:url('../img/icons.png') 64px 3px;
+    height:30px;
+    width:30px;
+    position:absolute;
+    top:-5.7%;
+    background-size:cover;
+    left:-1px;
 }
 .ml7 {
     margin-left:7%;
@@ -363,6 +372,10 @@ left: -1px;
 .cmtbox {
     padding:20px;
     background:#EDEDED;
+}
+.cmtbox button{
+    border-width:0px;
+    border-radius: 1px;
 }
 .cmtbox .item-input-inset .item-input-wrapper input {
     padding-left:4px;
@@ -415,34 +428,43 @@ left: -1px;
 .bgwhite {
     background:#fff;
 }
-.tab-menu .row{
+.tab-menu .row {
     padding:5px 0px;
 }
-.menu-list .row,.moviebg .row,.info-details .row{
+.menu-list .row,
+.moviebg .row,
+.info-details .row {
     padding:0px 5px;
 }
-.menu-list .row .col,.moviebg .row .col,.info-details .row .col{
+.menu-list .row .col,
+.moviebg .row .col,
+.info-details .row .col {
     padding:0px 5px;
 }
-.tab-menu .row .col{
+.tab-menu .row .col {
     padding:0px;
 }
-.cards .row
-{
-    margin-top: -5px;
+.cards .row {
+    margin-top:-5px;
 }
-.list .menu-item ion-item a:hover{
-    background-color: rgba(0, 0, 0, 0.24);
+.list .menu-item ion-item a:hover {
+    background-color:rgba(0,
+    0,
+    0,
+    0.24);
 }
-.avtars .list .item{
-border-color: #ddd;
-background-color: #fff;
-color: #444;
-position: relative;
-z-index: 2;
-display: block;
-margin: -1px;
-border-width: 0;
-border-style: solid;
-font-size: 16px;
+.avtars .list .item {
+    border-color:#ddd;
+    background-color:#fff;
+    color:#444;
+    position:relative;
+    z-index:2;
+    display:block;
+    margin:-1px;
+    border-width:0;
+    border-style:solid;
+    font-size:16px;
+}
+.title.title-center.header-item {
+    color:#fff!important;
 }
