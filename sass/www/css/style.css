@@ -334,7 +334,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:30%;
+    top:31%;
     left:-17px
 }
 .twittericon {
@@ -344,7 +344,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:47.5%;
+    top:48.5%;
     left:-17px;
 }
 .cmticon {
@@ -446,6 +446,9 @@ span {
 }
 .cards .row {
     margin-top:-5px;
+}
+.cmt-title{
+    color:#8b2b5d;
 }
 .list .menu-item ion-item a:hover {
     background-color:rgba(0,
