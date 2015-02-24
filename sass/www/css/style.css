@@ -126,12 +126,13 @@ h6,p,span {
     font-size:13px;
 }
 .heart{
+    background:url('../img/icons.png') 189px -10px;
+    height:34px;
+    width:37px;
     position: absolute;
     right:10%;
     top:10%;
-    color:#f37365;
-    font-size: x-large;
-}
+    }
 #profile {
     position:relative;
     margin-top:10%;
@@ -307,28 +308,54 @@ h6,p,span {
     border-radius:0px;
 }
 .detailsicon {
-    top:43px;
-    background:#fff;
-    left:-4%;
-    border:1px solid #e6e6e6;
+background: url('../img/icons.png') -10px -7px;
+height: 30px;
+width: 30px;
+position: absolute;
+border: 1px solid #e6e6e6;
+border-radius: 50px;
+top: 32px;
+left: -17px;
 }
 .expicon {
-    top:365px;
-    background:#fff;
-    left:-4%;
-    border:1px solid #e6e6e6;
+background: url('../img/icons.png') 70px -12px;
+height: 30px;
+width: 30px;
+position: absolute;
+border: 1px solid #e6e6e6;
+border-radius: 50px;
+top: 31%;
+left: -17px
 }
 .twittericon {
-    top:565px;
-    background:#fff;
-    left:-4%;
-    border:1px solid #e6e6e6;
+background: url('../img/icons.png') 139px -11px;
+height: 30px;
+width: 30px;
+position: absolute;
+border: 1px solid #e6e6e6;
+border-radius: 50px;
+top: 48.5%;
+left: -17px;
 }
 .cmticon {
-    top:920px;
-    background:#fff;
-    left:-4%;
-    border:1px solid #e6e6e6;
+background: url('../img/icons.png') 37px -12px;
+height: 30px;
+width: 30px;
+position: absolute;
+border: 1px solid #e6e6e6;
+border-radius: 50px;
+top: 78.3%;
+left: -17px;
+}
+.chatimg
+{
+background: url('../img/icons.png') 64px 1px;
+height: 30px;
+width: 30px;
+position: absolute;
+top: -5.7%;
+background-size: cover;
+left: -1px;
 }
 .ml7 {
     margin-left:7%;
@@ -406,4 +433,16 @@ h6,p,span {
 }
 .list .menu-item ion-item a:hover{
     background-color: rgba(0, 0, 0, 0.24);
+}
+.avtars .list .item{
+border-color: #ddd;
+background-color: #fff;
+color: #444;
+position: relative;
+z-index: 2;
+display: block;
+margin: -1px;
+border-width: 0;
+border-style: solid;
+font-size: 16px;
 }
