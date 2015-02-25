@@ -225,6 +225,7 @@ span {
 #signout {
     position:absolute;
     top:200%;
+    width:100%;
 }
 #signout .pd i:before {
     -webkit-transform:rotate(-90deg);
