@@ -84,7 +84,7 @@ span {
     margin:0;
 }
 #profile .profilepic {
-    border-radius:50%;
+    border-radius:9999px;
     height:auto;
     width:27%;
     border:2px solid #fff;
@@ -99,7 +99,7 @@ span {
     0.24);
 }
 .menupic {
-    border-radius:50%;
+    border-radius:9999px;
     height:auto;
     width:30%;
     border:2px solid #fff;
