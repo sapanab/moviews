@@ -335,7 +335,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:36%;
+    top:38%;
     left:-17px
 }
 .twittericon {
@@ -345,7 +345,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:52%;
+    top:53%;
     left:-17px;
 }
 .cmticon {
@@ -491,3 +491,9 @@ span {
 padding: 2% 7%;
 z-index: 3;
 }
+.width90
+{width:90%;}
+.width33
+{width:33%;}
+.width135
+{width:135%;}
