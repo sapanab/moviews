@@ -307,10 +307,10 @@ span {
     float:right;
 }
 .bghover {
-    padding:10px 2px;
+    padding:4px 2px;
 }
 .bghover:hover {
-    background:#f8f8f8;
+    background:#d4d4d4;
 }
 .mt17 {
     margin-top:17%;
@@ -335,7 +335,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:31%;
+    top:36%;
     left:-17px
 }
 .twittericon {
@@ -345,7 +345,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:48.5%;
+    top:52%;
     left:-17px;
 }
 .cmticon {
@@ -355,7 +355,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:78.3%;
+    top:79.3%;
     left:-17px;
 }
 .chatimg {
@@ -481,4 +481,13 @@ span {
 }*/
 .button-clear.button-clear{
     color:#fff;
+}
+.separator{
+    border-bottom: 1px solid #f4f4f4;
+    margin-bottom: 0px;
+}
+.loadbtn{
+   bottom: 13px;
+padding: 2% 7%;
+z-index: 3;
 }
