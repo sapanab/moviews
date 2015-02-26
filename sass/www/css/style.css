@@ -374,9 +374,9 @@ span {
     padding:20px;
     background:#EDEDED;
 }
-.cmtbox button{
+.cmtbox button {
     border-width:0px;
-    border-radius: 1px;
+    border-radius:1px;
 }
 .cmtbox .item-input-inset .item-input-wrapper input {
     padding-left:4px;
@@ -448,7 +448,7 @@ span {
 .cards .row {
     margin-top:-5px;
 }
-.cmt-title{
+.cmt-title {
     color:#8b2b5d;
 }
 .list .menu-item ion-item a:hover {
@@ -479,21 +479,35 @@ span {
     width:20px;
     display:inline-block;
 }*/
-.button-clear.button-clear{
+
+.button-clear.button-clear {
     color:#fff;
 }
-.separator{
-    border-bottom: 1px solid #f4f4f4;
-    margin-bottom: 0px;
+.separator {
+    border-bottom:1px solid #f4f4f4;
+    margin-bottom:0px;
 }
-.loadbtn{
-   bottom: 13px;
-padding: 2% 7%;
-z-index: 3;
+.loadbtn {
+    bottom:13px;
+    padding:2% 7%;
+    z-index:3;
 }
-.width90
-{width:40%;}
-.width33
-{width:30%;}
-.width135
-{width:45%;}
+.width30 {
+    width:30%;
+    float:left;
+}
+.width70 {
+    width:70%;
+    float:left;
+}
+.width25 {
+    width:25%;
+    float:left;
+}
+.width75 {
+    width:75%;
+    float:left;
+}
+.width100 {
+    width:100%;
+}
