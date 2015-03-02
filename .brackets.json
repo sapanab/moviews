@@ -1,7 +1,0 @@
-{
-    "jscodehints.detectedExclusions": [
-        "C:/xampp/htdocs/moviews/gulpfile.js",
-        "C:/xampp/htdocs/moviews/www/lib/ionic/js/ionic.min.js",
-        "C:/xampp/htdocs/moviews/www/lib/ionic/js/ionic.js"
-    ]
-}
