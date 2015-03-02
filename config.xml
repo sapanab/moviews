@@ -1,19 +1,62 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.moviews152993" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>moviews</name>
-  <description>
-        An Ionic Framework and Cordova project.
-    </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
-  <content src="index.html"/>
-  <access origin="*"/>
-  <preference name="webviewbounce" value="false"/>
-  <preference name="UIWebViewBounce" value="false"/>
-  <preference name="DisallowOverscroll" value="true"/>
-  <preference name="BackupWebStorage" value="none"/>
-  <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
-  </feature>
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.ting.moviews" version="1.0.0" versionCode="1">
+
+    <name>Moviews</name>
+
+    <description>Movie Reviews</description>
+
+    <author href="http://www.ting.in" email="info@ting.in">Ting</author>
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
+    <preference name="phonegap-version" value="3.6.3" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="false" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="true" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="EnableViewportScale" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="TopActivityIndicator" value="gray" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="HideKeyboardFormAccessoryBar" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="ErrorUrl" value="" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="LoadUrlTimeoutValue" value="20000" />
+    <preference name="DisallowOverscroll" value="true" />
+
+    <icon src="www/img/icon.png" />
+    
+    <gap:splash src="www/img/bg.png" />
+
+    <access origin="*" />
+
+    <gap:plugin name="com.ionic.keyboard" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" />
+
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="ios-package" value="IonicKeyboard" onload="true" />
+    </feature>
+    <!-- for iOS -->
+    <feature name="SocialSharing">
+        <param name="ios-package" value="SocialSharing" />
+    </feature>
+    <!-- for Android (you will find one in res/xml) -->
+    <feature name="SocialSharing">
+        <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+    </feature>
+
 </widget>
