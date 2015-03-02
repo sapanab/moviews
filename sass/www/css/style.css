@@ -131,12 +131,11 @@ span {
     font-size:13px;
 }
 .heart {
-    background:url('../img/icons.png') 189px -10px;
-    height:34px;
-    width:37px;
     position:absolute;
-    right:10%;
-    top:10%;
+    right:5%;
+    top:5%;
+    font-size:25px;
+    color:#165f55;
 }
 #profile {
     position:relative;
@@ -285,7 +284,7 @@ span {
 }
 .ratebtn {
     background:#165f55;
-    padding:3% 15%;
+    padding:3% 10%;
     color:#fff;
     line-height:15px;
     min-height:0px;
@@ -296,12 +295,12 @@ span {
 .ratebtn:hover {
     color:white;
 }
-.share-icon {
+.shareicon {
     color:#165f55;
 }
 .bdrleft {
     border-left:1px solid #e6e6e6;
-    margin:-1% 7% 0 5%;
+    margin:-1% 2% 0 5%;
 }
 .floatright {
     float:right;
@@ -442,6 +441,42 @@ span {
 .info-details .row .col {
     padding:0px 5px;
 }
+@media screen and (min-width: 245px) and (max-width: 280px){
+    .f12{
+        font-size:10px;
+    }
+    .leftmg p{
+        margin-left:-15px;
+    }
+    .sharebtns button
+    {
+        margin-left:-25%;
+    }
+    .hdtitle{
+        padding: 10px 0px 0px 3px;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 400px) {
+.col
+{
+padding: 3px 0px;    
+}
+.col-80
+{
+max-width:75%;
+}
+.menu-list .row,
+.moviebg .row,
+.info-details .row {
+    padding:0px 1px;
+}
+.menu-list .row .col,
+.moviebg .row .col,
+.info-details .row .col {
+    padding:0px 1px;
+}
+    
+}
 .tab-menu .row .col {
     padding:0px;
 }
@@ -489,7 +524,7 @@ span {
 }
 .loadbtn {
     bottom:13px;
-    padding:2% 7%;
+    padding:2% 4%;
     z-index:3;
 }
 .width30 {
