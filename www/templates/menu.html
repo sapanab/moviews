@@ -1,6 +1,7 @@
-<ion-side-menus enable-menu-with-back-views="false">
+
+ <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="bg">
       <ion-nav-back-button>
       </ion-nav-back-button>
 
@@ -8,29 +9,51 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+      
+       <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-ios7-search" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+    <ion-header-bar>
+    
     </ion-header-bar>
-    <ion-content>
+    <ion-view class="bghome">
+    <ion-content class="no-header">
+     
+      <div class="tac pos mt-10">
+            <img class="menupic" src="img/pp.jpg"/><div class="circle bgpink">3</div>
+             <div class="light"><p class="pname">Andrea Pinter</p><p><i class="icon ion-location"><span class="pl5 f12 osanslight">Miami Beach,FL</span></i></p>              </div>
+     </div>
       <ion-list>
+       <div class="menu-item mt-10">
+<!--
         <ion-item nav-clear menu-close ng-click="login()">
-          Login
+          <span class="ml35">Login</span>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
+-->
+        <ion-item nav-clear menu-close href="#/app/home">
+            <i class="icon ion-person"></i><span class="ml5 osanslight">PROFILE</span>
+            
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
+        <div class="hrline"></div>
+        <ion-item nav-clear menu-close href="#/app/featured">
+             <i class="icon ion-film-marker"></i><span class="ml5 osanslight">MOVIES</span>
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <div class="hrline"></div>
+        <ion-item id="signout" nav-clear menu-close href="#/app/home">
+            
+            <span class="pd"><i class="icon ion-ios7-upload-outline"></i></span><span class="pl5 osanslight">SIGN OUT</span>
+
         </ion-item>
+        </div>
       </ion-list>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>
+</ion-view>
