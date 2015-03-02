@@ -188,7 +188,7 @@ span {
     padding-left:20%;
 }
 .pl10 {
-    padding-left:10px;
+    padding-left:10px!important;
 }
 .p5 {
     padding:4px 0;
@@ -354,7 +354,7 @@ span {
     position:absolute;
     border:1px solid #e6e6e6;
     border-radius:50px;
-    top:79.3%;
+    top:80%;
     left:-17px;
 }
 .chatimg {
