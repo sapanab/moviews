@@ -462,41 +462,37 @@ span {
 .info-details .row .col {
     padding:0px 5px;
 }
-@media screen and (min-width: 245px) and (max-width: 280px){
-    .f12{
+@media screen and (min-width: 245px) and (max-width: 280px) {
+    .f12 {
         font-size:10px;
     }
-    .leftmg p{
+    .leftmg p {
         margin-left:-15px;
     }
-    .sharebtns button
-    {
+    .sharebtns button {
         margin-left:-25%;
     }
-    .hdtitle{
-        padding: 10px 0px 0px 3px;
+    .hdtitle {
+        padding:10px 0px 0px 3px;
     }
 }
 @media screen and (min-width: 250px) and (max-width: 400px) {
-.col
-{
-padding: 3px 0px;    
-}
-.col-80
-{
-max-width:75%;
-}
-.menu-list .row,
-.moviebg .row,
-.info-details .row {
-    padding:0px 1px;
-}
-.menu-list .row .col,
-.moviebg .row .col,
-.info-details .row .col {
-    padding:0px 1px;
-}
-    
+    .col {
+        padding:3px 0px;
+    }
+    .col-80 {
+        max-width:75%;
+    }
+    .menu-list .row,
+    .moviebg .row,
+    .info-details .row {
+        padding:0px 1px;
+    }
+    .menu-list .row .col,
+    .moviebg .row .col,
+    .info-details .row .col {
+        padding:0px 1px;
+    }
 }
 .tab-menu .row .col {
     padding:0px;
@@ -567,3 +563,18 @@ max-width:75%;
 .width100 {
     width:100%;
 }
+/*Jhol with IONIC*/
+
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader)>* {
+    margin-top:0px
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
+    height:44px
+}
+.platform-ios.platform-cordova:not(.fullscreen) .bar-subheader,
+.platform-ios.platform-cordova:not(.fullscreen) .has-header,
+.platform-ios.platform-cordova:not(.fullscreen) .tabs-top>.tabs,
+.platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
+    top:44px
+}
+/*Jhol with IONIC*/
