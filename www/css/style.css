@@ -36,7 +36,7 @@ font-family:'Lato';
 
 }
 .bghome {
-    background:url('../img/bg.jpg') no-repeat;
+    background:url('../img/bg.png') no-repeat;
     -webkit-background-size:100% 100%;
     -moz-background-size:100% 100%;
     -o-background-size:100% 100%;
@@ -84,6 +84,8 @@ span {
     margin:0;
 }
 #profile .profilepic {
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
     border-radius:50%;
     height:auto;
     width:27%;
@@ -99,6 +101,8 @@ span {
     0.24);
 }
 .menupic {
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
     border-radius:50%;
     height:auto;
     width:30%;
@@ -290,6 +294,8 @@ span {
     min-height:0px;
     font-size:14px;
     border-width:0px;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
     border-radius:0px;
 }
 .ratebtn:hover {
@@ -315,6 +321,8 @@ span {
     margin-top:17%;
 }
 .item-avatar > img:first-child {
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
     border-radius:0px;
 }
 .detailsicon {
@@ -323,6 +331,8 @@ span {
     width:30px;
     position:absolute;
     border:1px solid #e6e6e6;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
     border-radius:50px;
     top:32px;
     left:-17px;
@@ -333,6 +343,8 @@ span {
     width:30px;
     position:absolute;
     border:1px solid #e6e6e6;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
     border-radius:50px;
     top:38%;
     left:-17px
@@ -343,6 +355,8 @@ span {
     width:30px;
     position:absolute;
     border:1px solid #e6e6e6;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
     border-radius:50px;
     top:53%;
     left:-17px;
@@ -353,6 +367,8 @@ span {
     width:30px;
     position:absolute;
     border:1px solid #e6e6e6;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
     border-radius:50px;
     top:80%;
     left:-17px;
@@ -363,6 +379,9 @@ span {
     width:30px;
     position:absolute;
     top:-5.7%;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
     background-size:cover;
     left:-1px;
 }
@@ -375,6 +394,8 @@ span {
 }
 .cmtbox button {
     border-width:0px;
+    -webkit-border-radius:1px;
+    -moz-border-radius:1px;
     border-radius:1px;
 }
 .cmtbox .item-input-inset .item-input-wrapper input {
