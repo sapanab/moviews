@@ -563,6 +563,15 @@ span {
 .width100 {
     width:100%;
 }
+.item .item-content.activated,
+.item .item-content.active,
+.item-complex.activated .item-content,
+.item-complex.active .item-content,
+.item.activated,
+.item.active {
+    border-color:#000;
+    background-color:rgba(0, 0, 0, 0.2);
+}
 .platform-android .title {
     color:white;
 }
