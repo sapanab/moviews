@@ -264,7 +264,8 @@ span {
     0.24);
     padding:7px;
     font-size:10px;
-    margin-bottom:10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
     border-bottom:1px solid transparent;
     border-right:1px solid rgba(255,
     255,
@@ -574,6 +575,12 @@ span {
 }
 .platform-android .title {
     color:white;
+}
+input.search-bar {
+  height: 35px;
+  margin-top: 5px;
+  background: transparent;
+  border-bottom: 1px solid white;
 }
 /*Jhol with IONIC*/
 
