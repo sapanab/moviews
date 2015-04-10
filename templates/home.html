@@ -1,6 +1,8 @@
 <ion-view class="bghome">
     <ion-nav-title>
-    <form ng-submit="" ng-show="showSearch"><input type="text" placeholder="Search" class="search-bar"></form>
+        <form ng-submit="" ng-show="showSearch">
+            <input type="text" placeholder="Search" class="search-bar">
+        </form>
     </ion-nav-title>
     <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-ios7-search" ng-click="showSearch = !showSearch;"></button>
@@ -14,47 +16,91 @@
                 <h6 class="pname">Andrea Pinter</h6><i class="icon ion-location"></i><span class="pl5 latothin f12">Miami Beach,FL</span>
             </div>
         </div>
-        <div class="row tac light bgopacity mt-10">
-            <div class="col">
+        <div class="row tac light bgopacity mt-10 padding0">
+            <div class="col active-tab">
                 <h3 class="latosemibold light margin-0">23</h3>
-                <h6 class="latothin light margin-0">Rated</h6>
+                <div class="watched"></div>
             </div>
             <div class="col">
                 <h3 class="latosemibold light margin-0">11</h3>
-                <h6 class="latothin light margin-0">Recommended</h6>
+                <div class="rated"></div>
+            </div>
+            <div class="col">
+                <h3 class="latosemibold light margin-0">35</h3>
+                <div class="reviewed"></div>
             </div>
             <div class="col">
                 <h3 class="latosemibold light margin-0">935</h3>
-                <h6 class="latothin light margin-0">Friends</h6>
+                <div class="recommend"></div>
             </div>
         </div>
-        <div class="cards">
-            <div class="pos">
+        <ion-list class="padding0">
+           
+            <ion-item class="active-tab menu-hd text-center">
+                <p>WATCHED</p>
+            </ion-item>
+            <ion-item>
                 <a href="#/app/details"><i class="icon ion-ios7-heart-outline heart"></i><img src="img/gotg.jpg" height="auto" width="100%"/></a>
-            </div>
-            <div class="row bgwhite">
-                <div class="col col-90">
-                    <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
-                    <h6 class="margin-0"><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star stable"></i><span class="pl5 latothin fsmaller">Your ratings</span></h6>
+                <div class="row bgwhite padding0" style="margin-top:-5px;">
+                    <div class="col col-75 pad10">
+                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    </div>
+                    <div class="col pad10">
+                        <h6 class="margin-0 latothin fsmall">7th April 2014</h6>
+                    </div>
                 </div>
-                <div class="col">
-                    <h6 class="margin-0 latothin fsmall">1d</h6>
+            </ion-item>
+            
+            
+            <ion-item class="active-tab menu-hd text-center">
+                <p>RATED</p>
+            </ion-item>
+            <ion-item>
+            <a href="#/app/details"><i class="icon ion-ios7-heart-outline heart"></i><img src="img/gunday.jpg" height="auto" width="100%"/></a>
+                <div class="row bgwhite padding0" style="margin-top:-5px;">
+                    <div class="col col-75 pad10">
+                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    </div>
+                    <div class="col pad10">
+                        <h6 class="margin-0 latothin fsmall">
+                <i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star stable"></i></h6>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="pos">
-                <a href="#/app/details"><i class="icon ion-ios7-heart-outline heart"></i><img src="img/gunday.jpg" height="auto" width="100%"/></a>
-            </div>
-            <div class="row bgwhite">
-                <div class="col col-90">
-                    <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
-                    <h6 class="margin-0"><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star energized"></i><i class="icon ion-star stable"></i><span class="pl5 latothin fsmaller">Your ratings</span></h6>
+            </ion-item>
+            
+            
+            <ion-item class="active-tab menu-hd text-center">
+                <p>REVIEWED</p>
+            </ion-item>
+            <ion-item>
+                <a href="#/app/details"><i class="icon ion-ios7-heart-outline heart"></i><img src="img/gotg.jpg" height="auto" width="100%"/></a>
+                <div class="row bgwhite padding0" style="margin-top:-5px;">
+                    <div class="col col-75 pad10">
+                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    </div>
+                    <div class="col dark-green pad10">
+                        <h6 class="margin-0 latothin fsmall">Read reviews</h6>
+                    </div>
                 </div>
-                <div class="col">
-                    <h6 class="margin-0 latothin fsmall">1d</h6>
+            </ion-item>
+            
+            
+            <ion-item class="active-tab menu-hd text-center">
+                <p>RECOMMENDED</p>
+            </ion-item>
+            <ion-item>
+            <a href="#/app/details"><i class="icon ion-ios7-heart-outline heart"></i><img src="img/gunday.jpg" height="auto" width="100%"/></a>
+                <div class="row bgwhite padding0" style="margin-top:-5px;">
+                    <div class="col col-67 pad10">
+                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    </div>
+                    <div class="col dark-green pad10">
+                        <h6 class="margin-0 latothin fsmall">Recommend To</h6>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </ion-item>
+            
+            
+        </ion-list>
     </ion-content>
 </ion-view>

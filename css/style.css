@@ -239,14 +239,14 @@ span {
 }
 #signout {
     position:absolute;
-    top:200%;
+    top:245px;
     width:100%;
 }
 #signout .pd i:before {
     -webkit-transform:rotate(-90deg);
 }
 #signout .pd {
-    padding:20px 15px 0 14px;
+    padding:20px 15px 0 5px;
 }
 .twitter {
     position:absolute;
@@ -537,6 +537,9 @@ span {
 .title.title-center.header-item {
     color:#fff!important;
 }
+.title{
+    color:#fff!important;
+}
 /*
 .rate-star{
      background:url('../img/stars.png') -2px -6px;
@@ -576,6 +579,73 @@ span {
 .width100 {
     width:100%;
 }
+.watched{
+    background: url('../img/watch.png') no-repeat;
+    height:20px;
+    width:23px;
+    margin:0 auto;
+}
+.rated{
+    background: url('../img/rated.png') no-repeat;
+    height:20px;
+    width:45px;
+    margin:6px auto 0 auto;
+}
+.reviewed{
+     background: url('../img/review.png') no-repeat;
+    height:20px;
+    width:23px;
+    margin:0 auto;
+}
+.recommend{
+     background: url('../img/recommend.png') no-repeat;
+    height:20px;
+    width:23px;
+    margin:0 auto;
+}
+.bgopacity h2{
+    font-size:30px!important;
+    font-weight: 600!important;
+}
+.padding0 .item{
+    padding:0px!important;
+    border-style: none!important;
+}
+.padding0{
+    padding:0!important;
+}
+.active-tab{
+    background: #06282a;
+}
+.menu-hd p{
+    padding: 10px 10px;
+  font-weight: 600;
+  color: #fff!important;
+}
+.dark-green{
+    background: #06282a;
+    color:#fff;
+}
+.dark-green h6{
+    color:#fff;
+    margin-left:10px;
+}
+.pad10{
+    padding:10px 5px;
+}
+.setting-menu a{
+/*      border: none;*/
+  background-color: transparent;
+  color: #fff;
+}
+.setting-menu span{
+    margin-left:25px;
+    font-size: 14px;
+}
+.pull-right{
+    float: right;
+}
+
 .item .item-content.activated,
 .item .item-content.active,
 .item-complex.activated .item-content,
@@ -589,7 +659,7 @@ span {
     color:white;
 }
 input.search-bar {
-  height: 35px;
+  height: 5px;
   margin-top: 5px;
   background: transparent;
   border-bottom: 1px solid white;
