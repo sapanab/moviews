@@ -273,6 +273,9 @@ span {
     top:200px;
     width:100%;
 }
+.setting-menu .item-content{
+    padding:16px 20px 16px 16px!important;
+}
 .mtitle {
     position:absolute;
     bottom:0;
