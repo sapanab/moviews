@@ -56,7 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
+    
   .state('app.setting', {
     url: "/setting",
     views: {
@@ -87,6 +87,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
   /**** static pages****/
+   .state('login', {
+    url: "/login",
+        templateUrl: "templates/login.html",
+        controller: 'LoginCtrl'
+  })
+  
    .state('connect', {
     url: "/connect",
         templateUrl: "templates/connect.html",

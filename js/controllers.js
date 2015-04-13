@@ -9,6 +9,8 @@ angular.module('starter.controllers', [])
 })
 .controller('ConnectCtrl', function($scope, $stateParams) {
 })
+.controller('LoginCtrl', function($scope, $stateParams) {
+})
 .controller('FeaturedCtrl', function($scope, $stateParams) {
 })
 ;

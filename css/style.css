@@ -35,6 +35,7 @@ font-family:'Lato';
  font-weight:200;
 
 }
+
 .bghome {
     background:url('../img/bg.png') no-repeat;
     -webkit-background-size:100% 100%;
@@ -259,6 +260,13 @@ span {
     top:550px;
     left:5%;
     background:#45639f;
+}
+.fb-bg
+{
+    background:#45639f;
+}
+.twitt-bg{
+    background:#14a1a0;
 }
 .movies {
     position:absolute;
@@ -633,19 +641,88 @@ span {
 .pad10{
     padding:10px 5px;
 }
-.setting-menu a{
+.setting-menu .item{
 /*      border: none;*/
   background-color: transparent;
   color: #fff;
+}
+.setting-menu .list ion-item a:hover{
+      background-color: rgba(0, 0, 0, 0.24)!important;
+    color:#a39aa0;
 }
 .setting-menu span{
     margin-left:25px;
     font-size: 14px;
 }
+.setting-menu .item-content{
+    background-color: transparent!important;
+}
+.movie-list-hd
+{
+    background: #06282a;
+    margin-top:30px;
+}
+.movie-list-hd p{
+      padding: 7px 10px;
+  font-weight: 600;
+  color: #fff!important;
+}
+.menu-list .item
+{
+    padding:5px 10px!important;
+    border:none!important;
+    background-color: transparent!important;
+}
+.new-release{
+    position: absolute;
+  top: 0;
+  left: 4px;
+}
+.watch-movie{
+    position: absolute;
+  right: 20px;
+  top: 10px;
+}
 .pull-right{
     float: right;
 }
+.pull-left{
+    float: left;
+}
+.font-20{
+    font-size: 20px;
+}
+.margin20{
+    margin-top:20%;
+}
+.border-t-0 {
+    border-top: 0;
+}
+.border-b-0{
+    border-bottom: 0;
+}
+.login-head{
+    font-size: 18px;
+    color:#fff;
+    padding: 10px;
+  background: rgba(0, 0, 0, 0.33);
+}
+.toggle-bg{
+    border-color: transparent!important;
+  background-color: rgba(0, 0, 0, 0.36)!important;
+    width: 39px!important;
+    height:18px!important;
 
+}
+.toggle-handle{
+    width:15px!important;
+    height: 15px!important;
+    top:6px!important;
+    left:6px!important;
+}
+.contact span{
+    margin-left:20px;
+}
 .item .item-content.activated,
 .item .item-content.active,
 .item-complex.activated .item-content,
