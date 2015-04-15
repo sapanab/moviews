@@ -1,44 +1,58 @@
 <ion-view class="bglogin">
     <ion-content>
-        <ion-slide-box class="slide-box white text-center" on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="true" auto-play="false">
+        <div class="fix-height"></div>
+        <ion-slide-box class="slide-box white text-center" on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="true" auto-play="3000">
             <ion-slide>
                 <div class="screen">
-                    <img src="img/splash.png" width="100%" />
+                    <img src="img/splash.png" />
                 </div>
+                <div class="fix-height"></div>
             </ion-slide>
             <ion-slide class="landing">
                 <div class="landing-hd">
-                     NO FRILLS,NO STUFF, JUST MOVIE RATINGS.
+                    NO FRILLS,NO STUFF, JUST MOVIE RATINGS.
                 </div>
                 <img src="img/5stars.png">
                 <p>Check how your friends and experts have rated the most recent releases.</p>
+                <div class="fix-height"></div>
             </ion-slide>
-            <ion-slide class="landing">
+            <ion-slide>
                 <div class="landing-hd">
-                     RATE. REVIEW. RECOMMEND.
+                    RATE. REVIEW. RECOMMEND.
                 </div>
-                <img src="img/5stars.png">
+                <div class="mt10 icons">
+                    <img src="img/tick.png"><img src="img/comment.png"><img src="img/favt-star.png">
+                </div>
                 <p>Say it how you see it. Spread the love or hate!</p>
+                <div class="fix-height"></div>
             </ion-slide>
-             <ion-slide class="landing">
+            <ion-slide>
                 <div class="landing-hd">
-                     DATE WITH<br>HISTORY
+                    DATE WITH
+                    <br><span class="font-hist">HISTORY</span>
                 </div>
-                <img src="img/5stars.png">
+                <div class="mt10">
+                    <img src="img/video.png" width="50px">
+                </div>
                 <p>A record of your date with movies.</p>
+                <div class="fix-height"></div>
             </ion-slide>
-             <ion-slide class="landing">
+            <ion-slide>
                 <div class="landing-hd">
-                     TGIF
+                    TGIF
                 </div>
-                <img src="img/5stars.png">
-                <p>A gentle reminder on what's hit the theaters, every Friday.</p>
+                <div class="mt10 icons">
+                    <img src="img/timer.png">
+                </div>
+                <p>A gentle reminder on what's hit
+                    <br> the theaters, every Friday.</p>
+                <div class="fix-height"></div>
             </ion-slide>
         </ion-slide-box>
         <div class="text-center white landing-bg">
-            <div class="">WARNING</div>
+            <div class="pad-t10 rale-medium">WARNING</div>
             <div class="warning">
-                <p>Do not sign-up if you have the time to catch a not-so-good movie.</p>
+                <p class="rale-regular">Do not sign-up if you have the time to catch a not-so-good movie.</p>
             </div>
             <div class="row">
                 <div class="col">
@@ -50,10 +64,14 @@
                     </button>
                 </div>
             </div>
-            <div><p>We ain't gonna post jack without your permission.Deal.</p></div>
+            <div>
+                <p class="rale-regular">We ain't gonna post jack without your permission.Deal.</p>
+            </div>
             <div class="row border">
-                <div class="col"><a href="#/signup">SIGN UP</a></div>
-                <div class="col" style="border-right:none;"><a href="#/login">LOGIN</a></div>
+                <div class="col rale-medium"><a href="#/signup">SIGN UP</a>
+                </div>
+                <div class="col rale-medium" style="border-right:none;"><a href="#/login">LOGIN</a>
+                </div>
             </div>
         </div>
 
