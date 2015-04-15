@@ -371,6 +371,8 @@ a {
 
 .social-btns button span {
     margin-left: 20px;
+    font-family: 'Raleway';
+    font-weight: normal;
 }
 
 .social-btns button:before {
@@ -952,6 +954,8 @@ hr.fade-line {
 
 .login-form input[type="text"] {
     color: #fff;
+    font-family: 'Raleway';
+    font-weight: normal;
 }
 
 .ftr-data {
@@ -1074,7 +1078,7 @@ hr.fade-line {
 }
 
 .fix-ht100 {
-    height: 100px;
+    height: 110px;
 }
 
 .detail-btn {
@@ -1118,15 +1122,22 @@ hr.fade-line {
     font-family: 'Raleway';
     font-weight: normal;
 }
+.watch-img{
+    background-image: url('../img/watch.png');
+    height:23px;
+    width:21px;
+}
 .movie-icon-l{
-      height: 20px;
+      height: 15px;
   position: absolute;
   left: 5px;
+    top:5px;
 }
 .movie-icon-r{
-      height: 20px;
+      height: 15px;
   position: absolute;
   right: 10px;
+    top:5px;
 }
 .img-circle{
     border-radius: 50%!important;
@@ -1164,7 +1175,10 @@ hr.fade-line {
 .platform-android .title {
     color: white;
 }
-
+.cmtbox input[type="text"] {
+    font-family: Raleway;
+    font-weight: normal;
+}
 input.search-bar {
     height: 5px;
     margin-top: 5px;
