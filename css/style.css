@@ -442,7 +442,8 @@ a {
 
 .bdrleft {
     border-left: 1px solid #e6e6e6;
-    margin: -1% 2% 0 5%;
+    position: absolute;
+    left:10px;
 }
 
 .floatright {
