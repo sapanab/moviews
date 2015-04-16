@@ -83,7 +83,7 @@ h5,
 h6,
 p,
 span {
-    font-family: 'Lato';
+    font-family: 'Raleway';
     font-weight: normal;
 }
 
@@ -114,6 +114,10 @@ a {
 .latosemibold {
     font-family: 'Lato';
     font-weight: 200;
+}
+.lato-regular{
+    font-family: 'Lato';
+    font-weight: normal;
 }
 
 .rale-medium {
@@ -241,7 +245,7 @@ a {
 .menu-item .item-content {
     position: relative;
     z-index: 2;
-    padding: 16px 16px 16px 57px;
+    padding: 16px;
     border: none;
     background-color: transparent;
     color: #fff;
@@ -288,21 +292,27 @@ a {
 }
 
 .f12 {
-    font-size: 12px;
+    font-size: 12px!important;
 }
-
+.f25{
+    font-size: 25px;
+}
 .bold {
     font-weight: bold;
 }
-
+.mt0{
+    margin-top:0px!important;
+}
 .bgwhite {
     background: white;
 }
 
 .font-black {
-    color: black;
+    color: black!important;
 }
-
+.grey{
+    color:#7f7b7b!important;
+}
 .detail {
     margin-top: -5px;
     margin-bottom: 5px;
@@ -606,7 +616,7 @@ a {
 
 .hrline {
     border-bottom: 1px solid #fff;
-    width: 60%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -748,13 +758,13 @@ a {
 }
 
 .watched {
-    background: url('../img/watch.png') no-repeat;
-    height: 20px;
+    background: url('../img/watch-home.png') no-repeat;
+    height: 22px;
     width: 23px;
     margin: 0 auto;
 }
 
-.rated {
+.rate-home {
     background: url('../img/rated.png') no-repeat;
     height: 20px;
     width: 45px;
@@ -846,7 +856,7 @@ a {
 }
 
 .menu-list .item {
-    padding: 5px 10px!important;
+    padding: 0px 10px!important;
     border: none!important;
     background-color: transparent!important;
 }
@@ -951,6 +961,8 @@ hr.fade-line {
     background-color: rgba(0, 0, 0, 0.33);
     font-size: 11px;
     color: #fff;
+    border:0;
+    background-image: none;
 }
 
 .login-form input[type="text"] {
@@ -965,7 +977,7 @@ hr.fade-line {
 }
 
 .landing-bg {
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.47);
 }
 
 .warning p {
@@ -985,7 +997,7 @@ hr.fade-line {
     background-color: #45639f;
     border: 0;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 20px;
 }
 
@@ -993,7 +1005,7 @@ hr.fade-line {
     background-color: #14a2a0;
     border: 0;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     font-size: 20px;
 }
 
@@ -1017,15 +1029,16 @@ hr.fade-line {
 
 .landing-hd {
     color: white;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 23px;
     font-family: 'Raleway';
+    line-height: 1.1;
 }
 
 .font-hist {
-    font-size: 23px;
+    font-size: 29px;
     font-family: 'Raleway';
     font-weight: 500;
     margin-left: -5px;
@@ -1054,7 +1067,7 @@ hr.fade-line {
 }
 
 .white {
-    color: #fff;
+    color: #fff!important;
 }
 
 .greenbg {
@@ -1114,6 +1127,12 @@ hr.fade-line {
 }
 .green-star{
     color:#165f55;
+}
+.rated{
+     color:#165f55;
+}
+.not-rated{
+    color: #cacaca;
 }
 .detail-hd{
     padding: 0;

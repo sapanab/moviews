@@ -17,85 +17,85 @@
             </div>
         </div>
         <div class="row tac light bgopacity mt-10 padding0">
-            <div class="col active-tab">
+            <div class="col active-tab" ng-click="first=1">
                 <h3 class="latosemibold light margin-0">23</h3>
                 <div class="watched"></div>
             </div>
-            <div class="col">
+            <div class="col" ng-click="first=2">
                 <h3 class="latosemibold light margin-0">11</h3>
-                <div class="rated"></div>
+                <div class="rate-home"></div>
             </div>
-            <div class="col">
+            <div class="col" ng-click="first=3">
                 <h3 class="latosemibold light margin-0">35</h3>
                 <div class="reviewed"></div>
             </div>
-            <div class="col">
+            <div class="col" ng-click="first=4">
                 <h3 class="latosemibold light margin-0">935</h3>
                 <div class="recommend"></div>
             </div>
         </div>
         <ion-list class="padding0">
-           
-            <ion-item class="active-tab menu-hd text-center">
-                <p>WATCHED</p>
-            </ion-item>
-            <ion-item>
+          
+            <ion-item ng-if="first==1">
+               <div class="active-tab menu-hd text-center">
+                   <p>WATCHED</p>
+               </div>
                 <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
                 <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-75 pad10">
-                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    <div class="col col-67 padding5">
+                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
                     </div>
-                    <div class="col pad10">
-                        <h6 class="margin-0 latothin fsmall">7th April 2014</h6>
+                    <div class="col padding5">
+                        <p class="margin-0 latosemibold grey fsmall f12">7th April 2014</p>
                     </div>
                 </div>
             </ion-item>
             
             
-            <ion-item class="active-tab menu-hd text-center">
+            <ion-item ng-if="first==2">
+            <div class="active-tab menu-hd text-center">
                 <p>RATED</p>
-            </ion-item>
-            <ion-item>
+            </div>
             <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
                 <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-75 pad10">
-                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    <div class="col col-75 padding5">
+                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
                     </div>
-                    <div class="col pad10">
-                        <h6 class="margin-0 latothin fsmall">
-                <i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star bar-dark"></i><i class="icon ion-star stable"></i></h6>
+                    <div class="col padding5">
+                        <p class="margin-0 latothin f12">
+                <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></p>
                     </div>
                 </div>
             </ion-item>
             
             
-            <ion-item class="active-tab menu-hd text-center">
-                <p>REVIEWED</p>
-            </ion-item>
-            <ion-item>
+            <ion-item ng-if="first==3">
+               <div class="active-tab menu-hd text-center">
+                   <p>REVIEWED</p>
+               </div>
                 <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
                 <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-75 pad10">
-                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    <div class="col col-75 padding5">
+                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
                     </div>
-                    <div class="col dark-green pad10">
-                        <h6 class="margin-0 latothin fsmall">Read reviews</h6>
+                    <div class="col dark-green padding5">
+                        <p class="margin-0 latothin white f12">Read reviews</p>
                     </div>
                 </div>
             </ion-item>
             
-            
-            <ion-item class="active-tab menu-hd text-center">
+        
+            <ion-item ng-if="first==4">
+            <div class="active-tab menu-hd text-center">
                 <p>RECOMMENDED</p>
-            </ion-item>
-            <ion-item>
+            </div>
             <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
                 <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-67 pad10">
-                        <h6 class="margin-0 latosemibold">Guardians of the galaxy</h6>
+                    <div class="col col-67 padding5">
+                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
                     </div>
-                    <div class="col dark-green pad10">
-                        <h6 class="margin-0 latothin fsmall">Recommend To</h6>
+                    <div class="col dark-green padding5 text-center">
+                        <p class="margin-0 latothin white f12">Recommend To</p>
                     </div>
                 </div>
             </ion-item>

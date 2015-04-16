@@ -1,7 +1,7 @@
 <ion-view class="bglogin">
     <ion-content>
         <div class="fix-height"></div>
-        <ion-slide-box class="slide-box white text-center" on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="true" auto-play="3000">
+        <ion-slide-box class="slide-box white text-center" on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="true" auto-play="false">
             <ion-slide>
                 <div class="screen">
                     <img src="img/splash.png" />
@@ -18,7 +18,7 @@
             </ion-slide>
             <ion-slide>
                 <div class="landing-hd">
-                    RATE. REVIEW. RECOMMEND.
+                    RATE. REVIEW.<br><span style="font-size:24px;font-weight:600">RECOMMEND.</span>
                 </div>
                 <div class="mt10 icons">
                     <img src="img/tick.png"><img src="img/comment.png"><img src="img/favt-star.png">
@@ -76,4 +76,31 @@
         </div>
 
     </ion-content>
+<!--
+    <div class="bar bar-footer text-center white landing-bg">
+            <div class="pad-t10 rale-medium">WARNING</div>
+            <div class="warning">
+                <p class="rale-regular">Do not sign-up if you have the time to catch a not-so-good movie.</p>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="fb-color"><i class="ion-social-facebook"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="twitt-color"><i class="ion-social-twitter"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <p class="rale-regular">We ain't gonna post jack without your permission.Deal.</p>
+            </div>
+            <div class="row border">
+                <div class="col rale-medium"><a href="#/signup">SIGN UP</a>
+                </div>
+                <div class="col rale-medium" style="border-right:none;"><a href="#/login">LOGIN</a>
+                </div>
+            </div>
+        </div>
+-->
 </ion-view>
