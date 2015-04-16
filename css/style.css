@@ -250,7 +250,10 @@ a {
     background-color: transparent;
     color: #fff;
 }
-
+.menu-tabs img{
+    height:20px;
+    width: auto;
+}
 .menu-item .ml5 {
     margin-left: 15px;
 }
@@ -277,6 +280,9 @@ a {
 
 .fr {
     margin-left: 25%;
+}
+.pad-10{
+    padding:0px 10px 5px 10px;
 }
 
 .pl5 {
@@ -316,6 +322,7 @@ a {
 .detail {
     margin-top: -5px;
     margin-bottom: 5px;
+    padding:5px 10px;
 }
 
 #signout {
@@ -853,6 +860,7 @@ a {
     padding: 7px 10px;
     font-weight: 600;
     color: #fff!important;
+    margin-bottom: 5px;
 }
 
 .menu-list .item {
@@ -864,13 +872,15 @@ a {
 .new-release {
     position: absolute;
     top: 0;
-    left: 4px;
+    left: 6px;
 }
 
 .watch-movie {
     position: absolute;
     right: 20px;
     top: 10px;
+    height:32px;
+    widows: auto;
 }
 
 .pull-right {
@@ -1229,7 +1239,11 @@ hr.fade-line {
     border-color: #000;
     background-color: rgba(0, 0, 0, 0.2);
 }
-
+.setting-menu .item.activated{
+background-color: rgba(0, 0, 0, 0.24)!important;
+color: #a39aa0;
+    border:none;
+}
 .platform-android .title {
     color: white;
 }

@@ -16,22 +16,26 @@
                 <h6 class="pname">Andrea Pinter</h6><i class="icon ion-location"></i><span class="pl5 latothin f12">Miami Beach,FL</span>
             </div>
         </div>
-        <div class="row tac light bgopacity mt-10 padding0">
+        <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
             <div class="col active-tab" ng-click="first=1">
                 <h3 class="latosemibold light margin-0">23</h3>
-                <div class="watched"></div>
+<!--                <div class="watched"></div>-->
+           <img src="img/watch.png">
             </div>
             <div class="col" ng-click="first=2">
                 <h3 class="latosemibold light margin-0">11</h3>
                 <div class="rate-home"></div>
+<!--           <img src="img/rate.png">-->
             </div>
             <div class="col" ng-click="first=3">
                 <h3 class="latosemibold light margin-0">35</h3>
-                <div class="reviewed"></div>
+<!--                <div class="reviewed"></div>-->
+           <img src="img/review.png">
             </div>
             <div class="col" ng-click="first=4">
                 <h3 class="latosemibold light margin-0">935</h3>
-                <div class="recommend"></div>
+<!--                <div class="recommend"></div>-->
+           <img src="img/recommend.png">
             </div>
         </div>
         <ion-list class="padding0">
@@ -41,13 +45,10 @@
                    <p>WATCHED</p>
                </div>
                 <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
-                <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-67 padding5">
-                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
-                    </div>
-                    <div class="col padding5">
-                        <p class="margin-0 latosemibold grey fsmall f12">7th April 2014</p>
-                    </div>
+                <div class="bgwhite pad-10">
+                   <span class="latosemibold f12 font-black">Guardians of the galaxy</span>
+                   <span class="latosemibold grey fsmall f12 pull-right">7th April 2014</span>
+                    
                 </div>
             </ion-item>
             
@@ -57,14 +58,11 @@
                 <p>RATED</p>
             </div>
             <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
-                <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-75 padding5">
-                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
-                    </div>
-                    <div class="col padding5">
-                        <p class="margin-0 latothin f12">
-                <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></p>
-                    </div>
+                <div class="bgwhite pad-10" >
+                   <span class="latosemibold f12 font-black">Guardians of the galaxy</span>
+                   <span class="latothin f12 pull-right">
+                <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
+                
                 </div>
             </ion-item>
             
@@ -74,13 +72,9 @@
                    <p>REVIEWED</p>
                </div>
                 <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
-                <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-75 padding5">
-                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
-                    </div>
-                    <div class="col dark-green padding5">
-                        <p class="margin-0 latothin white f12">Read reviews</p>
-                    </div>
+                <div class="bgwhite">
+                   <span class="pad-10 latosemibold f12 font-black">Guardians of the galaxy</span>
+                   <span class="dark-green pad-10 pull-right latothin white f12">Read reviews</span>
                 </div>
             </ion-item>
             
@@ -90,13 +84,9 @@
                 <p>RECOMMENDED</p>
             </div>
             <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
-                <div class="row bgwhite padding0" style="margin-top:-5px;">
-                    <div class="col col-67 padding5">
-                        <p class="margin-0 latosemibold f12 font-black">Guardians of the galaxy</p>
-                    </div>
-                    <div class="col dark-green padding5 text-center">
-                        <p class="margin-0 latothin white f12">Recommend To</p>
-                    </div>
+                <div class="bgwhite">
+                   <span class="latosemibold pad-10 f12 font-black">Guardians of the galaxy</span>
+                   <span class="pull-right pad-10 dark-green latothin white f12">Recommend To</span>
                 </div>
             </ion-item>
             
