@@ -211,6 +211,13 @@ a {
     color: #fff;
     margin-bottom: 0;
 }
+.pname-menu {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Lato';
+    color: #fff;
+    margin-bottom: 0;
+}
 .menu-item .item {
     border-color: #ddd;
     background-color: transparent;
@@ -226,6 +233,11 @@ a {
 }
 .pos {
     position: relative;
+}
+.header-img{
+    height: 30px;
+  width: auto;
+  margin-top: 8px;
 }
 .menu-item .item-content {
     position: relative;
