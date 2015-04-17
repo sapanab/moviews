@@ -265,7 +265,10 @@ a {
 .mt-10 {
     margin-top: 10%;
 }
-
+.social-info p{
+    margin-bottom: 2px!important;
+    padding-bottom: 10px;
+}
 .pl20 {
     padding-left: 20%;
 }
@@ -282,11 +285,14 @@ a {
     margin-left: 25%;
 }
 .pad-10{
-    padding:5px 10px;
+    padding:7px 15px;
 }
 
 .pl5 {
     padding-left: 5px;
+}
+.paddding-social-btn{
+    padding:10px 0!important;
 }
 
 .fsmaller {
@@ -380,6 +386,8 @@ a {
     text-align: left!important;
     border-width: 0!important;
     border-radius: 0!important;
+    width:100%;
+    margin:10px 0;
 }
 
 .social-btns button:hover {
@@ -815,6 +823,9 @@ a {
     font-weight: 600;
     color: #fff!important;
 }
+.menu-hd{
+    margin-top: -2px;
+}
 
 .dark-green {
     background: #06282a;
@@ -965,6 +976,7 @@ hr.fade-line {
     background: transparent;
     border: none;
     color: #fff;
+    width:100%;
 }
 
 .login-ftr {
@@ -1002,21 +1014,25 @@ hr.fade-line {
 .landing-bg button {
     width: 90%;
 }
-
+.ftr-position{
+      position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 .landing-bg .fb-color {
     background-color: #45639f;
     border: 0;
     color: white;
-    padding: 10px 0;
-    font-size: 20px;
+    padding: 5px 0;;
+    font-size: 33px;
 }
 
 .landing-bg .twitt-color {
     background-color: #14a2a0;
     border: 0;
     color: white;
-    padding: 10px 0;
-    font-size: 20px;
+    padding: 5px 0;
+    font-size: 33px;
 }
 
 .slide-box {
@@ -1196,6 +1212,17 @@ hr.fade-line {
     width:20px;
     display:inline-block;
     float: right;
+}
+.movie-cards .item-content{
+    padding:0px;
+}
+.movie-cards .item{
+    border:0px;
+    padding:0px;
+    
+}
+.movie-cards .menu-hd p{
+    margin:0px;
 }
 .description-icon{
      background-image: url(../img/video-info.png);

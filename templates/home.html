@@ -19,78 +19,81 @@
         <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
             <div class="col active-tab" ng-click="first=1">
                 <h3 class="latosemibold light margin-0">23</h3>
-<!--                <div class="watched"></div>-->
-           <img src="img/watch.png">
+                <!--                <div class="watched"></div>-->
+                <img src="img/watch.png">
             </div>
             <div class="col" ng-click="first=2">
                 <h3 class="latosemibold light margin-0">11</h3>
                 <div class="rate-home"></div>
-<!--           <img src="img/rate.png">-->
+                <!--           <img src="img/rate.png">-->
             </div>
             <div class="col" ng-click="first=3">
                 <h3 class="latosemibold light margin-0">35</h3>
-<!--                <div class="reviewed"></div>-->
-           <img src="img/review.png">
+                <!--                <div class="reviewed"></div>-->
+                <img src="img/review.png">
             </div>
             <div class="col" ng-click="first=4">
                 <h3 class="latosemibold light margin-0">935</h3>
-<!--                <div class="recommend"></div>-->
-           <img src="img/recommend.png">
+                <!--                <div class="recommend"></div>-->
+                <img src="img/recommend.png">
             </div>
         </div>
-        <ion-list class="padding0">
-          
-            <ion-item ng-if="first==1">
-               <div class="active-tab menu-hd text-center">
-                   <p>WATCHED</p>
-               </div>
-                <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
+        <ion-list class="movie-cards">
+            
+            <div class="dark-green menu-hd text-center" ng-if="first==1">
+                <p>WATCHED</p>
+            </div>
+            <ion-item href="#/app/details" ng-if="first==1">
+
+                <img src="img/gunday.jpg" height="auto" width="100%" />
                 <div class="bgwhite pad-10">
-                   <span class="latosemibold f12 font-black">Guardians of the galaxy</span>
-                   <span class="latosemibold grey fsmall f12 pull-right">7th April 2014</span>
-                    
+                    <span class="latobold f12 font-black">Guardians of the galaxy</span>
+                    <span class="latosemibold grey fsmall f12 pull-right">7th April 2014</span>
+
                 </div>
             </ion-item>
-            
-            
-            <ion-item ng-if="first==2">
-            <div class="active-tab menu-hd text-center">
+
+            <div class="dark-green menu-hd text-center" ng-if="first==2">
                 <p>RATED</p>
             </div>
-            <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
-                <div class="bgwhite pad-10" >
-                   <span class="latosemibold f12 font-black">Guardians of the galaxy</span>
-                   <span class="latothin f12 pull-right">
+            <ion-item href="#/app/details" ng-if="first==2">
+
+                <img src="img/gunday.jpg" height="auto" width="100%" />
+
+                <div class="bgwhite pad-10">
+                    <span class="latobold f12 font-black">Guardians of the galaxy</span>
+                    <span class="latothin f12 pull-right">
                 <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
-                
+
                 </div>
             </ion-item>
-            
-            
-            <ion-item ng-if="first==3">
-               <div class="active-tab menu-hd text-center">
-                   <p>REVIEWED</p>
-               </div>
-                <a href="#/app/details"><img src="img/gotg.jpg" height="auto" width="100%"/></a>
-                <div class="bgwhite">
-                   <span class="pad-10 latosemibold f12 font-black">Guardians of the galaxy</span>
-                   <span class="dark-green pad-10 pull-right latothin white f12">Read reviews</span>
-                </div>
+
+            <div class="dark-green menu-hd text-center" ng-if="first==3">
+                <p>REVIEWED</p>
+            </div>
+            <ion-item href="#/app/details" ng-if="first==3">
+                <img src="img/gunday.jpg" height="auto" width="100%" />
+
+                <div class="latobold f12 font-black pull-left pad-10">Guardians of the galaxy</div>
+                <div class="dark-green latothin f12 white pull-right pad-10">Read reviews</div>
+                <div class="clear"></div>
+
+
             </ion-item>
-            
-        
-            <ion-item ng-if="first==4">
-            <div class="active-tab menu-hd text-center">
+
+            <div class="dark-green menu-hd text-center" ng-if="first==4">
                 <p>RECOMMENDED</p>
             </div>
-            <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%"/></a>
-                <div class="bgwhite pad-10">
-                   <span class="latosemibold f12 font-black">Guardians of the galaxy</span>
-                   <span class="pull-right dark-green latothin white f12">Recommend To</span>
-                </div>
+            <ion-item href="#/app/details" ng-if="first==4">
+
+                <img src="img/gunday.jpg" height="auto" width="100%" />
+
+                <div class="latobold f12 font-black pull-left pad-10">Guardians of the galaxy</div>
+                <div class="dark-green latothin f12 white pull-right pad-10">Recommend To</div>
+                <div class="clear"></div>
             </ion-item>
-            
-            
+
+
         </ion-list>
     </ion-content>
 </ion-view>
