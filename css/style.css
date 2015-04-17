@@ -302,6 +302,9 @@ a {
 .f25 {
     font-size: 25px;
 }
+.f16{
+    font-size: 16px;
+}
 .bold {
     font-weight: bold;
 }
@@ -315,7 +318,7 @@ a {
     color: black!important;
 }
 .grey {
-    color: #7f7b7b!important;
+    color: #cacaca!important;
 }
 .detail {
     margin-top: -5px;
@@ -416,7 +419,7 @@ a {
     display: inline-block;
 }
 .hdtitle {
-    padding: 10px 0px 0px 20px;
+    padding: 10px;
     margin: 0px;
 }
 .ratebtn {
@@ -438,18 +441,16 @@ a {
     color: #165f55;
 }
 .bdrleft {
-    border-left: 1px solid #e6e6e6;
-    position: absolute;
-    left: 10px;
+      border-left: 1px solid #cacaca;
+  margin: 0 15px 0;
+  padding:10px;
 }
 .floatright {
     float: right;
 }
 .bghover {
-    padding: 4px 2px;
-}
-.bghover:hover {
     background: #d4d4d4;
+     padding:5px;
 }
 .mt17 {
     margin-top: 17%;
@@ -526,6 +527,7 @@ a {
 .cmtbox {
     padding: 20px;
     background: #EDEDED;
+    margin-bottom: 0px!important;
 }
 .cmtbox button {
     border-width: 0px;
@@ -605,7 +607,7 @@ a {
         margin-left: -25%;
     }
     .hdtitle {
-        padding: 10px 0px 0px 3px;
+        padding: 10px;
     }
 }
 @media screen and (min-width: 250px) and (max-width: 400px) {
@@ -634,6 +636,7 @@ a {
 }
 .cmt-title {
     color: #8b2b5d;
+    font-size:14px;
 }
 .list .menu-item ion-item a:hover {
     background-color: rgba(0, 0, 0, 0.24);
@@ -996,6 +999,13 @@ hr.fade-line {
     left: 5%;
     width: 90%;
 }
+.user-cmt{
+    float: right;
+  vertical-align: bottom;
+  margin-top: 9px;
+  font-size: 12px;
+  font-weight: bold;
+}
 .detail-btn label {
     background: transparent;
     border: 0;
@@ -1007,7 +1017,7 @@ hr.fade-line {
     padding: 13px 10px;
 }
 .detail-btn .rate i {
-    font-size: 20px;
+    font-size: 23px;
 }
 .detail-btn button {
     background: transparent;
@@ -1033,6 +1043,9 @@ hr.fade-line {
     color: white;
     font-family: 'Raleway';
     font-weight: normal;
+}
+.detail-hd .col{
+    padding:10px;
 }
 .watch-img {
     background-image: url('../img/watch.png');
@@ -1078,6 +1091,8 @@ hr.fade-line {
     width: 20px;
     display: inline-block;
     float: right;
+    background-size: 100%;
+  background-repeat: no-repeat;
 }
 .movie-cards .item-content {
     padding: 0px;
