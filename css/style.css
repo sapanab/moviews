@@ -248,8 +248,9 @@ a {
     color: #fff;
 }
 .menu-tabs img {
-    height: 20px;
+    height: 17px;
     width: auto;
+    margin-top:5px;
 }
 .menu-item .ml5 {
     margin-left: 15px;
@@ -700,7 +701,7 @@ a {
     background: url('../img/rate.png') no-repeat;
     height: 20px;
     width: 65px;
-    margin:3 auto 0 auto;
+    margin:5px auto 0 auto;
     background-size: 100% auto;
 }
 .reviewed {
