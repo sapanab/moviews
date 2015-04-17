@@ -16,28 +16,31 @@
                 <h6 class="pname">Andrea Pinter</h6><i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>
             </div>
         </div>
+        
         <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
-            <div class="col active-tab" ng-click="first=1">
+            <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}">
                 <h3 class="latobold light margin-0">23</h3>
                 <!--                <div class="watched"></div>-->
                 <img src="img/watch.png">
             </div>
-            <div class="col" ng-click="first=2">
+            <div class="col" ng-click="first=2" ng-class="{'active-tab': first==2}">
                 <h3 class="latobold light margin-0">11</h3>
                 <div class="rate-home"></div>
                 <!--           <img src="img/rate.png">-->
             </div>
-            <div class="col" ng-click="first=3">
+            <div class="col" ng-click="first=3" ng-class="{'active-tab': first==3}">
                 <h3 class="latobold light margin-0">35</h3>
                 <!--                <div class="reviewed"></div>-->
                 <img src="img/review.png">
             </div>
-            <div class="col" ng-click="first=4">
+            <div class="col" ng-click="first=4" ng-class="{'active-tab': first==4}">
                 <h3 class="latobold light margin-0">935</h3>
                 <!--                <div class="recommend"></div>-->
                 <img src="img/recommend.png">
             </div>
         </div>
+        
+        
         <ion-list class="movie-cards">
 
             <div class="dark-green menu-hd text-center" ng-if="first==1">
