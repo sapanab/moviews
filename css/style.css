@@ -102,35 +102,39 @@ a {
 }
 .latobold {
     font-family: 'Lato';
-    font-weight: 500;
+    font-weight: 700;
 }
 .latolight {
     font-family: 'Lato';
-    font-weight: 100;
+    font-weight: 300;
 }
 .latothin {
     font-family: 'Lato';
-    font-weight: 50;
+    font-weight: 100;
 }
 .latosemibold {
     font-family: 'Lato';
-    font-weight: 200;
+    font-weight: 600;
 }
 .lato-regular {
     font-family: 'Lato';
-    font-weight: normal;
+    font-weight: 400;
 }
 .rale-medium {
     font-family: 'Raleway';
-    font-weight: 100;
+    font-weight: 500;
 }
 .rale-regular {
     font-family: 'Raleway';
-    font-weight: normal;
+    font-weight: 400;
 }
 .rale-bold {
     font-family: 'Raleway';
-    font-weight: 500;
+    font-weight: 700;
+}
+.rale-light{
+    font-family: 'Raleway';
+    font-weight: 300;
 }
 .tac {
     text-align: center;
@@ -202,8 +206,8 @@ a {
 }
 .pname {
     font-size: 20px;
-    font-weight: 200;
-    font-family: 'Lato';
+    font-weight: 400;
+    font-family: 'Raleway';
     color: #fff;
     margin-bottom: 0;
 }
@@ -714,7 +718,8 @@ a {
 }
 .menu-hd p {
     padding: 10px 10px;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: 'Raleway';
     color: #fff!important;
 }
 .menu-hd {
