@@ -304,6 +304,9 @@ a {
     margin-top: -5px;
     margin-bottom: 5px;
     padding: 5px 10px;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 12px;
 }
 #signout {
     position: absolute;
@@ -561,9 +564,6 @@ a {
     width: 85%;
     margin: 0 auto;
 }
-.bgwhite {
-    background: #fff;
-}
 .tab-menu .row {
     padding: 5px 0px;
 }
@@ -685,10 +685,11 @@ a {
     margin: 0 auto;
 }
 .rate-home {
-    background: url('../img/rated.png') no-repeat;
+    background: url('../img/rate.png') no-repeat;
     height: 20px;
-    width: 45px;
-    margin: 6px auto 0 auto;
+    width: 65px;
+    margin:3 auto 0 auto;
+    background-size: 100% auto;
 }
 .reviewed {
     background: url('../img/review.png') no-repeat;
@@ -719,7 +720,7 @@ a {
 .menu-hd p {
     padding: 10px 10px;
     font-weight: 700;
-    font-family: 'Raleway';
+    font-family: '';
     color: #fff!important;
 }
 .menu-hd {
