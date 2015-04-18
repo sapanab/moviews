@@ -6,8 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
 
-.run(function ($ionicPlatform) {
-    $ionicPlatform.ready(function () {
+.run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -15,15 +15,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
+            StatusBar.overlaysWebView(true);
+            StatusBar.styleLightContent();
         }
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-        .state('app', {
+    .state('app', {
         url: "/app",
         abstract: true,
         templateUrl: "templates/menu.html",
@@ -78,20 +79,20 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 
     .state('app.featured', {
-            url: "/featured",
-            views: {
-                'menuContent': {
-                    templateUrl: "templates/featured.html",
-                    controller: 'FeaturedCtrl'
-                }
+        url: "/featured",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/featured.html",
+                controller: 'FeaturedCtrl'
             }
-        })
-        /**** static pages****/
-        .state('login', {
-            url: "/login",
-            templateUrl: "templates/login.html",
-            controller: 'LoginCtrl'
-        })
+        }
+    })
+    /**** static pages****/
+    .state('login', {
+        url: "/login",
+        templateUrl: "templates/login.html",
+        controller: 'LoginCtrl'
+    })
 
     .state('signup', {
         url: "/signup",
@@ -104,7 +105,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         templateUrl: "templates/welcomescreen.html",
         controller: 'WelcomeCtrl'
     })
-    
+
     .state('landing', {
         url: "/landingpage",
         templateUrl: "templates/landingpage.html",
