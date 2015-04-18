@@ -762,10 +762,12 @@ a {
     background-color: transparent;
     color: #fff;
 }
+/*
 .setting-menu .list ion-item a:hover {
     background-color: rgba(0, 0, 0, 0.24)!important;
     color: #a39aa0;
 }
+*/
 .setting-menu span {
     margin-left: 25px;
     font-size: 14px;
@@ -1169,6 +1171,11 @@ hr.fade-line {
     background-color: rgba(0, 0, 0, 0.24)!important;
     color: #a39aa0;
     border: none;
+}
+.setting-menu .item .item-content.activated{
+    background-color: rgba(0, 0, 0, 0.24)!important;
+  color: #a39aa0;
+  border: none;
 }
 .platform-android .title {
     color: white;
