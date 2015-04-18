@@ -176,7 +176,7 @@ a {
     top: 0;
     border-top-width: 0;
     border-bottom-width: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: transparent;
 }
 .circle {
     width: 20px;
@@ -883,6 +883,9 @@ hr.fade-line {
     border: 0;
     background-image: none;
 }
+.login-hdr{
+    background-color: rgba(0, 0, 0, 0.55);
+}
 .login-form input[type="text"] {
     color: #fff;
     font-family: 'Raleway';
@@ -915,15 +918,14 @@ hr.fade-line {
     border: 0;
     color: white;
     padding: 5px 0;
-    ;
-    font-size: 33px;
+    font-size: 25px;
 }
 .landing-bg .twitt-color {
     background-color: #14a2a0;
     border: 0;
     color: white;
     padding: 5px 0;
-    font-size: 33px;
+    font-size: 25px;;
 }
 .slide-box {
     margin-top: 50px;
@@ -1023,6 +1025,10 @@ hr.fade-line {
     background: transparent;
     border: 0;
     color: #254446;
+    width: 100%;
+}
+.watch-opacity{
+    opacity: 0.5;
 }
 .margin-left {
     margin-left: 15px;
@@ -1142,6 +1148,13 @@ hr.fade-line {
     white-space: normal;
     font-size: 12px;
     line-height: 1.2;
+}
+.login-form .item-complex .item-content{
+    padding:0;
+    background: transparent;
+}
+.login-form button.activated{
+    background-color: rgba(0, 0, 0, 0.55)
 }
 .item .item-content.activated,
 .item .item-content.active,
