@@ -1057,6 +1057,7 @@ hr.fade-line {
 }
 .watch-opacity{
     opacity: 0.5;
+    right:15px!important;
 }
 .margin-left {
     margin-left: 15px;
@@ -1236,3 +1237,6 @@ input.search-bar {
     top: 44px
 }
 /*Jhol with IONIC*/
+[nav-bar-transition=ios] .title {
+    opacity:1!important;
+}
