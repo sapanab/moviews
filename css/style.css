@@ -239,9 +239,14 @@ a {
     position: relative;
 }
 .header-img{
+/*
     height: 30px;
   width: auto;
   margin-top: 8px;
+*/
+    width:60%;
+    height: auto;
+    margin:0 auto;
 }
 .menu-item .item-content {
     position: relative;
