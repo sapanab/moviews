@@ -1238,5 +1238,5 @@ input.search-bar {
 }
 /*Jhol with IONIC*/
 [nav-bar-transition=ios] .title {
-    z-index: 9999999!important;
+    z-index: 999999!important;
 }
