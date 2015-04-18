@@ -290,6 +290,9 @@ a {
 .paddding-social-btn {
     padding: 10px 0!important;
 }
+.paddding-social-btn a{
+    padding: 12px 60px;
+}
 .fsmaller {
     font-size: smaller;
 }
@@ -929,8 +932,11 @@ hr.fade-line {
     padding: 5px 0;
     font-size: 25px;;
 }
+.login-hdr .title.title-left{
+    text-align: center!important;
+}
 .slide-box {
-    margin-top: 50px;
+   padding-top:100px;
 }
 .screen img {
     width: 65%;
