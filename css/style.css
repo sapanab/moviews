@@ -319,7 +319,6 @@ a {
 }
 .bgwhite {
     background: white;
-    overflow: hidden!important;
 }
 .font-black {
     color: black!important;
