@@ -403,6 +403,14 @@ a {
     margin-left: -13px;
     padding: 3px 8px;
 }
+.social-btns .button.fb-bg.activated{
+    background-color: rgba(69, 99, 159, 0.65);
+    border:none;
+}
+.social-btns .button.twitt-bg.activated{
+    background-color: rgba(20, 161, 160, 0.65);
+    border:none;
+}
 .mtitle {
     position: absolute;
     bottom: 0;
