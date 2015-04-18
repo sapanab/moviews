@@ -1176,6 +1176,9 @@ hr.fade-line {
 .login-form button.activated{
     background-color: rgba(0, 0, 0, 0.55)
 }
+.login-form button:hover{
+    color:#fff!important;
+}
 .item .item-content.activated,
 .item .item-content.active,
 .item-complex.activated .item-content,
