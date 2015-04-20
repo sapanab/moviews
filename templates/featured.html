@@ -1,10 +1,18 @@
 <ion-view class="bghome">
+   <div class="bar bar-header dark-green">
+       <form ng-submit="" ng-show="showSearch">
+            <input type="text" placeholder="Search" class="search-bar">
+        </form>
+        <h1 class="title margin-auto"><img class="header-img" src="img/head-logo.png"></h1>
+    </div>
+<!--
     <ion-nav-title>
         <form ng-submit="" ng-show="showSearch">
             <input type="text" placeholder="Search" class="search-bar">
         </form>
         <img class="header-img" src="img/head-logo.png">
     </ion-nav-title>
+-->
     <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-ios7-search" ng-click="showSearch = !showSearch;"></button>
     </ion-nav-buttons>
