@@ -13,28 +13,28 @@
             <div class="circle"><i class="icon ion-checkmark"></i>
             </div>
             <div class="light">
-                <h6 class="pname">Andrea Pinter</h6><i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>
+                <h6 class="pname">{{userdetails.userdetails.name}}</h6><i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>
             </div>
         </div>
         
         <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
             <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}">
-                <h3 class="latobold light margin-0">23</h3>
+                <h3 class="latobold light margin-0">{{userdetails.watchcount}}</h3>
                 <!--                <div class="watched"></div>-->
                 <img src="img/watch.png" style="height:20px">
             </div>
             <div class="col" ng-click="first=2" ng-class="{'active-tab': first==2}">
-                <h3 class="latobold light margin-0">11</h3>
+                <h3 class="latobold light margin-0">{{userdetails.ratecount}}</h3>
                 <div class="rate-home"></div>
                 <!--           <img src="img/rate.png">-->
             </div>
             <div class="col" ng-click="first=3" ng-class="{'active-tab': first==3}">
-                <h3 class="latobold light margin-0">35</h3>
+                <h3 class="latobold light margin-0">{{userdetails.reviewcount}}</h3>
                 <!--                <div class="reviewed"></div>-->
                 <img src="img/review.png">
             </div>
             <div class="col" ng-click="first=4" ng-class="{'active-tab': first==4}">
-                <h3 class="latobold light margin-0">935</h3>
+                <h3 class="latobold light margin-0">{{userdetails.recommendcount}}</h3>
                 <!--                <div class="recommend"></div>-->
                 <img src="img/recommend.png">
             </div>
@@ -46,9 +46,9 @@
             <div class="dark-green menu-hd text-center" ng-if="first==1">
                 <p>WATCHED</p>
             </div>
-            <ion-item ng-if="first==1">
+            <ion-item ng-if="first==1" ng-repeat="movies in userdetails.watched">
 
-                <a href="#/app/details"> <img src="img/gunday.jpg" height="auto" width="100%" /></a>
+                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5 pad-10">
                     <div class="lato-regular f12 font-black pull-left">Guardians of the galaxy</div>
                     <div class="lato-regular grey fsmall f12 pull-right">7th April 2014</div>
@@ -59,9 +59,9 @@
             <div class="dark-green menu-hd text-center" ng-if="first==2">
                 <p>RATED</p>
             </div>
-            <ion-item ng-if="first==2">
+            <ion-item ng-if="first==2" ng-repeat="movies in userdetails.ratings">
 
-                <a href="#/app/details"><img src="img/gunday.jpg" height="auto" width="100%" /></a>
+                <a href="#/app/details?/{{movies.id}}"><img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
 
                 <div class="mt5 pad-10">
                     <div class="lato-regular f12 font-black pull-left">Guardians of the galaxy</div>
@@ -76,8 +76,8 @@
             <div class="dark-green menu-hd text-center" ng-if="first==3">
                 <p>REVIEWED</p>
             </div>
-            <ion-item ng-if="first==3">
-                <a href="#/app/details"> <img src="img/gunday.jpg" height="auto" width="100%" /></a>
+            <ion-item ng-if="first==3" ng-repeat="movies in userdetails.reviewed">
+                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5">
                     <div class="lato-regular f12 font-black pull-left pad-10">Guardians of the galaxy</div>
                     <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
@@ -89,9 +89,9 @@
             <div class="dark-green menu-hd text-center" ng-if="first==4">
                 <p>RECOMMENDED</p>
             </div>
-            <ion-item ng-if="first==4">
+            <ion-item ng-if="first==4" ng-repeat="movies in userdetails.recommended">
 
-                <a href="#/app/details"> <img src="img/gunday.jpg" height="auto" width="100%" /></a>
+                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5">
                     <div class="lato-regular f12 font-black pull-left pad-10">Guardians of the galaxy</div>
                     <div class="dark-green rale-regular f12 white pull-right pad-10">Recommend To</div>

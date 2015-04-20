@@ -13,22 +13,13 @@ myservices.factory('MyServices', function ($http) {
     },
         
         returnval.login=function(user,logincallback) {
-        console.log("Demo");
+//        console.log("Demo");
         $http.get(adminurl + "login?email="+user.email+"&password="+user.password,{}).success(logincallback);
+    },
+        returnval.signup=function(user1,signupcallback) {
+//        console.log("Demo");
+        $http.get(adminurl + "signup?name="+user1.name+"&email="+user1.email+"&password="+user1.password,{}).success(signupcallback);
     };
    
     return returnval;
 });
-//
-//
-//myservices.login('MyServicess', function ($http) {
-//  
-//    var returnval={};
-//    
-//    returnval.login=function(email,password,callback) {
-//        console.log("Demo");
-//        $http.get(adminurl + "login?email="+email+"&password="+password).success(callback);
-//    };
-//   
-//    return returnval;
-//});

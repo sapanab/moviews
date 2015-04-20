@@ -18,14 +18,14 @@
         <ion-list class="login-form">
 
             <label class="item item-input mt0">
-                <input type="text" placeholder="Email or Username">
+                <input type="text" placeholder="Email or Username" ng-model="user.email">
             </label>
             <label class="item item-input">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" ng-model="user.password">
             </label>
 
-            <ion-item class="text-center mt10 padding0" href="#/app/home">
-                <button type="submit" class="button login-btn" ><span>Login</span>
+            <ion-item class="text-center mt10 padding0">
+                <button type="submit" class="button login-btn" ng-click="onlogin(user)"><span>Login</span>
                 </button>
             </ion-item>
 
