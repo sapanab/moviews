@@ -24,7 +24,7 @@ angular.module('starter.controllers', ['myservices'])
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup) {
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
     
@@ -46,6 +46,25 @@ angular.module('starter.controllers', ['myservices'])
 //    $scope.onmovie=function(movieid) {
 //        MyServices.getmoviedetails(movieid,detailscallback);
 //    };
+       $scope.showPopup = function() {
+  $scope.data = {}
+
+  // An elaborate, custom popup
+  var myPopup = $ionicPopup.show({
+    templateUrl: 'templates/rating.html',
+    scope: $scope,
+    buttons: [
+      { text: 'Cancel' },
+     
+    ]
+  });
+  myPopup.then(function(res) {
+    console.log('Tapped!', res);
+  });
+  $timeout(function() {
+     myPopup.close(); //close the popup after 3 seconds for some reason
+  }, 3000);
+ };
 
 })
 
