@@ -1,18 +1,50 @@
 <ion-view>
     <ion-content>
-        <div class="text-center"><h3>Rating</h3></div>
+        <div class="text-center">
+            <h3>RATING</h3>
+        </div>
         <ion-list>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
-            <ion-item></ion-item>
+            <!--
+               <ion-item class="pos">
+               <span><i class="icon half-star"></i></i></span>
+               <span><i class="icon empty-star"></i></span>
+               <span><i class="icon empty-star"></i></span>
+               <span><i class="icon empty-star"></i></span>
+               <span><i class="icon empty-star"></i></span>
+               <span class="pull-right">**!%^&*</span>
+            </ion-item>
+-->
+            <ion-item class="pos">
+                <i class="icon half-star"></i></i><i class="icon empty-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">**!%^&*</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon empty-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">STARE AT A WALL INSTEAD</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon half-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">WHY GOD WHY?</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">DO IT UNDER PEER-PRESSURE</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon half-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">*FACE PALM*</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">YAY AND NAY</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon half-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">ONE TIME WATCH</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">ME LIKEY!</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon half-star star5"></i><span class="margin-l">LEGENDARY!</span>
+            </ion-item>
+            <ion-item class="pos">
+                <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon full-star star5"></i><span class="margin-l">WATCH IT 5 TIMES MORE</span>
+            </ion-item>
         </ion-list>
-        <div>Close</div>
+        <div class="text-center" ng-click="closepopup();" style="padding:10px 0">Close</div>
     </ion-content>
 </ion-view>
