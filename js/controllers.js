@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['myservices'])
+angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {})
 
@@ -27,7 +27,7 @@ angular.module('starter.controllers', ['myservices'])
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup) {
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
-    
+//    $scope.star=5;
     var detailscallback=function(data,status) {
         if(data=="false")
         {
@@ -38,11 +38,14 @@ angular.module('starter.controllers', ['myservices'])
         {
             $scope.movie=data;
 //            $location.path("/app/home");
-            console.log($scope.movie);
+//            $scope.rate = $scope.movie.description.rating;
+            $scope.star=[];
+            $scope.star.rate=5;
         }
             
     };
     MyServices.getmoviedetails($scope.movieid,detailscallback);
+    
 //    $scope.onmovie=function(movieid) {
 //        MyServices.getmoviedetails(movieid,detailscallback);
 //    };
