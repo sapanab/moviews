@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.details', {
-        url: "/details/:id",
+        url: "/details",
         views: {
             'menuContent': {
                 templateUrl: "templates/details.html",
