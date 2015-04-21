@@ -641,9 +641,6 @@ a {
     .col-80 {
         max-width: 75%;
     }
-    .slide-box{
-        padding-top:55px!important;
-    }
     .menu-list .row,
     .moviebg .row,
     .info-details .row {
@@ -948,9 +945,10 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     width: 90%;
 }
 .ftr-position {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    height:202px;
 }
 .landing-bg .fb-color {
     background-color: #45639f;
@@ -970,7 +968,8 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     text-align: center!important;
 }
 .slide-box {
-   padding-top:100px;
+   position: absolute;
+    bottom:200px;
 }
 .screen img {
     width: 65%;
@@ -1225,6 +1224,14 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 }
 .platform-android .title {
     color: white;
+}
+.slider-pager {
+  position: fixed;
+  bottom: 230px;
+  z-index: 1;
+  width: 100%;
+  height: 15px;
+  text-align: center;
 }
 .cmtbox input[type="text"] {
     font-family: Raleway;
