@@ -17,12 +17,12 @@
         <button class="button button-icon button-clear ion-ios7-search" ng-click="showSearch = !showSearch;"></button>
     </ion-nav-buttons>
     <ion-content>
-        <div class="pos moviebg">
-            <img src="img/hny.jpg" height="auto" width="100%" />
+        <div class="pos moviebg" ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isfeatured==1">
+            <img ng-src="{{movies.image}}" height="auto" width="100%" />
             
             <div class="mtitle gradientbg pl10">
                 <h6 class="margin-0 light rale-regular">FEATURED</h6>
-                    <h6 class="light rale-regular">HAPPY NEW YEAR,Hindi (UA)</h6>
+                    <h6 class="light rale-regular">{{movies.name}}</h6>
             </div>
         </div>
         <!--
@@ -41,15 +41,15 @@
             <p>IN THEATERS THIS WEEK</p>
         </div>
         <ion-list class="menu-list">
-            <ion-item>
-                <a href="#/app/details">
+            <ion-item ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isintheator==1">
+                <a href="#/app/details/{{movies.id}}">
                     <img class="new-release" src="img/release.png">
-                    <img src="img/killdil.jpg" height="auto" width="100%" />
-                    <img class="watch-movie" src="img/watch.png">
+                    <img ng-src="{{movies.image}}" height="auto" width="100%" />
+                    <img class="watch-movie" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id==userwatch.id">
                 </a>
                 <div class="bgwhite detail">
                     
-                       KILL DIL
+                    {{movies.name}}
                    
                     <span class="f12 pull-right"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>
                     </span>
@@ -59,6 +59,7 @@
         </ion-list>
 
 
+<!--
         <ion-list class="menu-list">
             <ion-item>
                 <a href="#/app/details">
@@ -95,6 +96,7 @@
                 </div>
             </ion-item>
         </ion-list>
+-->
 
         <!--
         <div class="menu-list">

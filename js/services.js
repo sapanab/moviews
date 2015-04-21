@@ -19,6 +19,14 @@ myservices.factory('MyServices', function ($http) {
         returnval.signup=function(user1,signupcallback) {
 //        console.log("Demo");
         $http.get(adminurl + "signup?name="+user1.name+"&email="+user1.email+"&password="+user1.password,{}).success(signupcallback);
+    },
+        returnval.getmoviedetails=function(movieid,detailscallback) {
+//        console.log("Demo");
+        $http.get(adminurl + "moviedetails?movie="+movieid,{}).success(detailscallback);
+    },
+        returnval.getmoviesintheatre=function(featuredscallback) {
+//        console.log("Demo");
+        $http.get(adminurl + "theatresthisweek",{}).success(featuredscallback);
     };
    
     return returnval;

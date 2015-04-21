@@ -8,19 +8,19 @@
         <h1 class="title margin-auto"><img class="header-img" src="img/head-logo.png"></h1>
     </div>
     <ion-content class="has-header">
-        <h6 class="hdtitle rale-regular">Captain America:The Winter Solider,English(A)</h6>
+        <h6 class="hdtitle rale-regular">{{movie.description.name}}</h6>
 
         <div>
             <div class="pos" style="margin-bottom:-6px;">
                 <a href="#"><img class="watch-movie watch-opacity" src="img/watch.png">
-                </a><img src="img/dp.png" height="auto" width="100%" />
+                </a><img ng-src="{{movie.description.image}}" height="auto" width="100%" />
             </div>
             <div class="pos">
                 <div class="fix-ht100 greenbg"></div>
                 <ion-list class="detail-btn">
                     <ion-item class="rate">
                         <label>
-                            <span class="f16 rale-bold">RATE</span>
+                            <span class="f16 rale-bold">RATE</span><star-rating star-rating="3" max-star-rating="5" rating-changed=""></star-rating>
                             <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>
                             <span class="user-cmt">WHY GOD WHY!</span>
                         </label>
@@ -44,8 +44,9 @@
             <div class="bdrleft">
 
 
-                <div class="rale-regular padding5">Taran Adarsh<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
+                <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating">{{experts.name}}<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
                 </div>
+<!--
                 <div class="rale-regular padding5">Rajiv Masand<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
                 </div>
                 <div class="rale-regular padding5">Anupama Chopra<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>
@@ -54,6 +55,7 @@
                 </div>
                 <div class="bghover rale-semibold">AVERAGE RATING<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>
                 </div>
+-->
 
             </div>
 
@@ -120,31 +122,29 @@
             <div class="f12 bdrleft description">
                 <!--                        <label class="latosemibold">DETAILS</label>-->
                 <div>
-                    <label class="f12 rale-regular">GENRE:</label><span>Action ,Drama,Sci-Fi</span>
+                    <label class="f12 rale-regular">GENRE:</label><span>{{movie.description.genre}}</span>
                 </div>
                 <div>
-                    <label class="f12 rale-regular">RELEASE DATE:</label><span>4 May 2012</span>
+                    <label class="f12 rale-regular">RELEASE DATE:</label><span>{{movie.description.dateofrelease}}</span>
                 </div>
                 <div>
-                    <label class="f12 rale-regular">DURATION:</label><span>143 mins</span>
+                    <label class="f12 rale-regular">DURATION:</label><span>{{movie.description.duration}}</span>
                 </div>
                 <div>
-                    <label class="f12 rale-regular">DIRECTOR:</label><span>Anthony Russo and Joe Russo</span>
+                    <label class="f12 rale-regular">DIRECTOR:</label><span>{{movie.description.director}}</span>
                 </div>
                 <div class="width100 clear">
                     <div class="width25">
                         <label class="f12 rale-regular">WRITERS:</label>
                     </div>
-                    <div class="width75"><span>Christopher Markus(Screenplay),Stephen McFeely(screenplay)</span>
+                    <div class="width75"><span>{{movie.description.writer}}</span>
                     </div>
                 </div>
                 <div class="width100 clear">
                     <div class="width30">
                         <label class="f12 rale-regular">CAST & CREW:</label>
                     </div>
-                    <div class="width70"><span>Chris Evans, Samuel L. Jackson, Scarlett
-                                     Johansson, Robert Redford, Sebastian
-                                      Stan, Cobie Smulders</span>
+                    <div class="width70"><span>{{movie.description.casteandcrew}}</span>
                     </div>
 
                 </div>

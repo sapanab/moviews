@@ -38,6 +38,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+    
 
     .state('app.browse', {
         url: "/browse",

@@ -20,8 +20,6 @@ angular.module('starter.controllers', ['myservices'])
     }
     
     MyServices.userdetails(onusersuccess);
-    
-    
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
@@ -29,6 +27,26 @@ angular.module('starter.controllers', ['myservices'])
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location) {
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
+    
+    var detailscallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log(data);
+            console.log("No Movie");
+        }
+        else
+        {
+            $scope.movie=data;
+//            $location.path("/app/home");
+            console.log($scope.movie);
+        }
+            
+    };
+    MyServices.getmoviedetails($scope.movieid,detailscallback);
+//    $scope.onmovie=function(movieid) {
+//        MyServices.getmoviedetails(movieid,detailscallback);
+//    };
+
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location) {
@@ -46,7 +64,7 @@ angular.module('starter.controllers', ['myservices'])
             user=data;
             console.log(user);
             $.jStorage.set("user",data);
-            $location.path("/app/home");
+            $location.path("/app/featured");
         }
             
     };
@@ -81,6 +99,35 @@ angular.module('starter.controllers', ['myservices'])
 
 .controller('WelcomeCtrl', function($scope, $stateParams) {})
 
-.controller('LandingCtrl', function($scope, $stateParams) {})
+.controller('LandingCtrl', function($scope, $stateParams,MyServices,$location) {
 
-.controller('FeaturedCtrl', function($scope, $stateParams) {});
+        $.jStorage.flush();
+        console.log($.jStorage.get("user"));
+        $location.path("/landingpage");
+})
+
+.controller('FeaturedCtrl', function($scope, $stateParams,MyServices,$location) {
+
+    var onusersuccess=function(data,status) {
+        $scope.userdetails=data;
+        console.log($scope.userdetails);
+    };
+    MyServices.userdetails(onusersuccess);
+    
+    var featuredcallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log(data);
+            console.log("No Movies");
+        }
+        else
+        {
+            $scope.intheatre=data;
+            console.log($scope.intheatre);
+//            $location.path("/login");
+        }
+            
+    };
+    MyServices.getmoviesintheatre(featuredcallback);
+    
+})

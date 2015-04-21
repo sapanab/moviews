@@ -50,8 +50,8 @@
 
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5 pad-10">
-                    <div class="lato-regular f12 font-black pull-left">Guardians of the galaxy</div>
-                    <div class="lato-regular grey fsmall f12 pull-right">7th April 2014</div>
+                    <div class="lato-regular f12 font-black pull-left">{{movies.name}}</div>
+                    <div class="lato-regular grey fsmall f12 pull-right">{{movies.dateofrelease}}</div>
                     <div class="clear"></div>
                 </div>
             </ion-item>
@@ -64,7 +64,7 @@
                 <a href="#/app/details?/{{movies.id}}"><img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
 
                 <div class="mt5 pad-10">
-                    <div class="lato-regular f12 font-black pull-left">Guardians of the galaxy</div>
+                    <div class="lato-regular f12 font-black pull-left">{{movies.name}}</div>
                     <div class="f12 pull-right">
                         <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>
                     </div>
@@ -79,7 +79,7 @@
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.reviewed">
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5">
-                    <div class="lato-regular f12 font-black pull-left pad-10">Guardians of the galaxy</div>
+                    <div class="lato-regular f12 font-black pull-left pad-10">{{movies.name}}</div>
                     <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
                     <div class="clear"></div>
                 </div>
@@ -93,7 +93,7 @@
 
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" /></a>
                 <div class="mt5">
-                    <div class="lato-regular f12 font-black pull-left pad-10">Guardians of the galaxy</div>
+                    <div class="lato-regular f12 font-black pull-left pad-10">{{movies.name}}</div>
                     <div class="dark-green rale-regular f12 white pull-right pad-10">Recommend To</div>
                     <div class="clear"></div>
                 </div>
