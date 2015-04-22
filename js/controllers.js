@@ -25,6 +25,8 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
+    $scope.first=1;
+    $scope.second=2;
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
 //    $scope.star=5;
@@ -112,14 +114,15 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         else
         {
             console.log(data);
-            $location.path("/login");
+//            $location.path("/login");
+            $.jStorage.set("user",data);
+            $location.path("/app/featured");
         }
             
     };
     
     $scope.onsignup=function(user1) {
         MyServices.signup(user1,signupcallback);
-        
     };
 })
 
