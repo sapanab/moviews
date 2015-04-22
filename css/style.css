@@ -1048,7 +1048,7 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 .user-cmt{
     float: right;
   vertical-align: bottom;
-  margin-top: 9px;
+  margin-top: 2px;
   font-size: 12px;
   font-weight: bold;
 }
