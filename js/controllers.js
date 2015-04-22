@@ -24,7 +24,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
 //    $scope.star=5;

@@ -51,7 +51,10 @@
                     
                     {{movies.name}}
                    
-                    <span class="f12 pull-right"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>
+                    <span class="f12 pull-right">
+                        <rating ng-model="movies.rating" max="5"></rating>
+
+<!--                        <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>-->
                     </span>
 
                 </div>
