@@ -1116,9 +1116,9 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     top: 5px;
 }
 .expt {
-    background-image: url(../img/expert.png);
+    background-image: url(../img/expert1.png);
     height: 20px;
-    width: 20px;
+    width: 17px;
     display: inline-block;
     float: left;
 }
