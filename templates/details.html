@@ -39,15 +39,15 @@
             <!--<div class="bdrleft">-->
 
             <div class="row detail-hd">
-                <div class="col dark-green"><i class="icon expt"></i><span>EXPERTS</span>
+                <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}"><i class="icon expt"></i><span>EXPERTS</span>
                 </div>
-                <div class="col">FRIENDS<i class="icon friends"></i>
+                <div class="col" ng-click="first=2" ng-class="{'active-tab': first==2}">FRIENDS<i class="icon friends"></i>
                 </div>
             </div>
             <div class="bdrleft">
 
 
-                <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating">{{experts.name}}
+                <div class="rale-regular padding5" ng-if="first==1" ng-repeat="experts in movie.expertrating">{{experts.name}}
                     <span class="floatright"><rating class="ptr-disable" ng-model="experts.rating" max="5"></rating></span>
                     <!--                    
 <span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
@@ -68,13 +68,13 @@
 
 
             <div class="row detail-hd">
-                <div class="col"><i class="icon twit-feeds"></i>TWITTER FEEDS</div>
-                <div class="col dark-green">REVIEWS<i class="icon review-icon"></i>
+                <div class="col" ng-click="second=1" ng-class="{'active-tab': second==1}"><i class="icon twit-feeds"></i>TWITTER FEEDS</div>
+                <div class="col" ng-click="second=2" ng-class="{'active-tab': second==2}">REVIEWS<i class="icon review-icon"></i>
                 </div>
             </div>
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
-                <div class="separator list">
+                <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">Anna Petrovic</span>
@@ -82,7 +82,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="separator list">
+                <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">Piotr Nalepa</span>
@@ -90,7 +90,7 @@
                         </p>
                     </a>
                 </div>
-                <div class="separator list" style="border-bottom:none;">
+                <div class="separator list" style="border-bottom:none;" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">Venkman</span>
