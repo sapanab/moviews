@@ -8,7 +8,7 @@ myservices.factory('MyServices', function ($http) {
     var returnval={};
     
     returnval.userdetails=function(callback) {
-        console.log("Demo");
+//        console.log("Demo");
         $http.get(adminurl + "userdetails?user="+user.id).success(callback);
     },
         

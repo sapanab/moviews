@@ -114,8 +114,9 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         else
         {
             console.log(data);
-//            $location.path("/login");
             $.jStorage.set("user",data);
+            //$location.path("/login");
+            console.log($.jStorage.get("user"));
             $location.path("/app/featured");
         }
             
