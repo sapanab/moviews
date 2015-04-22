@@ -37,10 +37,11 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         else
         {
             $scope.movie=data;
-//            $location.path("/app/home");
+//            $location.path("/app/home");      
 //            $scope.rate = $scope.movie.description.rating;
+            console.log($scope.movie);
             $scope.star=[];
-            $scope.star.rate=5;
+            $scope.star.rate=$scope.movie.averagerating;
         }
             
     };

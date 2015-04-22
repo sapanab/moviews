@@ -19,10 +19,11 @@
                 <div class="fix-ht100 greenbg"></div>
                 <ion-list class="detail-btn">
                     <ion-item class="rate" ng-click="showPopup();">
-                         <rating ng-model="star.rate" max="5"></rating>
+<!--                         <rating ng-model="star.rate" max="5"></rating>-->
                         <label>
                             <span class="f16 rale-bold">RATE</span>
-                            <rating ng-model="star" max="5"></rating>
+                            <span><rating ng-model="star.rate" max="5"></rating></span>
+<!--                            <rating ng-model="star" max="5"></rating>-->
 <!--                            <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>-->
                             <span class="user-cmt">WHY GOD WHY!</span>
                         </label>
@@ -46,7 +47,10 @@
             <div class="bdrleft">
 
 
-                <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating">{{experts.name}}<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
+                <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating">{{experts.name}}
+                    <span><rating ng-model="experts.rating" max="5"></rating></span>
+                    <!--                    
+<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
                 </div>
 <!--
                 <div class="rale-regular padding5">Rajiv Masand<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
