@@ -1215,6 +1215,10 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     border-color: #000;
     background-color: rgba(0, 0, 0, 0.2);
 }
+.detail-btn .list .item.activated{
+    border-color: #ddd;
+    background-color: #fff;
+}
 .setting-menu .item.activated {
     background-color: rgba(0, 0, 0, 0.24)!important;
     color: #a39aa0;
@@ -1300,11 +1304,11 @@ input.search-bar {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 16px;
-    padding: 20px 0 10px 0;
+    padding: 10px 0 10px 0;
     margin-bottom: 0;
 }
 .popup{
-    height:400px;
+    height:388px;
 }
 .popup .pane .margin-l{
     margin-left:42%;
