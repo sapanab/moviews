@@ -22,7 +22,7 @@
 <!--                         <rating ng-model="star.rate" max="5"></rating>-->
                         <label>
                             <span class="f16 rale-bold">RATE</span>
-                            <span><rating ng-model="star.rate" max="5"></rating></span>
+                            <span><rating class="ptr-disable" ng-model="star.rate" max="5"></rating></span>
 <!--                            <rating ng-model="star" max="5"></rating>-->
 <!--                            <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>-->
                             <span class="user-cmt">WHY GOD WHY!</span>
@@ -48,7 +48,7 @@
 
 
                 <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating">{{experts.name}}
-                    <span class="floatright"><rating ng-model="experts.rating" max="5"></rating></span>
+                    <span class="floatright"><rating class="ptr-disable" ng-model="experts.rating" max="5"></rating></span>
                     <!--                    
 <span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
                 </div>
