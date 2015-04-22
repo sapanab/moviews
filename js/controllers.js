@@ -61,6 +61,9 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
      
     ]
   });
+           $scope.closepopup=function(){
+               myPopup.close();
+           }
   myPopup.then(function(res) {
     console.log('Tapped!', res);
   });
