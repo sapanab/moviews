@@ -27,6 +27,10 @@ myservices.factory('MyServices', function ($http) {
         returnval.getmoviesintheatre=function(featuredscallback) {
 //        console.log("Demo");
         $http.get(adminurl + "theatresthisweek",{}).success(featuredscallback);
+    },
+        returnval.getusercomments=function(commentscallback) {
+//        console.log(adminurl + "getsingleusercomment?id="+user.id);
+        $http.get(adminurl + "getsingleusercomment?user="+user.id,{}).success(commentscallback);
     };
    
     return returnval;

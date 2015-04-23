@@ -29,7 +29,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
     $scope.second=2;
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
-//    $scope.star=5;
+    $scope.star=[];
     var detailscallback=function(data,status) {
         if(data=="false")
         {
@@ -39,21 +39,37 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         else
         {
             $scope.movie=data;
-//            $location.path("/app/home");      
-//            $scope.rate = $scope.movie.description.rating;
             console.log($scope.movie);
-            $scope.star=[];
             $scope.star.rate=$scope.movie.averagerating;
         }
             
     };
     MyServices.getmoviedetails($scope.movieid,detailscallback);
+
+    var commentscallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log(data);
+            console.log("No Comments");
+        }
+        else
+        {
+            console.log("comments");
+            $scope.comments=data;
+            $scope.name=user.name;
+            console.log(data);
+        }
+            
+    };
+    MyServices.getusercomments(commentscallback);
     
-//    $scope.onmovie=function(movieid) {
-//        MyServices.getmoviedetails(movieid,detailscallback);
-//    };
-       $scope.showPopup = function() {
-  $scope.data = {}
+    $scope.starrate=function(rate){
+        $scope.star.rate=rate;
+        $scope.closepopup();
+    }
+    
+    $scope.showPopup = function() {
+    $scope.data = {}
 
   // An elaborate, custom popup
   var myPopup = $ionicPopup.show({
@@ -64,17 +80,16 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
      
     ]
   });
-           $scope.closepopup=function(){
-               myPopup.close();
-           }
-  myPopup.then(function(res) {
+       $scope.closepopup=function(){
+           myPopup.close();
+       }
+    myPopup.then(function(res) {
     console.log('Tapped!', res);
   });
-  $timeout(function() {
-     myPopup.close(); //close the popup after 3 seconds for some reason
-  }, 3000);
+  
  };
-
+    
+     
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location) {

@@ -88,6 +88,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+    
+    .state('app.rating', {
+        url: "/rating",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/rating.html",
+                controller: 'DetailCtrl'
+            }
+        }
+    })
     /**** static pages****/
     .state('login', {
         url: "/login",

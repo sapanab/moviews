@@ -22,10 +22,42 @@
 
                         <label>
                             <span class="f16 rale-bold">RATE</span>
-                            <span><rating class="ptr-disable" ng-model="star.rate" max="5" style="display:inline-block;"></rating></span>
+                            <span class="margin-left">
+<!--                                <rating class="ptr-disable" ng-model="star.rate" max="5" style="display:inline-block;"></rating>-->
+                                <ion-item class="pos" ng-if="star.rate==0.5">
+                                    <i class="icon half-star"></i></i><i class="icon empty-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">**!%^&*</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==1">
+                                    <i class="icon full-star"></i></i><i class="icon empty-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">STARE AT A WALL INSTEAD</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==1.5">
+                                    <i class="icon full-star"></i></i><i class="icon half-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">WHY GOD WHY?</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==2">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon empty-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">DO IT UNDER PEER-PRESSURE</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==2.5">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon half-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">*FACE PALM*</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==3">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon empty-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">YAY AND NAY</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==3.5;">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon half-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">ONE TIME WATCH</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==4">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon empty-star star5"></i><span class="margin-l">ME LIKEY!</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==4.5">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon half-star star5"></i><span class="margin-l">LEGENDARY!</span>
+                                </ion-item>
+                                <ion-item class="pos" ng-if="star.rate==5">
+                                    <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon full-star star5"></i><span class="margin-l">WATCH IT 5 TIMES MORE</span>
+                                </ion-item>
+                            </span>
 
 <!--                            <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>-->
-                            <span class="user-cmt">WHY GOD WHY!</span>
+                            <span class="user-cmt">{{star.text}}</span>
                         </label>
                     </ion-item>
                     <ion-item class="text-center">
@@ -77,8 +109,8 @@
                 <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
-                        <span class="rale-regular cmt-title">Anna Petrovic</span>
-                        <p class="rale-regular">Back off, man. I'm a scientist.Back off, man. I'm a scientist.<span class="floatright grey">6d</span>
+                        <span class="rale-regular cmt-title">{{name}}</span>
+                        <p class="rale-regular">{{comments.comment}}<span class="floatright grey">6d</span>
                         </p>
                     </a>
                 </div>
