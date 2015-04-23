@@ -1046,7 +1046,7 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     width: 90%;
 }
 .user-cmt{
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
 }
 .detail-btn label {
@@ -1061,6 +1061,7 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 }
 .detail-btn .rate i {
     font-size: 23px;
+    margin-top:2px;
 }
 .detail-btn button {
     background: transparent;
@@ -1282,13 +1283,13 @@ input.search-bar {
  left:5px;   
 }
 .s3{
-    left:20px;
+    left:21px;
 }
 .s4{
- left:35px;   
+ left:36px;   
 }
 .s5{
- left:50px;   
+ left:51px;   
 }
 .star2{
     left:11%;
@@ -1303,7 +1304,7 @@ input.search-bar {
     left:35%;
 }
 .rating-stars .pos span{
-    margin-left:40%;
+    margin-left:30%;
 }
 .popup-body .pane .has-header{
     top:0px;
