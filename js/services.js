@@ -31,6 +31,10 @@ myservices.factory('MyServices', function ($http) {
         returnval.getusercomments=function(commentscallback) {
 //        console.log(adminurl + "getsingleusercomment?id="+user.id);
         $http.get(adminurl + "getsingleusercomment?user="+user.id,{}).success(commentscallback);
+    },
+        returnval.setusercomments=function(movieid,comment,setcommentscallback) {
+//        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
+        $http.get(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment,{}).success(setcommentscallback);
     };
    
     return returnval;

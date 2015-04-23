@@ -24,7 +24,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window) {
     $scope.first=1;
     $scope.second=2;
     $scope.movieid=$stateParams.id;
@@ -40,7 +40,8 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         {
             $scope.movie=data;
             console.log($scope.movie);
-            $scope.star.rate=$scope.movie.averagerating;
+            $scope.star.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
+            console.log("Rounded="+$scope.star.rate);
         }
             
     };
@@ -57,7 +58,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
             console.log("comments");
             $scope.comments=data;
             $scope.name=user.name;
-            console.log(data);
+            console.log($scope.comments);
         }
             
     };
@@ -89,7 +90,24 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
   
  };
     
-     
+    var setcommentscallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log(data);
+            console.log("No Comments");
+        }
+        else
+        {
+            console.log("id");
+            console.log($scope.comments);
+        }
+            
+    };
+    $scope.insertcomment=function(){
+        console.log($scope.movie.comment);
+        MyServices.setusercomments($scope.movieid,$scope.movie.comment,setcommentscallback);
+        $scope.movie.comment="";
+    }
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location) {

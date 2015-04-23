@@ -471,6 +471,7 @@ a {
 }
 .floatright {
     float: right;
+    margin-right:40px;
 }
 .bghover {
     background: #d4d4d4;
