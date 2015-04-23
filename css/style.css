@@ -1046,9 +1046,6 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     width: 90%;
 }
 .user-cmt{
-    float: right;
-  vertical-align: bottom;
-  margin-top: 2px;
   font-size: 12px;
   font-weight: bold;
 }
@@ -1278,6 +1275,21 @@ input.search-bar {
   width: 16px;
   position: absolute;
 }
+.s1{
+    left:-10px;
+}
+.s2{
+ left:5px;   
+}
+.s3{
+    left:20px;
+}
+.s4{
+ left:35px;   
+}
+.s5{
+ left:50px;   
+}
 .star2{
     left:11%;
 }
@@ -1289,6 +1301,9 @@ input.search-bar {
 }
 .star5{
     left:35%;
+}
+.rating-stars .pos span{
+    margin-left:40%;
 }
 .popup-body .pane .has-header{
     top:0px;
