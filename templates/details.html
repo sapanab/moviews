@@ -12,7 +12,7 @@
 
         <div>
             <div class="pos" style="margin-bottom:-6px;">
-                <a href="#"><img class="watch-movie watch-opacity" src="img/watch.png">
+                <a href="#"><img class="watch-movie watch-opacity" src="img/watch.png" ng-if="iswatched==0">
                 </a><img ng-src="{{movie.description.image}}" height="auto" width="100%" />
             </div>
             <div class="pos">
@@ -137,14 +137,15 @@
             </div>
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
-                <div class="separator list" ng-if="second==2">
+                <div class="separator list" ng-repeat="com in comments" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">{{name}}</span>
-                        <p class="rale-regular">{{comments.comment}}<span class="floatright grey">6d</span>
+                        <p class="rale-regular">{{com.comment}}<span class="floatright grey">6d</span>
                         </p>
                     </a>
                 </div>
+<!--
                 <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
@@ -161,6 +162,7 @@
                         </p>
                     </a>
                 </div>
+-->
                 <div class="rale-semibold">12 more comments</div>
 
             </div>
@@ -194,7 +196,7 @@
                     <label class="f12 rale-regular">GENRE:</label><span>{{movie.description.genre}}</span>
                 </div>
                 <div>
-                    <label class="f12 rale-regular">RELEASE DATE:</label><span>{{movie.description.dateofrelease}}</span>
+                    <label class="f12 rale-regular">RELEASE DATE:</label><span>{{releasedate}}</span>
                 </div>
                 <div>
                     <label class="f12 rale-regular">DURATION:</label><span>{{movie.description.duration}}</span>

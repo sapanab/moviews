@@ -1,6 +1,46 @@
-angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
+angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova'])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {})
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaGeolocation) {
+    $scope.uname = $.jStorage.get("user");
+    var posOptions = {timeout: 10000, enableHighAccuracy: false};
+  $cordovaGeolocation
+    .getCurrentPosition(posOptions)
+    .then(function (position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+    }, function(err) {
+      // error
+    });
+
+
+  var watchOptions = {
+    frequency : 1000,
+    timeout : 3000,
+    enableHighAccuracy: false // may cause errors if true
+  };
+
+  var watch = $cordovaGeolocation.watchPosition(watchOptions);
+  watch.then(
+    null,
+    function(err) {
+      // error
+    },
+    function(position) {
+      var lat  = position.coords.latitude
+      var long = position.coords.longitude
+  });
+
+
+//  watch.clearWatch();
+//  // OR
+//  $cordovaGeolocation.clearWatch(watch)
+//      .then(function(result) {
+//      // success
+//      }, function (error) {
+//      // error
+//    });
+//    console.log($scope.location);
+})
 
 .controller('HomeCtrl', function($scope, $stateParams,MyServices,$location) {
     $scope.first = 1;
@@ -24,7 +64,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter) {
     $scope.first=1;
     $scope.second=2;
     $scope.movieid=$stateParams.id;
@@ -40,12 +80,37 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
         {
             $scope.movie=data;
             console.log($scope.movie);
+            $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
+            console.log("Formatted Date="+$scope.releasedate);
             $scope.star.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
             console.log("Rounded="+$scope.star.rate);
         }
             
     };
     MyServices.getmoviedetails($scope.movieid,detailscallback);
+    
+    var onusersuccess=function(data,status) {
+        $scope.userdetails=data;
+        console.log($scope.userdetails);
+        console.log("Length="+$scope.userdetails.watched.length);
+        
+        for(var i=0;i<$scope.userdetails.watched.length;i++)
+        {
+            if($scope.userdetails.watched[i].id==$scope.movieid)
+            {
+                $scope.iswatched="1";
+                break;
+            }
+            else
+            {
+                $scope.iswatched="0";
+            }
+        }
+        console.log("iswatched="+$scope.iswatched);
+
+    };
+    MyServices.userdetails(onusersuccess);
+    
 
     var commentscallback=function(data,status) {
         if(data=="false")
@@ -91,13 +156,15 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
  };
     
     var setcommentscallback=function(data,status) {
-        if(data=="false")
+        if(data=="0")
         {
             console.log(data);
             console.log("No Comments");
         }
         else
         {
+             MyServices.getusercomments(commentscallback);
+
             console.log("id");
             console.log($scope.comments);
         }
@@ -133,7 +200,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating' ])
     $scope.onlogin=function(user) {
         MyServices.login(user,logincallback);
     };
-
+    
 })
 
 .controller('SignupCtrl', function($scope, $stateParams,MyServices,$location) {

@@ -98,6 +98,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         }
     })
+
     /**** static pages****/
     .state('login', {
         url: "/login",
