@@ -471,7 +471,7 @@ a {
 }
 .floatright {
     float: right;
-    margin-right:40px;
+    margin-right:50px;
 }
 .bghover {
     background: #d4d4d4;
@@ -1063,6 +1063,9 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 .detail-btn .rate i {
     font-size: 23px;
     margin-top:2px;
+}
+.margin-stars{
+    margin-right: 65px;
 }
 .detail-btn button {
     background: transparent;
