@@ -473,6 +473,16 @@ a {
     float: right;
     margin-right:50px;
 }
+.right button.ios-android-search:before{
+    font-size: 25px!important;
+}
+
+
+.bar .button.search.button-icon.icon-right::before, .bar .button.search.button-icon::before {
+  vertical-align: top;
+  font-size: 25px!important;
+  line-height: 32px;
+}
 .bghover {
     background: #d4d4d4;
      padding:5px;
@@ -1254,10 +1264,12 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     font-weight: normal;
 }
 input.search-bar {
-    height: 5px;
+    height: 30px;
     margin-top: 5px;
     background: transparent;
     border-bottom: 1px solid white;
+    /* position: absolute; */
+    width: 80%;
 }
 /* Pop up style*/
 .half-star{
@@ -1336,6 +1348,14 @@ input.search-bar {
 .popup .pane .margin-l{
     margin-left:42%;
     vertical-align: top;
+}
+.search-movie {
+    width: 80%;
+    border: 1px solid #fff;
+    background: #fff;
+    position: absolute;
+    z-index: 99999;
+    right: 31px;
 }
 /*Jhol with IONIC*/
 
