@@ -42,12 +42,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 //    console.log($scope.location);
 })
 
-.controller('HomeCtrl', function($scope, $stateParams,MyServices,$location) {
+.controller('HomeCtrl', function($scope, $stateParams,MyServices,$location, $filter) {
     $scope.first = 1;
 //    $scope.userdetails={watchcount:"50"};
     var onusersuccess=function(data,status) {
         $scope.userdetails=data;
-        console.log(data);
+        console.log("Length="+$scope.userdetails.watched.length);
+        for(var i=0;i<$scope.userdetails.watched.length;i++)
+        {
+            $scope.userdetails.watched[i].dateofrelease=$filter('date')($scope.userdetails.watched[i].dateofrelease, "dd MMM yyyy");
+        }
+        console.log($scope.userdetails);
     };
     
     if(!user)
@@ -129,9 +134,23 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     };
     MyServices.getusercomments(commentscallback);
     
+    var ratingcallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log("Rating not saved");
+        }
+        else
+        {
+            console.log("Rating Saved");
+        }
+            
+    };
+    
     $scope.starrate=function(rate){
         $scope.star.rate=rate;
         $scope.closepopup();
+        MyServices.setuserrating($scope.movieid,rate,ratingcallback);
+        MyServices.getmoviedetails($scope.movieid,detailscallback);
     }
     
     $scope.showPopup = function() {
@@ -174,7 +193,23 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         console.log($scope.movie.comment);
         MyServices.setusercomments($scope.movieid,$scope.movie.comment,setcommentscallback);
         $scope.movie.comment="";
-    }
+    };
+    
+    var setwatchedcallback=function(data,status) {
+        if(data=="0")
+        {
+            console.log("Not Saved in Watchedlist");
+        }
+        else
+        {
+            console.log("Saved in Watchlist");
+        }
+            
+    };
+    $scope.setwatched=function(){
+        MyServices.setuserwatch($scope.movieid,setwatchedcallback);
+        MyServices.getmoviedetails($scope.movieid,detailscallback);
+    };
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location) {

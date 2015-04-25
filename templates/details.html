@@ -12,7 +12,7 @@
 
         <div>
             <div class="pos" style="margin-bottom:-6px;">
-                <a href="#"><img class="watch-movie watch-opacity" src="img/watch.png" ng-if="iswatched==0">
+                <a href="#"><img class="watch-movie watch-opacity" src="img/watch.png" ng-if="iswatched==0" ng-click="setwatched();">
                 </a><img ng-src="{{movie.description.image}}" height="auto" width="100%" />
             </div>
             <div class="pos">
@@ -53,6 +53,9 @@
                                 </span>
                                 <span class="pos" ng-if="star.rate==5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i><span class="margin-l user-cmt">WATCH IT 5 TIMES MORE</span>
+                                </span>
+                                <span class="pos" ng-if="!star.rate">
+                                    <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
                             </span>
 
@@ -110,7 +113,10 @@
                                 </span>
                                 <span class="pos" ng-if="experts.rating==5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i>
-                                </span>    
+                                </span>
+                                <span class="pos" ng-if="!experts.rating">
+                                    <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                                </span>
                     </span>
                     <!--                    
 <span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
@@ -137,6 +143,14 @@
             </div>
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
+                <div class="separator list" ng-repeat="reviews in movie.reviews" ng-if="second==2">
+                    <a class="item item-avatar" href="#">
+                        <img class="img-circle" src="img/pp.jpg" />
+                        <span class="rale-regular cmt-title">{{reviews.name}}</span>
+                        <p class="rale-regular">{{reviews.review}}<span class="floatright grey">6d</span>
+                        </p>
+                    </a>
+                </div>
                 <div class="separator list" ng-repeat="com in comments" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
@@ -145,6 +159,7 @@
                         </p>
                     </a>
                 </div>
+                
 <!--
                 <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
