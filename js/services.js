@@ -1,4 +1,5 @@
-var adminbase = "http://localhost/moviebackend/";
+var adminbase = "http://www.wohlig.co.in/moviebackend/";
+//var adminbase = "http://localhost/moviebackend/";
 var adminurl=adminbase+"index.php/json/";
 var myservices = angular.module('myservices', []);
 var user=$.jStorage.get("user");
@@ -35,6 +36,14 @@ myservices.factory('MyServices', function ($http) {
         returnval.setusercomments=function(movieid,comment,setcommentscallback) {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment,{}).success(setcommentscallback);
+    },
+        returnval.setuserwatch=function(movieid,comment,setwatchedcallback) {
+//        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
+        $http.get(adminurl + "watched?user="+user.id+"&movie="+movieid,{}).success(setwatchedcallback);
+    },
+        returnval.logout=function(logoutcallback) {
+//        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
+        $http.get(adminurl + "logout",{}).success(logoutcallback);
     };
    
     return returnval;

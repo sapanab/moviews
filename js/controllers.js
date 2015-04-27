@@ -1,9 +1,11 @@
 angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova'])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaGeolocation) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaGeolocation, MyServices, $location) {
     $scope.uname = $.jStorage.get("user");
+    
+    
     var posOptions = {timeout: 10000, enableHighAccuracy: false};
-  $cordovaGeolocation
+    $cordovaGeolocation
     .getCurrentPosition(posOptions)
     .then(function (position) {
       var lat  = position.coords.latitude
@@ -40,6 +42,23 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 //      // error
 //    });
 //    console.log($scope.location);
+    
+    var logoutcallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log("Logout Failed");
+        }
+        else
+        {
+            console.log("Logged Out");
+            $location.path("/landingpage");
+        }
+            
+    };
+    $scope.signout=function(){
+        MyServices.logout(logoutcallback);
+    };
+    
 })
 
 .controller('HomeCtrl', function($scope, $stateParams,MyServices,$location, $filter) {
@@ -98,6 +117,9 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         $scope.userdetails=data;
         console.log($scope.userdetails);
         console.log("Length="+$scope.userdetails.watched.length);
+        
+        if($scope.userdetails.watched==0)
+            $scope.iswatched="0";
         
         for(var i=0;i<$scope.userdetails.watched.length;i++)
         {
