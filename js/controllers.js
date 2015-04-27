@@ -249,6 +249,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             user=data;
             console.log(user);
             $.jStorage.set("user",data);
+//            var myPopup = $ionicPopup.show({
+//                templateUrl: 'templates/rating.html',
+//                scope: $scope,
+//            });
             $location.path("/app/featured");
         }
             
