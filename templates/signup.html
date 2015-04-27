@@ -1,14 +1,14 @@
-<ion-view class="bglogin">
+<ion-view class="bglogin" ng-controller="LoginJagruti">
    <ion-header-bar class="bar bar-header tac login-hdr">
         <h1 class="title" >SIGN UP</h1>
     </ion-header-bar>
     <ion-content class="has-header">
         
         <div class="social-btns">
-            <button type="submit" class="button icon-left fbbgicon ion-social-facebook button-block fb-bg light">
+            <button type="submit" class="button icon-left fbbgicon ion-social-facebook button-block fb-bg light" ng-click="facebooklogin();">
                 <span>Sign up via Facebook</span>
             </button>
-            <button type="submit" class="button icon-left twittbgicon ion-social-twitter button-block twitt-bg light">
+            <button type="submit" class="button icon-left twittbgicon ion-social-twitter button-block twitt-bg light" ng-click="twitterlogin();">
                 <span>Sign up via Twitter</span>
             </button>
         </div>

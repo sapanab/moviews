@@ -43,20 +43,22 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 //    });
 //    console.log($scope.location);
     
-    var logoutcallback=function(data,status) {
-        if(data=="false")
-        {
-            console.log("Logout Failed");
-        }
-        else
-        {
-            console.log("Logged Out");
-            $location.path("/landingpage");
-        }
-            
-    };
+//    var logoutcallback=function(data,status) {
+//        if(data=="false")
+//        {
+//            console.log("Logout Failed");
+//        }
+//        else
+//        {
+//            console.log("Logged Out");
+//            $location.path("/landingpage");
+//        }
+//            
+//    };
     $scope.signout=function(){
-        MyServices.logout(logoutcallback);
+//        $.jStorage.flush();
+//        MyServices.logout();
+        $location.path("/landingpage");
     };
     
 })
@@ -163,6 +165,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         }
         else
         {
+            MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Rating Saved");
         }
             
@@ -172,7 +175,6 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         $scope.star.rate=rate;
         $scope.closepopup();
         MyServices.setuserrating($scope.movieid,rate,ratingcallback);
-        MyServices.getmoviedetails($scope.movieid,detailscallback);
     }
     
     $scope.showPopup = function() {
@@ -224,17 +226,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         }
         else
         {
+            MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Saved in Watchlist");
         }
             
     };
     $scope.setwatched=function(){
         MyServices.setuserwatch($scope.movieid,setwatchedcallback);
-        MyServices.getmoviedetails($scope.movieid,detailscallback);
     };
 })
 
-.controller('LoginCtrl', function($scope, $stateParams,MyServices,$location) {
+.controller('LoginCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
 
     $.jStorage.flush();
     
@@ -249,11 +251,14 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             user=data;
             console.log(user);
             $.jStorage.set("user",data);
-//            var myPopup = $ionicPopup.show({
-//                templateUrl: 'templates/rating.html',
-//                scope: $scope,
-//            });
-            $location.path("/app/featured");
+            var alertPopup = $ionicPopup.alert({
+//                title: 'Don\'t eat that!',
+                template: 'Login Successfull'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
+            $location.path("/app/featured");    
         }
             
     };

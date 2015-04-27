@@ -1,4 +1,4 @@
-<ion-view class="bglogin">
+<ion-view class="bglogin" ng-controller="LoginJagruti">
     <ion-content>
     </ion-content>
         <ion-slide-box class="slide-box white text-center" on-slide-changed="slideHasChanged($index)" does-continue="true" show-pager="true" auto-play="false">
@@ -63,11 +63,11 @@
         </div>
         <div class="row">
             <div class="col">
-                <button class="fb-color"><i class="ion-social-facebook"></i>
+                <button class="fb-color" ng-click="facebooklogin();"><i class="ion-social-facebook"></i>
                 </button>
             </div>
             <div class="col">
-                <button class="twitt-color"><i class="ion-social-twitter"></i>
+                <button class="twitt-color" ng-click="twitterlogin();"><i class="ion-social-twitter"></i>
                 </button>
             </div>
         </div>

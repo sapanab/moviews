@@ -37,13 +37,17 @@ myservices.factory('MyServices', function ($http) {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment,{}).success(setcommentscallback);
     },
+        returnval.setuserrating=function(movieid,rate,ratingcallback) {
+//        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
+        $http.get(adminurl + "userrating?user="+user.id+"&movie="+movieid+"&rating="+rate,{}).success(ratingcallback);
+    },
         returnval.setuserwatch=function(movieid,comment,setwatchedcallback) {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "watched?user="+user.id+"&movie="+movieid,{}).success(setwatchedcallback);
     },
-        returnval.logout=function(logoutcallback) {
+        returnval.logout=function() {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
-        $http.get(adminurl + "logout",{}).success(logoutcallback);
+        $http.get(adminurl + "logout",{});
     };
    
     return returnval;
