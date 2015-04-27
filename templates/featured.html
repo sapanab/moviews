@@ -1,10 +1,14 @@
 <ion-view class="bghome">
    <div class="bar bar-header dark-green">
-       <form ng-submit="" ng-show="showSearch">
+      <h1 class="title margin-auto"><img class="header-img" src="img/head-logo.png"></h1>
+    </div>
+<!--
+      <div class="search-movie">
+       <form ng-submit="">
             <input type="text" placeholder="Search" class="search-bar">
         </form>
-        <h1 class="title margin-auto"><img class="header-img" src="img/head-logo.png"></h1>
     </div>
+-->
 <!--
     <ion-nav-title>
         <form ng-submit="" ng-show="showSearch">
@@ -14,9 +18,18 @@
     </ion-nav-title>
 -->
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-ios7-search" ng-click="showSearch = !showSearch;"></button>
+        <button class="button button-icon search button-clear ion-android-search" ng-click="first" ng-init="first=false"></button>
+         
+<!--        <input type="text" placeholder="Search..." ng-if="first">-->
+    
     </ion-nav-buttons>
+              
     <ion-content>
+      <div class="search-movie">
+       <form ng-submit="">
+            <input type="text" placeholder="Search" >
+        </form>
+        </div>
         <div class="pos moviebg" ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isfeatured==1">
             <img ng-src="{{movies.image}}" height="auto" width="100%" />
             
