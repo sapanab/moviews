@@ -476,7 +476,11 @@ a {
 .right button.ios-android-search:before{
     font-size: 25px!important;
 }
-
+.bar .button.button-icon .icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar .button.button-icon:before {
+  vertical-align: top;
+  font-size: 25px!important;
+  line-height: 32px;
+}
 
 .bar .button.search.button-icon.icon-right::before, .bar .button.search.button-icon::before {
   vertical-align: top;
