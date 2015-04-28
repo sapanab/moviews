@@ -1,5 +1,5 @@
-//var adminbase = "http://www.wohlig.co.in/moviebackend/";
-var adminbase = "http://localhost/moviebackend/";
+var adminbase = "http://www.wohlig.co.in/moviebackend/";
+//var adminbase = "http://localhost/moviebackend/";
 var adminurl=adminbase+"index.php/json/";
 var myservices = angular.module('myservices', []);
 var user=$.jStorage.get("user");
@@ -38,7 +38,7 @@ myservices.factory('MyServices', function ($http) {
         $http.get(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment,{}).success(setcommentscallback);
     },
         returnval.setuserrating=function(movieid,rate,ratingcallback) {
-//        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
+        console.log("userrating?user="+user.id+"&movie="+movieid+"&rating="+rate);
         $http.get(adminurl + "userrating?user="+user.id+"&movie="+movieid+"&rating="+rate,{}).success(ratingcallback);
     },
         returnval.setuserwatch=function(movieid,setwatchedcallback) {
@@ -48,6 +48,10 @@ myservices.factory('MyServices', function ($http) {
         returnval.logout=function() {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "logout",{});
+    },
+        returnval.gettwitterfeeds=function(movieid,twittercallback) {
+        console.log("twitterfeeds?movie="+movieid);
+        $http.get(adminurl + "twitterfeeds?movie="+movieid,{}).success(twittercallback);
     };
    
     return returnval;
