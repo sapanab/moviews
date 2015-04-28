@@ -91,6 +91,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter) {
+    var mid="";
     $scope.first=1;
     $scope.second=2;
     $scope.movieid=$stateParams.id;
@@ -108,8 +109,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             console.log($scope.movie);
             $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
             console.log("Formatted Date="+$scope.releasedate);
-            $scope.star.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
-            console.log("Rounded="+$scope.star.rate);
+            mid=$scope.movie.description.id;
+//            console.log("mid="+mid);
+            //            $scope.star.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
+//            console.log("Rounded="+$scope.star.rate);
         }
             
     };
@@ -119,6 +122,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         $scope.userdetails=data;
         console.log($scope.userdetails);
         console.log("Length="+$scope.userdetails.watched.length);
+//        console.log("mid="+mid);
+//        console.log("RLength="+$scope.userdetails.ratings.length);
+        for(var i=0;i<$scope.userdetails.ratings.length;i++)
+        {
+            console.log("for    "+mid);
+            if($scope.userdetails.ratings[i].id==mid)
+            {
+                $scope.star.rate=$window.Math.round(parseFloat($scope.userdetails.ratings[i].rating));
+                console.log("Rounded="+$scope.star.rate);
+            }
+        }
         
         if($scope.userdetails.watched==0)
             $scope.iswatched="0";
@@ -165,7 +179,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         }
         else
         {
-            MyServices.getmoviedetails($scope.movieid,detailscallback);
+            //MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Rating Saved");
             var alertPopup = $ionicPopup.show({
                 title: 'Your Rating is Saved. Thank You !!',
@@ -250,6 +264,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     $scope.setwatched=function(){
         MyServices.setuserwatch($scope.movieid,setwatchedcallback);
     };
+    
+    $scope.inwatch=function(){
+    
+        var alertPopup = $ionicPopup.show({
+                title: 'Already in your watchlist.',
+//                template: 'Login Successfull'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
+    }
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
