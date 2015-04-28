@@ -842,6 +842,9 @@ a {
     height: 32px;
     widows: auto;
 }
+.popup1{
+height:45px!important;
+}
 .mt5{
     margin-top:-5px;
 }

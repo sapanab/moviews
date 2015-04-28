@@ -167,6 +167,13 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         {
             MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Rating Saved");
+            var alertPopup = $ionicPopup.show({
+                title: 'Your Rating is Saved. Thank You !!',
+//                template: 'Login Successfull'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
         }
             
     };
@@ -220,14 +227,23 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     };
     
     var setwatchedcallback=function(data,status) {
+        console.log("in success");
         if(data=="0")
         {
             console.log("Not Saved in Watchedlist");
         }
         else
         {
+            MyServices.userdetails(onusersuccess);
             MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Saved in Watchlist");
+            var alertPopup = $ionicPopup.show({
+                title: 'Added to your watchlist. Thank You !!',
+//                template: 'Login Successfull'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
         }
             
     };
@@ -245,14 +261,22 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         {
             console.log(data);
             console.log("Login Failed");
+            var alertPopup = $ionicPopup.show({
+//                title: 'Login Successfull',
+                template: 'Sorry ! Invalid Login Credentials'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
+            
         }
         else
         {
             user=data;
             console.log(user);
             $.jStorage.set("user",data);
-            var alertPopup = $ionicPopup.alert({
-//                title: 'Don\'t eat that!',
+            var alertPopup = $ionicPopup.show({
+//                title: 'Login Successfull',
                 template: 'Login Successfull'
            });
             $timeout(function() {

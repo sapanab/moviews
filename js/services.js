@@ -41,7 +41,7 @@ myservices.factory('MyServices', function ($http) {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "userrating?user="+user.id+"&movie="+movieid+"&rating="+rate,{}).success(ratingcallback);
     },
-        returnval.setuserwatch=function(movieid,comment,setwatchedcallback) {
+        returnval.setuserwatch=function(movieid,setwatchedcallback) {
 //        console.log(adminurl + "usercomment?user="+user.id+"&movie="+movieid+"&comment="+comment);
         $http.get(adminurl + "watched?user="+user.id+"&movie="+movieid,{}).success(setwatchedcallback);
     },
