@@ -91,12 +91,14 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter) {
-    var mid="";
+    
     $scope.first=1;
     $scope.second=2;
     $scope.movieid=$stateParams.id;
     console.log($scope.movieid);
     $scope.star=[];
+    $scope.star1=[];
+    
     var detailscallback=function(data,status) {
         if(data=="false")
         {
@@ -109,10 +111,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             console.log($scope.movie);
             $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
             console.log("Formatted Date="+$scope.releasedate);
-            mid=$scope.movie.description.id;
-//            console.log("mid="+mid);
-            //            $scope.star.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
-//            console.log("Rounded="+$scope.star.rate);
+            
+            
+            $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
+            console.log("Rounded="+$scope.star.rate);
         }
             
     };
@@ -122,15 +124,15 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         $scope.userdetails=data;
         console.log($scope.userdetails);
         console.log("Length="+$scope.userdetails.watched.length);
-//        console.log("mid="+mid);
+        
 //        console.log("RLength="+$scope.userdetails.ratings.length);
         for(var i=0;i<$scope.userdetails.ratings.length;i++)
         {
-            console.log("for    "+mid);
-            if($scope.userdetails.ratings[i].id==mid)
+            if($scope.userdetails.ratings[i].id==$scope.movieid)
             {
-                $scope.star.rate=$window.Math.round(parseFloat($scope.userdetails.ratings[i].rating));
-                console.log("Rounded="+$scope.star.rate);
+//                $scope.star.rate=$window.Math.round(parseFloat($scope.userdetails.ratings[i].rating));
+                $scope.star.rate=$scope.userdetails.ratings[i].rating;
+//                console.log("Rounded="+$scope.star.rate);
             }
         }
         
@@ -194,6 +196,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     
     $scope.starrate=function(rate){
         $scope.star.rate=rate;
+        console.log(rate);
         $scope.closepopup();
         MyServices.setuserrating($scope.movieid,rate,ratingcallback);
     }
@@ -275,6 +278,21 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
                 alertPopup.close(); //close the popup after 3 seconds for some reason
                 }, 3000);
     }
+    
+    var twittercallback=function(data,status) {
+        if(data=="0")
+        {
+            console.log("Not feeds");
+        }
+        else
+        {
+            $scope.tweets=data;
+            console.log("feeds");
+            console.log($scope.tweets);
+        }
+            
+    };
+    MyServices.gettwitterfeeds($scope.movieid,twittercallback);
 })
 
 .controller('LoginCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
