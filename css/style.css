@@ -1094,6 +1094,10 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     opacity: 0.5;
     right:15px!important;
 }
+.watch-opacity1{
+    opacity: 1.5;
+    right:15px!important;
+}
 .margin-left {
     margin-left: 15px;
 }
