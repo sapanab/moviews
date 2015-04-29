@@ -106,6 +106,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
+.controller('SearchCtrl', function($scope, $stateParams) {})
 
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter,$ionicModal) {
     

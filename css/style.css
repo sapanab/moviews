@@ -490,6 +490,8 @@ a {
 .bghover {
     background: #d4d4d4;
      padding:5px;
+      padding-right: 19px!important;
+  width: 105%;
 }
 .mt17 {
     margin-top: 17%;

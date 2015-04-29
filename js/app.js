@@ -61,6 +61,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
             }
         }
     })
+        
+    .state('app.search', {
+        url: "/search",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/search.html",
+                controller: 'SearchCtrl'
+            }
+        }
+    })
 
     .state('app.setting', {
         url: "/setting",
