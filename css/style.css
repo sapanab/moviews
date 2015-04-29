@@ -1138,6 +1138,11 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     right: 10px;
     top: 5px;
 }
+.social-reviews{
+    height: 300px;
+  overflow: auto;
+  overflow-y: scroll;
+}
 .expt {
     background-image: url(../img/expert1.png);
     height: 20px;
