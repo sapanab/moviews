@@ -343,6 +343,9 @@ a {
     font-weight: 300;
     font-size: 12px;
 }
+.item-input-wrapper{
+    background: #010A0C!important;
+}
 #signout {
     position: absolute;
     top: 245px;
@@ -948,6 +951,12 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     color:#fff;
 }
 */
+.rating-pop{
+    background: rgba(255, 255, 255, 0.17)!important;
+}
+input[type=search]{
+    color:#fff!important;
+}
 .ftr-data {
     line-height: 1.3;
     padding: 4px 10px 0 10px;

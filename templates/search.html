@@ -1,12 +1,10 @@
-<ion-view>
+<ion-view view-title="SEARCH RESULTS" class="bghome">
    <div class="bar bar-header dark-green">
 <!--       <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>-->
 
    </div>
     <ion-content>
-           <div class="movie-list-hd tac">
-            <p>SEARCH RESULTS</p>
-        </div>
+
         <ion-list class="menu-list">
             <ion-item ng-repeat="movies in movieres.moviesearch" ng-if="movies.isintheator==1">
                 <a href="#/app/details/{{movies.id}}">
@@ -57,7 +55,7 @@
             
             </ion-item>
             <div class="rale-semibold text-center" ng-if="nomovies==1">
-               <h3> No Movies Found</h3>
+               <h3 class="white"> No Movies Found</h3>
             </div>
         </ion-list>
  </ion-content>
