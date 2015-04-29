@@ -389,7 +389,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     MyServices.gettwitterfeeds($scope.movieid,twittercallback);
 })
 
-.controller('LoginCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout) {
+.controller('LoginCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$ionicLoading) {
 
     $.jStorage.flush();
     
@@ -413,13 +413,16 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             console.log(user);
             $.jStorage.set("user",data);
             var alertPopup = $ionicPopup.show({
-//                title: 'Login Successfull',
-                template: 'Login Successfull'
+                title: 'Login Successfull',
            });
             $timeout(function() {
                 alertPopup.close(); //close the popup after 3 seconds for some reason
                 }, 3000);
-            $location.path("/app/featured");    
+            $location.path("/app/featured");
+            $ionicLoading.show({
+                template: 'Please wait...',
+                duration: 3000
+            });
         }
             
     };
