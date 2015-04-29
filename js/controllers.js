@@ -107,7 +107,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter,$ionicModal) {
     
     $scope.first=1;
     $scope.second=2;
@@ -240,7 +240,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     $scope.starrate=function(rate){
         $scope.star.rate=rate;
         console.log(rate);
-        $scope.closepopup();
+        $scope.closeModal();
         MyServices.setuserrating($scope.movieid,rate,ratingcallback);
     }
     
