@@ -66,6 +66,23 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 .controller('HomeCtrl', function($scope, $stateParams,MyServices,$location, $filter) {
     $scope.first = 1;
 //    $scope.userdetails={watchcount:"50"};
+    
+    $scope.myVar = false;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    }
+    
+    $scope.searchmovie={};
+    
+    $scope.getsearchres = function(keyEvent) {
+    if (keyEvent.which === 13)
+    {
+        console.log($scope.searchmovie.s);
+        $.jStorage.set("searchmovie",$scope.searchmovie.s);
+        $location.path("/app/search");
+    }
+    }
+    
     var onusersuccess=function(data,status) {
         $scope.userdetails=data;
         console.log("Length="+$scope.userdetails.watched.length);
