@@ -951,8 +951,14 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
     color:#fff;
 }
 */
+.pop-width{
+    width: 75%;
+  margin: 0 auto;
+     margin-top: 18%;
+}
 .rating-pop{
-    background: rgba(255, 255, 255, 0.17)!important;
+    background: rgba(255, 255, 255, 0.41)!important;
+   
 }
 input[type=search]{
     color:#fff!important;
@@ -1354,7 +1360,7 @@ input.search-bar {
     font-family: 'Raleway';
     font-weight: 600;
 }
-.rating-popup .text-center h3{
+.rating-popup .item .text-center h3{
     color:#032729;
     font-family: 'Raleway';
     font-weight: 700;

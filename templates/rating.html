@@ -1,5 +1,5 @@
 <ion-view class="rating-pop">
-    <ion-content>
+    <ion-content class="pop-width">
         
         <ion-list class="rate-list">
             <!--
@@ -13,7 +13,7 @@
             </ion-item>
 -->
            <ion-item>
-               <div class="text-center" style="padding-top:15%;">
+               <div class="text-center">
             <h3>RATING</h3>
         </div>
            </ion-item>
@@ -47,7 +47,10 @@
             <ion-item class="pos" ng-click="starrate(5);">
                 <i class="icon full-star"></i></i><i class="icon full-star star2"></i><i class="icon full-star star3"></i><i class="icon full-star star4"></i><i class="icon full-star star5"></i><span class="margin-l">WATCH IT 5 TIMES MORE</span>
             </ion-item>
+            <ion-item>
+                 <div class="text-center" ng-click="closeModal();">Close</div>
+            </ion-item>
         </ion-list>
-        <div class="text-center" ng-click="closeModal();" style="padding:10px 0">Close</div>
+       
     </ion-content>
 </ion-view>
