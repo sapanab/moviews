@@ -51,8 +51,12 @@ myservices.factory('MyServices', function ($http) {
         $http.get(adminurl + "logout",{});
     },
         returnval.gettwitterfeeds=function(movieid,twittercallback) {
-        console.log("twitterfeeds?movie="+movieid);
+//        console.log("twitterfeeds?movie="+movieid);
         $http.get(adminurl + "twitterfeeds?movie="+movieid,{}).success(twittercallback);
+    },
+        returnval.getmoviesearch=function(moviekeyword,searchcallback) {
+//        console.log("twitterfeeds?movie="+movieid);
+        $http.get(adminurl + "moviesearch?moviename="+moviekeyword,{}).success(searchcallback);
     };
    
     return returnval;

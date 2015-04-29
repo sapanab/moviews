@@ -23,7 +23,7 @@
     </ion-nav-title>
 -->
     <ion-nav-buttons side="right">
-        <button class="button button-icon search button-clear ion-android-search" ng-click="first" ng-init="first=false"></button>
+        <button class="button button-icon search button-clear ion-android-search" ng-click="toggle();" ng-init="first=false"></button>
          
 <!--        <input type="text" placeholder="Search..." ng-if="first">-->
     
@@ -31,8 +31,8 @@
               
     <ion-content>
       <div class="search-movie">
-       <form ng-submit="">
-            <input type="text" placeholder="Search" >
+       <form ng-submit="" ng-show="myVar">
+            <input type="text" placeholder="Search" ng-model="searchmovie.s" ng-keypress="getsearchres($event)">
         </form>
         </div>
         <div class="pos moviebg" ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isfeatured==1">

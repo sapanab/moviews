@@ -106,7 +106,46 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
-.controller('SearchCtrl', function($scope, $stateParams) {})
+.controller('SearchCtrl', function($scope, $stateParams,MyServices) {
+    
+    var onusersuccess=function(data,status) {
+        $scope.userdetails=data;
+    };
+    MyServices.userdetails(onusersuccess);
+    
+    $scope.search=$.jStorage.get("searchmovie");
+    console.log("In search="+$scope.search);
+    
+    var searchcallback=function(data,status) {
+        if(data=="false")
+        {
+            console.log(data);
+            console.log("No Movie");
+        }
+        else
+        {
+            $scope.movieres=data;
+            for(var i=0;i<$scope.movieres.moviesearch.length;i++)
+            {
+                $scope.movieres.moviesearch[i].image=imgpath+$scope.movieres.moviesearch[i].image;
+            }
+            console.log($scope.movieres);
+//            $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
+//            console.log("Formatted Date="+$scope.releasedate);
+//            $scope.movie.description.image=imgpath+$scope.movie.description.image;
+//            //console.log($scope.movie.description.image);
+//            
+//            $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averageexpertrating));
+//            console.log("Rounded="+$scope.star1.rate);
+//            if($scope.movie.reviews.length==0)
+//                $scope.nocomments=1;
+//            else
+//                $scope.nocomments=0;
+        }
+            
+    };
+    MyServices.getmoviesearch($scope.search,searchcallback);
+})
 
 .controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter,$ionicModal) {
     
@@ -401,6 +440,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 
 .controller('FeaturedCtrl', function($scope, $stateParams,MyServices,$location) {
 
+    $scope.myVar = false;
+    $scope.toggle = function() {
+        $scope.myVar = !$scope.myVar;
+    }
     var onusersuccess=function(data,status) {
         $scope.userdetails=data;
         console.log($scope.userdetails);
@@ -426,5 +469,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             
     };
     MyServices.getmoviesintheatre(featuredcallback);
+    
+    $scope.searchmovie={};
+    
+    $scope.getsearchres = function(keyEvent) {
+    if (keyEvent.which === 13)
+    {
+        console.log($scope.searchmovie.s);
+        $.jStorage.set("searchmovie",$scope.searchmovie.s);
+        $location.path("/app/search");
+    }
+}
+
     
 })

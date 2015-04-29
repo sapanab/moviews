@@ -4,7 +4,7 @@
             <p>SEARCH RESULTS</p>
         </div>
         <ion-list class="menu-list">
-            <ion-item ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isintheator==1">
+            <ion-item ng-repeat="movies in movieres.moviesearch" ng-if="movies.isintheator==1">
                 <a href="#/app/details/{{movies.id}}">
                     <img class="new-release" src="img/release.png">
                     <img ng-src="{{movies.image}}" height="auto" width="100%" />
