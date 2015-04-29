@@ -21,7 +21,7 @@
             <div class="pos">
                 <div class="fix-ht100 greenbg"></div>
                 <ion-list class="detail-btn">
-                    <ion-item class="rate" ng-click="showPopup();">
+                    <ion-item class="rate" ng-click="openedit();">
 
                         <label>
                             <span class="f16 rale-bold">RATE</span>
@@ -206,6 +206,8 @@
                         </p>
                     </a>
                 </div>
+                
+                <div class="rale-semibold" ng-if="(nocomments==1 && second==2)">No Comments</div>
 
                 <div class="separator list" ng-repeat="tweets in tweets.statuses|limitTo:4" ng-if="second==1">
                     <a class="item item-avatar" href="#">

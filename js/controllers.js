@@ -115,6 +115,22 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     console.log($scope.movieid);
     $scope.star=[];
     $scope.star1=[];
+    $scope.nocomments=2;
+    
+    $ionicModal.fromTemplateUrl('templates/rating.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+    }).then(function (modal) {
+        $scope.modal = modal;
+    });
+
+    $scope.openedit = function () {
+        $scope.modal.show();
+    };
+
+    $scope.closeModal = function () {
+        $scope.modal.hide();
+    };
     
     var detailscallback=function(data,status) {
         if(data=="false")
@@ -133,6 +149,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             
             $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averageexpertrating));
             console.log("Rounded="+$scope.star1.rate);
+            if($scope.movie.reviews.length==0)
+                $scope.nocomments=1;
+            else
+                $scope.nocomments=0;
         }
             
     };
@@ -153,6 +173,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 //                console.log("Rounded="+$scope.star.rate);
             }
         }
+        
         
         if($scope.userdetails.watched==0)
             $scope.iswatched="0";
@@ -187,6 +208,10 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             $scope.comments=data;
             $scope.name=user.name;
             console.log($scope.comments);
+            if($scope.comments.length==0)
+                $scope.nocomments=1;
+            else
+                $scope.nocomments=0;
         }
             
     };
@@ -219,26 +244,6 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         MyServices.setuserrating($scope.movieid,rate,ratingcallback);
     }
     
-    $scope.showPopup = function() {
-    $scope.data = {}
-
-  // An elaborate, custom popup
-  var myPopup = $ionicPopup.show({
-    templateUrl: 'templates/rating.html',
-    scope: $scope,
-    buttons: [
-      { text: 'Cancel' },
-     
-    ]
-  });
-       $scope.closepopup=function(){
-           myPopup.close();
-       }
-    myPopup.then(function(res) {
-    console.log('Tapped!', res);
-  });
-  
- };
     
     var setcommentscallback=function(data,status) {
         if(data=="0")
