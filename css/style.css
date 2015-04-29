@@ -1335,19 +1335,16 @@ input.search-bar {
 .rating-stars .pos span{
     margin-left:30%;
 }
-.popup-body .pane .has-header{
-    top:0px;
-}
-.popup-body .pane .list .item{
+.rate-list .list .item{
     padding:5px 10px;
 }
-.popup .pane span{
+.rate-list .list .item span{
     font-size: 9px;
     color:#032729;
     font-family: 'Raleway';
     font-weight: 600;
 }
-.popup .pane h3{
+.rating-popup .text-center h3{
     color:#032729;
     font-family: 'Raleway';
     font-weight: 700;
@@ -1355,10 +1352,8 @@ input.search-bar {
     padding: 10px 0 10px 0;
     margin-bottom: 0;
 }
-.popup{
-    height:388px;
-}
-.popup .pane .margin-l{
+
+.margin-l{
     margin-left:42%;
     vertical-align: top;
 }
