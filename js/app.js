@@ -33,16 +33,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
         controller: 'AppCtrl'
     })
 
-   
-    .state('app.browse', {
-        url: "/browse",
-        views: {
-            'menuContent': {
-                templateUrl: "templates/browse.html"
-            }
-        }
-    })
-
     .state('app.details', {
         url: "/details/:id",
         views: {
