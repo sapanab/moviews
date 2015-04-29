@@ -347,6 +347,7 @@ a {
     position: absolute;
     top: 245px;
     width: 100%;
+    padding-left: 10px;
 }
 #signout .pd i:before {
     -webkit-transform: rotate(-90deg);
@@ -1356,6 +1357,13 @@ input.search-bar {
 .margin-l{
     margin-left:42%;
     vertical-align: top;
+}
+.signout-icon{
+   background-image: url("../img/signout.png");
+  height: 18px;
+  width: 20px;
+  display: inline-block;
+  background-size: 100%;
 }
 .search-movie {
     width: 80%;
