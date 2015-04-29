@@ -1,4 +1,8 @@
 <ion-view>
+   <div class="bar bar-header dark-green">
+<!--       <a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>-->
+
+   </div>
     <ion-content>
            <div class="movie-list-hd tac">
             <p>SEARCH RESULTS</p>
@@ -52,7 +56,9 @@
                 </div>
             
             </ion-item>
-            <div class="rale-semibold" ng-if="nomovies==1">No Movies Found</div>
+            <div class="rale-semibold text-center" ng-if="nomovies==1">
+               <h3> No Movies Found</h3>
+            </div>
         </ion-list>
  </ion-content>
 </ion-view>
