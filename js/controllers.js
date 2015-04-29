@@ -248,8 +248,14 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         }
         else
         {
-             MyServices.getusercomments(commentscallback);
-
+            var alertPopup = $ionicPopup.show({
+                title: 'Your comment is saved. Thank You !!',
+//                template: 'Login Successfull'
+           });
+            $timeout(function() {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
+            MyServices.getusercomments(commentscallback);
             console.log("id");
             console.log($scope.comments);
         }

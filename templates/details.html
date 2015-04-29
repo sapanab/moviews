@@ -79,8 +79,10 @@
             <div class="row detail-hd">
                 <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}"><i class="icon expt"></i><span>EXPERTS</span>
                 </div>
+<!--
                 <div class="col" ng-click="first=2" ng-class="{'active-tab': first==2}">FRIENDS<i class="icon friends"></i>
                 </div>
+-->
             </div>
             <div class="bdrleft">
 
@@ -187,7 +189,7 @@
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
 <!--                <ion-scroll direction="y" style="height:300px">-->
-                <div class="separator list" ng-repeat="reviews in movie.reviews" ng-if="second==2">
+                <div class="separator list" ng-repeat="reviews in movie.reviews|limitTo:2" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">{{reviews.name}}</span>
@@ -196,7 +198,7 @@
                     </a>
                 </div>
                
-                <div class="separator list" ng-repeat="com in comments" ng-if="(com.movie==movie.description.id && second==2)">
+                <div class="separator list" ng-repeat="com in comments|limitTo:2" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
                         <span class="rale-regular cmt-title">{{name}}</span>
@@ -205,7 +207,7 @@
                     </a>
                 </div>
 
-                <div class="separator list" ng-repeat="tweets in tweets.statuses" ng-if="second==1">
+                <div class="separator list" ng-repeat="tweets in tweets.statuses|limitTo:4" ng-if="second==1">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" ng-src="{{tweets.user.profile_image_url}}" />
                         <span class="rale-regular cmt-title">{{tweets.user.name}}</span>
@@ -232,7 +234,7 @@
                     </a>
                 </div>
 -->
-                <div class="rale-semibold">12 more comments</div>
+<!--                <div class="rale-semibold">12 more comments</div>-->
 
             </div>
             <div class="brdleft"></div>
