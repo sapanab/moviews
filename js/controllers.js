@@ -63,7 +63,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
     
 })
 
-.controller('HomeCtrl', function($scope, $stateParams,MyServices,$location, $filter) {
+.controller('HomeCtrl', function($scope, $stateParams,MyServices,$location, $filter, $ionicLoading) {
+    $scope.show = function() {
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+  };
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+    $scope.show();
+    
     $scope.first = 1;
 //    $scope.userdetails={watchcount:"50"};
     
@@ -108,6 +118,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         }
 
         console.log($scope.userdetails);
+        $scope.hide();
     };
     
     if(!user)
@@ -123,8 +134,17 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
-.controller('SearchCtrl', function($scope, $stateParams,MyServices) {
+.controller('SearchCtrl', function($scope, $stateParams,MyServices,$ionicLoading) {
     
+    $scope.show = function() {
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+  };
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+    $scope.show();
     var onusersuccess=function(data,status) {
         $scope.userdetails=data;
     };
@@ -155,25 +175,25 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
                 $scope.movieres.moviesearch[i].image=imgpath+$scope.movieres.moviesearch[i].image;
             }
             console.log($scope.movieres);
-//            $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
-//            console.log("Formatted Date="+$scope.releasedate);
-//            $scope.movie.description.image=imgpath+$scope.movie.description.image;
-//            //console.log($scope.movie.description.image);
-//            
-//            $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averageexpertrating));
-//            console.log("Rounded="+$scope.star1.rate);
-//            if($scope.movie.reviews.length==0)
-//                $scope.nocomments=1;
-//            else
-//                $scope.nocomments=0;
+            $scope.hide();
         }
             
     };
     MyServices.getmoviesearch($scope.search,searchcallback);
 })
 
-.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter,$ionicModal) {
+.controller('DetailCtrl', function($scope, $stateParams,MyServices,$location,$ionicPopup,$timeout,$window,$filter,$ionicModal,$ionicLoading) {
     
+    $scope.show = function() {
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+  };
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+    
+     $scope.show();
     $scope.first=1;
     $scope.second=2;
     $scope.movieid=$stateParams.id;
@@ -218,6 +238,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
                 $scope.nocomments=1;
             else
                 $scope.nocomments=0;
+            $scope.hide();
         }
             
     };
@@ -412,17 +433,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             user=data;
             console.log(user);
             $.jStorage.set("user",data);
-            var alertPopup = $ionicPopup.show({
-                title: 'Login Successfull',
-           });
-            $timeout(function() {
-                alertPopup.close(); //close the popup after 3 seconds for some reason
-                }, 3000);
             $location.path("/app/featured");
-            $ionicLoading.show({
-                template: 'Please wait...',
-                duration: 3000
-            });
         }
             
     };
@@ -466,8 +477,19 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         $location.path("/landingpage");
 })
 
-.controller('FeaturedCtrl', function($scope, $stateParams,MyServices,$location) {
+.controller('FeaturedCtrl', function($scope, $stateParams,MyServices,$location,$ionicLoading) {
 
+      $scope.show = function() {
+    $ionicLoading.show({
+      template: 'Loading...'
+    });
+  };
+  $scope.hide = function(){
+    $ionicLoading.hide();
+  };
+    
+     $scope.show();
+    
     $scope.myVar = false;
     $scope.toggle = function() {
         $scope.myVar = !$scope.myVar;
@@ -493,6 +515,7 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
                 $scope.intheatre.theatresthisweek[i].image=imgpath+$scope.intheatre.theatresthisweek[i].image;
             }
             console.log($scope.intheatre);
+            $scope.hide();
         }
             
     };
