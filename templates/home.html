@@ -21,10 +21,13 @@
         <div id="profile" class="tac">
             <img class="profilepic" ng-if="user.image" ng-src="{{user.image}}" />
             <img class="menupic" ng-if="!(user.image)" src="img\default.jpg">
+<!--
             <div class="circle"><i class="icon ion-checkmark"></i>
             </div>
+-->
             <div class="light">
-                <h6 class="pname">{{userdetails.userdetails.name}}</h6><i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>
+                <h6 class="pname">{{userdetails.userdetails.name}}</h6>
+<!--                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>-->
             </div>
         </div>
 
@@ -44,11 +47,13 @@
                 <!--                <div class="reviewed"></div>-->
                 <img src="img/review.png">
             </div>
+<!--
             <div class="col" ng-click="first=4" ng-class="{'active-tab': first==4}">
                 <h3 class="latobold light margin-0">{{userdetails.recommendcount}}</h3>
-                <!--                <div class="recommend"></div>-->
+                                <div class="recommend"></div>
                 <img src="img/recommend.png">
             </div>
+-->
         </div>
 
 
@@ -129,9 +134,11 @@
 
             </ion-item>
 
+<!--
             <div class="dark-green menu-hd text-center" ng-if="first==4">
                 <p>RECOMMENDED</p>
             </div>
+-->
             <ion-item ng-if="first==4" ng-repeat="movies in userdetails.recommended">
 
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />

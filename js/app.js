@@ -125,5 +125,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
         controller: 'ConnectCtrl'
     });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/landingpage');
+    $urlRouterProvider.otherwise('/app/featured');
 });

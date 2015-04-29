@@ -446,6 +446,11 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             template: 'Loading...'
         });
     };
+
+    if (!user) {
+        $location.path("/landingpage");
+    }
+
     $scope.hide = function() {
         $ionicLoading.hide();
     };
