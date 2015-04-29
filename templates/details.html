@@ -186,6 +186,7 @@
             </div>
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
+                <ion-scroll direction="y" style="height:300px">
                 <div class="separator list" ng-repeat="reviews in movie.reviews" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
@@ -194,6 +195,7 @@
                         </p>
                     </a>
                 </div>
+               
                 <div class="separator list" ng-repeat="com in comments" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
@@ -202,7 +204,7 @@
                         </p>
                     </a>
                 </div>
-                
+
                 <div class="separator list" ng-repeat="tweets in tweets.statuses" ng-if="second==1">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" ng-src="{{tweets.user.profile_image_url}}" />
@@ -211,6 +213,7 @@
                         </p>
                     </a>
                 </div>
+                </ion-scroll>
 <!--
                 <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
