@@ -125,6 +125,14 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         else
         {
             $scope.movieres=data;
+            if($scope.movieres.moviesearch.length==0)
+            {
+                $scope.nomovies=1;
+            }
+            else
+            {
+                $scope.nomovies=0;
+            }
             for(var i=0;i<$scope.movieres.moviesearch.length;i++)
             {
                 $scope.movieres.moviesearch[i].image=imgpath+$scope.movieres.moviesearch[i].image;
