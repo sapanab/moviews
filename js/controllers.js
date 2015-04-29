@@ -113,8 +113,8 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             console.log("Formatted Date="+$scope.releasedate);
             
             
-            $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averagerating));
-            console.log("Rounded="+$scope.star.rate);
+            $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averageexpertrating));
+            console.log("Rounded="+$scope.star1.rate);
         }
             
     };
