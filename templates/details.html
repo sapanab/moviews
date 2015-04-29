@@ -67,7 +67,7 @@
                         </label>
                     </ion-item>
                     <ion-item class="text-center">
-                        <button class="button rale-bold">
+                        <button class="button rale-bold" ng-click="share();">
                             RECOMMEND
                         </button>
                     </ion-item>
@@ -246,7 +246,7 @@
             <div class="cmtbox list">
 
                 <div class="item item-input-inset">
-                    <label class="item-input-wrapper">
+                    <label class="item-input-wrapper" style="background: white !important;">
                         <input type="text" placeholder="Write a comment..." ng-model="movie.comment">
                     </label>
                     <button class="button button-small" ng-click="insertcomment();">

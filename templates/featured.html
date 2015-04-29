@@ -42,12 +42,12 @@
         </form>
 -->
         </div>
-        <div class="pos moviebg" ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isfeatured==1">
-            <img ng-src="{{movies.image}}" height="auto" width="100%" />
-            
+        <div class="pos moviebg">
+            <img ng-src="{{intheatre.theatresthisweek[0].image}}" height="auto" width="100%" />
+        
             <div class="mtitle gradientbg pl10">
                 <h6 class="margin-0 light rale-regular">FEATURED</h6>
-                    <h6 class="light rale-regular">{{movies.name}}</h6>
+                    <h6 class="light rale-regular">{{intheatre.theatresthisweek[0].name}}</h6>
             </div>
         </div>
         <!--
