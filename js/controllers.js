@@ -72,7 +72,24 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         for(var i=0;i<$scope.userdetails.watched.length;i++)
         {
             $scope.userdetails.watched[i].dateofrelease=$filter('date')($scope.userdetails.watched[i].dateofrelease, "dd MMM yyyy");
+            $scope.userdetails.watched[i].image=imgpath+$scope.userdetails.watched[i].image;
         }
+        for(var i=0;i<$scope.userdetails.reviewed.length;i++)
+        {
+            $scope.userdetails.reviewed[i].dateofrelease=$filter('date')($scope.userdetails.reviewed[i].dateofrelease, "dd MMM yyyy");
+            $scope.userdetails.reviewed[i].image=imgpath+$scope.userdetails.reviewed[i].image;
+        }
+        for(var i=0;i<$scope.userdetails.recommended.length;i++)
+        {
+            $scope.userdetails.recommended[i].dateofrelease=$filter('date')($scope.userdetails.recommended[i].dateofrelease, "dd MMM yyyy");
+            $scope.userdetails.recommended[i].image=imgpath+$scope.userdetails.recommended[i].image;
+        }
+        for(var i=0;i<$scope.userdetails.ratings.length;i++)
+        {
+            $scope.userdetails.ratings[i].dateofrelease=$filter('date')($scope.userdetails.ratings[i].dateofrelease, "dd MMM yyyy");
+            $scope.userdetails.ratings[i].image=imgpath+$scope.userdetails.ratings[i].image;
+        }
+
         console.log($scope.userdetails);
     };
     
@@ -111,7 +128,8 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
             console.log($scope.movie);
             $scope.releasedate = $filter('date')($scope.movie.description.dateofrelease, "dd MMM yyyy");
             console.log("Formatted Date="+$scope.releasedate);
-            
+            $scope.movie.description.image=imgpath+$scope.movie.description.image;
+            //console.log($scope.movie.description.image);
             
             $scope.star1.rate=$window.Math.round(parseFloat($scope.movie.averageexpertrating));
             console.log("Rounded="+$scope.star1.rate);
@@ -386,8 +404,12 @@ angular.module('starter.controllers', [ 'myservices','ionic.rating','ngCordova']
         else
         {
             $scope.intheatre=data;
+//            console.log($scope.intheatre);
+            for(var i=0;i<$scope.intheatre.theatresthisweek.length;i++)
+            {
+                $scope.intheatre.theatresthisweek[i].image=imgpath+$scope.intheatre.theatresthisweek[i].image;
+            }
             console.log($scope.intheatre);
-//            $location.path("/login");
         }
             
     };

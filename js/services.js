@@ -1,6 +1,7 @@
 var adminbase = "http://www.wohlig.co.in/moviebackend/";
 //var adminbase = "http://localhost/moviebackend/";
 var adminurl=adminbase+"index.php/json/";
+var imgpath=adminbase+"uploads/";
 var myservices = angular.module('myservices', []);
 var user=$.jStorage.get("user");
 
