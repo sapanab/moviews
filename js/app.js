@@ -61,6 +61,36 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
             }
         }
     })
+    
+    .state('app.edit', {
+        url: "/edit",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/edit.html",
+                controller: 'EditCtrl'
+            }
+        }
+    })
+        
+    .state('app.terms', {
+        url: "/terms",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/terms.html",
+                controller: 'TermsCtrl'
+            }
+        }
+    })
+        
+    .state('app.changepassword', {
+        url: "/changepassword",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/changepassword.html",
+                controller: 'ChangepasswordCtrl'
+            }
+        }
+    })
 
     .state('app.home', {
         url: "/home",

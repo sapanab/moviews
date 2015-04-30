@@ -129,6 +129,9 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
+.controller('EditCtrl', function($scope, $stateParams) {})
+.controller('TermsCtrl', function($scope, $stateParams) {})
+.controller('ChangepasswordCtrl', function($scope, $stateParams) {})
     .controller('SearchCtrl', function($scope, $stateParams, MyServices, $ionicLoading) {
 
         $scope.show = function() {
