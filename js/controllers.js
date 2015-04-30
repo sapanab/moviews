@@ -170,6 +170,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         MyServices.getmoviesearch($scope.search, searchcallback);
     })
 
+
 .controller('DetailCtrl', function($scope, $stateParams, MyServices, $location, $ionicPopup, $timeout, $window, $filter, $ionicModal, $ionicLoading) {
 
     $scope.show = function() {
