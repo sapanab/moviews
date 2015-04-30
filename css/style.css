@@ -486,6 +486,30 @@ a {
   line-height: 32px;
 }
 
+.chng-pswd{
+    width:90%;
+    margin:0 auto;
+}
+.chng-pswd button{
+    background: white;
+  border: 0;
+  width: 100%;
+  color: #254446;
+}
+.chng-pswd .mt10 input{
+    background:#010A0C!important;
+    color:#fff;
+    border-radius: 2px;
+    padding:20px 5px;
+}
+.chng-pswd label{
+    color:#fff;
+}
+
+.chng-pswd input[type=text],input[type=password]{
+    width:100%;;
+}
+
 .bar .button.search.button-icon.icon-right::before, .bar .button.search.button-icon::before {
   vertical-align: top;
   font-size: 25px!important;
