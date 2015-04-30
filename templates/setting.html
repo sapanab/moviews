@@ -35,10 +35,10 @@
                 <span>ACCOUNT</span><i class="icon ion-chevron-right pull-right"></i>
             </ion-item>
 -->
-            <ion-item href="#/app/edit">
+            <ion-item href="#/app/edit" ng-if="uname.logintype!='Facebook' && uname.logintype!='Twitter'">
                 <span>EDIT PROFILE</span><i class="icon ion-chevron-right pull-right"></i>
             </ion-item>
-            <ion-item href="#/app/changepassword">
+            <ion-item href="#/app/changepassword" ng-if="uname.logintype!='Facebook' && uname.logintype!='Twitter'">
                 <span>CHANGE PASSWORD</span><i class="icon ion-chevron-right pull-right"></i>
             </ion-item>
 <!--

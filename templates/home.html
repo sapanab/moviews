@@ -27,7 +27,9 @@
 -->
             <div class="light">
                 <h6 class="pname">{{userdetails.userdetails.name}}</h6>
-                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>
+<!--                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>-->
+            <i class="icon ion-location" ng-if="city"></i><span class="pl5 rale-light f12" ng-if="city">
+                {{userdetails.userdetails.street}},{{userdetails.userdetails.city}}</span>
             </div>
         </div>
 
@@ -123,7 +125,7 @@
             <div class="dark-green menu-hd text-center" ng-if="first==3">
                 <p>REVIEWED</p>
             </div>
-            <ion-item ng-if="first==3" ng-repeat="movies in userdetails.reviewed">
+            <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
                 <div class="mt5">

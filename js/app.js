@@ -57,7 +57,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
         url: "/setting",
         views: {
             'menuContent': {
-                templateUrl: "templates/setting.html"
+                templateUrl: "templates/setting.html",
+                controller: 'SettingsCtrl'
             }
         }
     })

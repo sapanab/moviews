@@ -2,62 +2,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaGeolocation, MyServices, $location) {
     $scope.uname = $.jStorage.get("user");
-
-
-    var posOptions = {
-        timeout: 10000,
-        enableHighAccuracy: false
-    };
-    $cordovaGeolocation
-        .getCurrentPosition(posOptions)
-        .then(function(position) {
-            var lat = position.coords.latitude
-            var long = position.coords.longitude
-        }, function(err) {
-            // error
-        });
-
-
-    var watchOptions = {
-        frequency: 1000,
-        timeout: 3000,
-        enableHighAccuracy: false // may cause errors if true
-    };
-
-    var watch = $cordovaGeolocation.watchPosition(watchOptions);
-    watch.then(
-        null,
-        function(err) {
-            // error
-        },
-        function(position) {
-            var lat = position.coords.latitude
-            var long = position.coords.longitude
-        });
-
-
-    //  watch.clearWatch();
-    //  // OR
-    //  $cordovaGeolocation.clearWatch(watch)
-    //      .then(function(result) {
-    //      // success
-    //      }, function (error) {
-    //      // error
-    //    });
-    //    console.log($scope.location);
-
-    //    var logoutcallback=function(data,status) {
-    //        if(data=="false")
-    //        {
-    //            console.log("Logout Failed");
-    //        }
-    //        else
-    //        {
-    //            console.log("Logged Out");
-    //            $location.path("/landingpage");
-    //        }
-    //            
-    //    };
+    $scope.ul=$.jStorage.get("userlocation");
     $scope.signout = function() {
         //        $.jStorage.flush();
         //        MyServices.logout();
@@ -126,6 +71,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     }
 
     MyServices.userdetails(onusersuccess);
+    
 })
 
 .controller('ConnectCtrl', function($scope, $stateParams) {})
@@ -443,7 +389,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     $location.path("/landingpage");
 })
 
-.controller('FeaturedCtrl', function($scope, $stateParams, MyServices, $location, $ionicLoading) {
+.controller('FeaturedCtrl', function($scope, $stateParams, MyServices, $window, $location, $ionicLoading) {
 
     $scope.show = function() {
         $ionicLoading.show({
@@ -467,6 +413,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     }
     var onusersuccess = function(data, status) {
         $scope.userdetails = data;
+        $.jStorage.set("userlocation",$scope.userdetails.userdetails);
         console.log($scope.userdetails);
     };
     MyServices.userdetails(onusersuccess);
@@ -480,14 +427,15 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             //            console.log($scope.intheatre);
             for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
                 $scope.intheatre.theatresthisweek[i].image = imgpath + $scope.intheatre.theatresthisweek[i].image;
+                $scope.hide();
             }
-            console.log($scope.intheatre);
-            $scope.hide();
         }
 
     };
     MyServices.getmoviesintheatre(featuredcallback);
-
+    console.log($scope.intheatre);
+                
+    
     $scope.searchmovie = {};
 
     $scope.getsearchres = function(keyEvent) {
@@ -497,6 +445,8 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $location.path("/app/search");
         }
     }
+})
+.controller('SettingsCtrl', function($scope, $stateParams) {
 
-
+    $scope.uname = $.jStorage.get("user");
 })

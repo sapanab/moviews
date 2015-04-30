@@ -8,7 +8,7 @@
         <h1 class="title margin-auto"><img class="header-img" src="img/head-logo.png"></h1>
     </div>
     <ion-content class="has-header">
-        <h6 class="hdtitle rale-regular">{{movie.description.name}}</h6>
+        <h6 class="hdtitle rale-regular">{{movie.description.moviename}}</h6>
         
 
         <div>
@@ -192,7 +192,7 @@
 <!--                <ion-scroll direction="y" style="height:300px">-->
                 <div class="separator list" ng-repeat="reviews in movie.reviews|limitTo:2" ng-if="second==2">
                     <a class="item item-avatar" href="#">
-                        <img class="img-circle" src="img/pp.jpg" />
+                        <img class="img-circle" src="img/default.jpg" />
                         <span class="rale-regular cmt-title">{{reviews.name}}</span>
                         <p class="rale-regular">{{reviews.review}}<span class="floatright grey">6d</span>
                         </p>
@@ -201,7 +201,7 @@
                
                 <div class="separator list" ng-repeat="com in comments|limitTo:2" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
-                        <img class="img-circle" src="img/pp.jpg" />
+                        <img class="img-circle" src="img/default.jpg" />
                         <span class="rale-regular cmt-title">{{name}}</span>
                         <p class="rale-regular">{{com.comment}}<span class="floatright grey">6d</span>
                         </p>
@@ -267,7 +267,7 @@
             <div class="f12 bdrleft description">
                 <!--                        <label class="latosemibold">DETAILS</label>-->
                 <div>
-                    <label class="f12 rale-regular">GENRE:</label><span>{{movie.description.genre}}</span>
+                    <label class="f12 rale-regular">GENRE:</label><span>{{movie.description.genrename}}</span>
                 </div>
                 <div>
                     <label class="f12 rale-regular">RELEASE DATE:</label><span>{{releasedate}}</span>
