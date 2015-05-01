@@ -131,11 +131,12 @@
                 </a>
 -->
                 <div class="separator list">
-                    <a class="item item-avatar">
+                    <a class="item" href="#/app/details/{{movies.id}}">
 <!--                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />-->
 <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
-                        <p class="rale-regular">{{movies.comment}}<span class="floatright grey">6d</span>
+                        <p class="rale-regular">{{movies.comment}}
+                            <span class="floatright grey">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
                     </a>
                 </div>

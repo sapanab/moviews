@@ -59,7 +59,31 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $scope.userdetails.ratings[i].dateofrelease = $filter('date')($scope.userdetails.ratings[i].dateofrelease, "dd MMM yyyy");
             $scope.userdetails.ratings[i].image = imgpath + $scope.userdetails.ratings[i].image;
         }
+        console.log("Comment Length="+$scope.userdetails.comment.length);
+        for(var i=0;i<$scope.userdetails.comment.length; i++)
+        {
+            var scope = this;
+            scope.firstdate = $filter('date')($scope.userdetails.comment[i].timestamp, 'dd/MM/yyyy');
+            console.log("firstdate="+firstdate)
+            scope.sdate = new Date();
+            scope.seconddate = $filter('date')(sdate, 'dd/MM/yyyy');
+            console.log("seconddate="+seconddate);
+            scope.data_before = [];
+            var dt1 = scope.firstdate.split('/'),
+                dt2 = scope.seconddate.split('/'),
+                one = new Date(dt1[2], dt1[1]-1, dt1[0]),
+                two = new Date(dt2[2], dt2[1]-1, dt2[0]);
 
+            var millisecondsPerDay = 1000 * 60 * 60 * 24;
+            var millisBetween = two.getTime() - one.getTime();
+            var days = millisBetween / millisecondsPerDay;
+            if(days==0)
+                days="Today";
+            else
+                days=days+"d";
+            $scope.userdetails.comment[i].timestamp=days;
+        }
+        
         console.log($scope.userdetails);
         $scope.hide();
     };
@@ -71,6 +95,24 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     }
 
     MyServices.userdetails(onusersuccess);
+    
+    var scope = this;
+    scope.firstdate = '01/01/2013';
+    scope.seconddate = '10/01/2013';
+    scope.data_before = [];
+    scope.differenceInDays = function() {
+
+        var dt1 = scope.firstdate.split('/'),
+            dt2 = scope.seconddate.split('/'),
+            one = new Date(dt1[2], dt1[1]-1, dt1[0]),
+            two = new Date(dt2[2], dt2[1]-1, dt2[0]);
+
+        var millisecondsPerDay = 1000 * 60 * 60 * 24;
+        var millisBetween = two.getTime() - one.getTime();
+        var days = millisBetween / millisecondsPerDay;
+
+        return Math.floor(days);      
+    };
     
 })
 
@@ -215,15 +257,40 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         if (data == "false") {
             console.log(data);
             console.log("No Comments");
-        } else {
-            console.log("comments");
+        } 
+        else 
+        {
             $scope.comments = data;
             $scope.name = user.name;
-            console.log($scope.comments);
-            if ($scope.comments.length == 0)
+            if ($scope.comments.usercomment.length == 0)
                 $scope.nocomments = 1;
             else
                 $scope.nocomments = 0;
+            console.log("Comment Length="+$scope.comments.usercomment.length);
+            for(var i=0; i<$scope.comments.usercomment.length; i++)
+            {
+                var scope = this;
+                scope.firstdate = $filter('date')($scope.comments.usercomment[i].timestamp, 'dd/MM/yyyy');
+                console.log("firstdate="+firstdate)
+                scope.sdate = new Date();
+                scope.seconddate = $filter('date')(sdate, 'dd/MM/yyyy');
+                console.log("seconddate="+seconddate);
+                scope.data_before = [];
+                var dt1 = scope.firstdate.split('/'),
+                    dt2 = scope.seconddate.split('/'),
+                    one = new Date(dt1[2], dt1[1]-1, dt1[0]),
+                    two = new Date(dt2[2], dt2[1]-1, dt2[0]);
+
+                var millisecondsPerDay = 1000 * 60 * 60 * 24;
+                var millisBetween = two.getTime() - one.getTime();
+                var days = millisBetween / millisecondsPerDay;
+                if(days==0)
+                    days="Today";
+                else
+                    days=days+"d";
+                $scope.comments.usercomment[i].timestamp=days;
+                console.log($scope.comments);
+            }
         }
 
     };
@@ -232,12 +299,13 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     var ratingcallback = function(data, status) {
         if (data == "false") {
             console.log("Rating not saved");
-        } else {
+        } 
+        else 
+        {
             //MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Rating Saved");
             var alertPopup = $ionicPopup.show({
-                title: 'Your Rating is Saved. Thank You !!',
-                //                template: 'Login Successfull'
+            title: 'Your Rating is Saved. Thank You !!',
             });
             $timeout(function() {
                 alertPopup.close(); //close the popup after 3 seconds for some reason
