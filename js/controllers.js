@@ -262,10 +262,10 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         {
             $scope.comments = data;
             $scope.name = user.name;
-            if ($scope.comments.usercomment.length == 0)
-                $scope.nocomments = 1;
-            else
-                $scope.nocomments = 0;
+//            if ($scope.comments.usercomment.length == 0)
+//                $scope.nocomments = 1;
+//            else
+//                $scope.nocomments = 0;
             console.log("Comment Length="+$scope.comments.usercomment.length);
             for(var i=0; i<$scope.comments.usercomment.length; i++)
             {
@@ -289,8 +289,8 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 else
                     days=days+"d";
                 $scope.comments.usercomment[i].timestamp=days;
-                console.log($scope.comments);
             }
+            console.log($scope.comments);
         }
 
     };
@@ -335,13 +335,10 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 alertPopup.close(); //close the popup after 3 seconds for some reason
             }, 3000);
             MyServices.getusercomments(commentscallback);
-            console.log("id");
-            console.log($scope.comments);
         }
 
     };
     $scope.insertcomment = function() {
-        console.log($scope.movie.comment);
         MyServices.setusercomments($scope.movieid, $scope.movie.comment, setcommentscallback);
         $scope.movie.comment = "";
     };

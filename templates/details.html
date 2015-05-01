@@ -200,7 +200,7 @@
                     </a>
                 </div>
                
-                <div class="separator list" ng-repeat="com in comments.usercomment|limitTo:2" ng-if="(com.movie==movie.description.id && second==2)">
+                <div class="separator list" ng-repeat="com in comments.usercomment" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
 <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
