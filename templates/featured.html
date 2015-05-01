@@ -43,7 +43,7 @@
 -->
         </div>
         <div class="pos moviebg">
-            <img ng-src="{{intheatre.theatresthisweek[0].image}}" height="auto" width="100%" />
+            <img ng-src="{{intheatre.theatresthisweek[2].image}}" height="auto" width="100%" />
         
             <div class="mtitle gradientbg pl10">
                 <h6 class="margin-0 light rale-regular">FEATURED</h6>
@@ -76,37 +76,40 @@
                     
                     {{movies.name}}
                    
-                    <span class="f12 pull-right margin-stars">
+                    <span class="f12 pull-right margin-stars" ng-repeat="avgr in avgrate.allavgrating" ng-if="avgr.movie==movies.id">
 <!--                        <rating class="ptr-disable" ng-model="movies.rating" max="5"></rating>-->
-                        <span class="pos" ng-if="movies.rating==0.5">
+                        <span class="pos" ng-if="avgr.avg==0.5">
                                     <i class="icon half-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==1">
+                        <span class="pos" ng-if="avgr.avg==1">
                             <i class="icon full-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==1.5">
+                        <span class="pos" ng-if="avgr.avg==1.5">
                             <i class="icon full-star s1"></i></i><i class="icon half-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==2">
+                        <span class="pos" ng-if="avgr.avg==2">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==2.5">
+                        <span class="pos" ng-if="avgr.avg==2.5">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon half-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==3">
+                        <span class="pos" ng-if="avgr.avg==3">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==3.5;">
+                        <span class="pos" ng-if="avgr.avg==3.5;">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon half-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==4">
+                        <span class="pos" ng-if="avgr.avg==4">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==4.5">
+                        <span class="pos" ng-if="avgr.avg==4.5">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon half-star s5"></i>
                         </span>
-                        <span class="pos" ng-if="movies.rating==5">
+                        <span class="pos" ng-if="avgr.avg==5">
                             <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i>
+                        </span>
+                        <span class="pos" ng-if="!avgr.avg">
+                            <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                         </span>
 <!--                        <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>-->
                     </span>

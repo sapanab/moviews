@@ -427,14 +427,24 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             //            console.log($scope.intheatre);
             for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
                 $scope.intheatre.theatresthisweek[i].image = imgpath + $scope.intheatre.theatresthisweek[i].image;
-                $scope.hide();
+                
             }
+            console.log($scope.intheatre);
+            $scope.hide();
         }
 
     };
     MyServices.getmoviesintheatre(featuredcallback);
-    console.log($scope.intheatre);
                 
+    var allavgsuccess=function(data,status)
+    {
+        for (var i = 0; i < data.allavgrating.length; i++) {
+            data.allavgrating[i].avg=$window.Math.round(parseFloat(data.allavgrating[i].avg));
+        }
+        $scope.avgrate=data;
+        console.log($scope.avgrate);
+    }
+    MyServices.getallavgrating(allavgsuccess);
     
     $scope.searchmovie = {};
 

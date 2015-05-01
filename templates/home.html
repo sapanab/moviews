@@ -45,7 +45,7 @@
                 <!--           <img src="img/rate.png">-->
             </div>
             <div class="col" ng-click="first=3" ng-class="{'active-tab': first==3}">
-                <h3 class="latobold light margin-0">{{userdetails.reviewcount}}</h3>
+                <h3 class="latobold light margin-0">{{userdetails.commentcount}}</h3>
                 <!--                <div class="reviewed"></div>-->
                 <img src="img/review.png">
             </div>
@@ -126,13 +126,30 @@
                 <p>REVIEWED</p>
             </div>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
+<!--
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
+-->
+                <div class="separator list">
+                    <a class="item item-avatar">
+<!--                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />-->
+<!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
+                        <span class="rale-regular cmt-title">{{movies.moviename}}</span>
+                        <p class="rale-regular">{{movies.comment}}<span class="floatright grey">6d</span>
+                        </p>
+                    </a>
+                </div>
+                <!--
                 <div class="mt5">
-                    <div class="lato-regular f12 font-black pull-left pad-10">{{movies.name}}</div>
+                    <div class="lato-regular f12 font-black pull-left pad-10">
+                        {{movies.moviename}}
+                    <p class="rale-regular">{{movies.comment}}
+                        <span class="floatright grey">6d</span>
+                        </p></div>
                     <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
                     <div class="clear"></div>
                 </div>
+-->
 
             </ion-item>
 

@@ -201,14 +201,15 @@
                
                 <div class="separator list" ng-repeat="com in comments|limitTo:2" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
-                        <img class="img-circle" src="img/default.jpg" />
+                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
+<!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                         <span class="rale-regular cmt-title">{{name}}</span>
                         <p class="rale-regular">{{com.comment}}<span class="floatright grey">6d</span>
                         </p>
                     </a>
                 </div>
                 
-                <div class="rale-semibold" ng-if="(nocomments==1 && second==2)">No Comments</div>
+<!--                <div class="rale-semibold" ng-if="(comments.length==0 && second==2)">No Comments</div>-->
 
                 <div class="separator list" ng-repeat="tweets in tweets.statuses|limitTo:4" ng-if="second==1">
                     <a class="item item-avatar" href="#">
