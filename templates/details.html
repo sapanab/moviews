@@ -194,7 +194,8 @@
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/default.jpg" />
                         <span class="rale-regular cmt-title">{{reviews.name}}</span>
-                        <p class="rale-regular">{{reviews.review}}<span class="floatright grey">6d</span>
+                        <p class="rale-regular">{{reviews.review}}
+                            <span class="floatright grey" style="margin-right:0">6d</span>
                         </p>
                     </a>
                 </div>
@@ -204,7 +205,7 @@
                         <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
 <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                         <span class="rale-regular cmt-title">{{name}}</span>
-                        <p class="rale-regular">{{com.comment}}<span class="floatright grey">{{ com.timestamp | date : 'dd MMM yyyy' }}</span>
+                        <p class="rale-regular">{{com.comment}}<span class="floatright grey" style="margin-right:0">{{ com.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
                     </a>
                 </div>
@@ -215,7 +216,8 @@
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" ng-src="{{tweets.user.profile_image_url}}" />
                         <span class="rale-regular cmt-title">{{tweets.user.name}}</span>
-                        <p class="rale-regular">{{tweets.text}}<span class="floatright grey">6d</span>
+                        <p class="rale-regular">{{tweets.text}}
+<!--                            <span class="floatright grey">6d</span>-->
                         </p>
                     </a>
                 </div>
