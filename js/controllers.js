@@ -386,8 +386,34 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     var twittercallback = function(data, status) {
         if (data == "0") {
             console.log("Not feeds");
-        } else {
+        } 
+        else 
+        {
             $scope.tweets = data;
+//            console.log("Tweets Length="+$scope.tweets.statuses.length);
+//            for(var i=0; i<$scope.tweets.statuses.length; i++)
+//            {
+//                var scope = this;
+//                scope.firstdate = $filter('date')($scope.tweets.statuses[i].created_at, 'dd/MM/yyyy');
+//                console.log("firstdate="+firstdate)
+//                scope.sdate = new Date();
+//                scope.seconddate = $filter('date')(sdate, 'dd/MM/yyyy');
+////                console.log("seconddate="+seconddate);
+//                scope.data_before = [];
+//                var dt1 = scope.firstdate.split('/'),
+//                    dt2 = scope.seconddate.split('/'),
+//                    one = new Date(dt1[2], dt1[1]-1, dt1[0]),
+//                    two = new Date(dt2[2], dt2[1]-1, dt2[0]);
+//
+//                var millisecondsPerDay = 1000 * 60 * 60 * 24;
+//                var millisBetween = two.getTime() - one.getTime();
+//                var days = millisBetween / millisecondsPerDay;
+//                if(days==0)
+//                    days="Today";
+//                else
+//                    days=days+"d";
+//                $scope.tweets.statuses[i].created_at=days;
+//            }
             console.log("feeds");
             console.log($scope.tweets);
         }
