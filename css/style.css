@@ -1232,7 +1232,7 @@ input[type=search]{
 }
 .movie-cards .item {
     border: 0px;
-    padding: 0px;
+    padding: 5px 10px;
 }
 .movie-cards .menu-hd p {
     margin: 0px;
