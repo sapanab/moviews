@@ -1,4 +1,4 @@
-<ion-view  class="bgwhite">
+<ion-view class="bgwhite">
     <!--
   <ion-nav-title>
    <img class="header-img" src="img/head-logo.png">
@@ -9,7 +9,7 @@
     </div>
     <ion-content class="has-header">
         <h6 class="hdtitle rale-regular">{{movie.description.moviename}}</h6>
-        
+
 
         <div>
             <div class="pos" style="margin-bottom:-6px;">
@@ -30,45 +30,45 @@
 <!--                                <rating class="ptr-disable" ng-model="star.rate" max="5" style="display:inline-block;"></rating>-->
                                 <span class="pos" ng-if="star.rate==0.5">
                                     <i class="icon half-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">**!%^&*</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==1">
+                            </span>
+                            <span class="pos" ng-if="star.rate==1">
                                     <i class="icon full-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">STARE AT A WALL INSTEAD</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==1.5">
+                            </span>
+                            <span class="pos" ng-if="star.rate==1.5">
                                     <i class="icon full-star s1"></i></i><i class="icon half-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">WHY GOD WHY?</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==2">
+                            </span>
+                            <span class="pos" ng-if="star.rate==2">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">DO IT UNDER PEER-PRESSURE</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==2.5">
+                            </span>
+                            <span class="pos" ng-if="star.rate==2.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon half-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">*FACE PALM*</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==3">
+                            </span>
+                            <span class="pos" ng-if="star.rate==3">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">YAY AND NAY</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==3.5;">
+                            </span>
+                            <span class="pos" ng-if="star.rate==3.5;">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon half-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">ONE TIME WATCH</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==4">
+                            </span>
+                            <span class="pos" ng-if="star.rate==4">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon empty-star s5"></i><span class="margin-l user-cmt">ME LIKEY!</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==4.5">
+                            </span>
+                            <span class="pos" ng-if="star.rate==4.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon half-star s5"></i><span class="margin-l user-cmt">LEGENDARY!</span>
-                                </span>
-                                <span class="pos" ng-if="star.rate==5">
+                            </span>
+                            <span class="pos" ng-if="star.rate==5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i><span class="margin-l user-cmt">WATCH IT 5 TIMES MORE</span>
-                                </span>
-                                <span class="pos" ng-if="!star.rate">
+                            </span>
+                            <span class="pos" ng-if="!star.rate">
                                     <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
                             </span>
 
-<!--                            <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>-->
-<!--                            <span class="user-cmt">{{star.text}}</span>-->
+                            <!--                            <span class="margin-left"><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>-->
+                            <!--                            <span class="user-cmt">{{star.text}}</span>-->
                         </label>
                     </ion-item>
                     <ion-item class="text-center">
-                        <button class="button rale-bold" ng-click="share();">
+                        <button class="button rale-bold" ng-click="openeditfb();share();">
                             RECOMMEND
                         </button>
                     </ion-item>
@@ -80,7 +80,7 @@
             <div class="row detail-hd">
                 <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}"><i class="icon expt"></i><span>EXPERTS</span>
                 </div>
-<!--
+                <!--
                 <div class="col" ng-click="first=2" ng-class="{'active-tab': first==2}">FRIENDS<i class="icon friends"></i>
                 </div>
 -->
@@ -93,81 +93,81 @@
                                 <span class="pos" ng-if="experts.rating==0.5">
                                     <i class="icon half-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==1">
+                    <span class="pos" ng-if="experts.rating==1">
                                     <i class="icon full-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==1.5">
+                    <span class="pos" ng-if="experts.rating==1.5">
                                     <i class="icon full-star s1"></i></i><i class="icon half-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==2">
+                    <span class="pos" ng-if="experts.rating==2">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==2.5">
+                    <span class="pos" ng-if="experts.rating==2.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon half-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==3">
+                    <span class="pos" ng-if="experts.rating==3">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==3.5;">
+                    <span class="pos" ng-if="experts.rating==3.5;">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon half-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==4">
+                    <span class="pos" ng-if="experts.rating==4">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==4.5">
+                    <span class="pos" ng-if="experts.rating==4.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon half-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="experts.rating==5">
+                    <span class="pos" ng-if="experts.rating==5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="!experts.rating">
+                    <span class="pos" ng-if="!experts.rating">
                                     <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
                     </span>
                     <!--                    
 <span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
                 </div>
-                
+
                 <div class="bghover rale-semibold padding5" ng-if="first==1">Average Rating
                     <span class="floatright"><!--<rating class="ptr-disable" ng-model="experts.rating" max="5"></rating>-->
                                 <span class="pos" ng-if="star1.rate==0.5">
                                     <i class="icon half-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==1">
+                    <span class="pos" ng-if="star1.rate==1">
                                     <i class="icon full-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==1.5">
+                    <span class="pos" ng-if="star1.rate==1.5">
                                     <i class="icon full-star s1"></i></i><i class="icon half-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==2">
+                    <span class="pos" ng-if="star1.rate==2">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==2.5">
+                    <span class="pos" ng-if="star1.rate==2.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon half-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==3">
+                    <span class="pos" ng-if="star1.rate==3">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==3.5;">
+                    <span class="pos" ng-if="star1.rate==3.5;">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon half-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==4">
+                    <span class="pos" ng-if="star1.rate==4">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==4.5">
+                    <span class="pos" ng-if="star1.rate==4.5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon half-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="star1.rate==5">
+                    <span class="pos" ng-if="star1.rate==5">
                                     <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i>
                                 </span>
-                                <span class="pos" ng-if="!star1.rate">
+                    <span class="pos" ng-if="!star1.rate">
                                     <i class="icon empty-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
                                 </span>
                     </span>
                     <!--                    
 <span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>-->
                 </div>
-<!--
+                <!--
                 <div class="rale-regular padding5">Rajiv Masand<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i></span>
                 </div>
                 <div class="rale-regular padding5">Anupama Chopra<span class="floatright"><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i><i class="icon ion-star not-rated"></i></span>
@@ -189,7 +189,7 @@
             </div>
             <div class="avtars bdrleft">
                 <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
-<!--                <ion-scroll direction="y" style="height:300px">-->
+                <!--                <ion-scroll direction="y" style="height:300px">-->
                 <div class="separator list" ng-repeat="reviews in movie.reviews|limitTo:2" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/default.jpg" />
@@ -199,30 +199,30 @@
                         </p>
                     </a>
                 </div>
-               
+
                 <div class="separator list" ng-repeat="com in comments.usercomment" ng-if="(com.movie==movie.description.id && second==2)">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
-<!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
+                        <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                         <span class="rale-regular cmt-title">{{name}}</span>
                         <p class="rale-regular">{{com.comment}}<span class="floatright grey" style="margin-right:0">{{ com.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
                     </a>
                 </div>
-                
-<!--                <div class="rale-semibold" ng-if="(comments.usercomment.length==0 && second==2)">No Comments</div>-->
+
+                <!--                <div class="rale-semibold" ng-if="(comments.usercomment.length==0 && second==2)">No Comments</div>-->
 
                 <div class="separator list" ng-repeat="tweets in tweets.statuses|limitTo:4" ng-if="second==1">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" ng-src="{{tweets.user.profile_image_url}}" />
                         <span class="rale-regular cmt-title">{{tweets.user.name}}</span>
                         <p class="rale-regular">{{tweets.text}}
-<!--                            <span class="floatright grey">6d</span>-->
+                            <!--                            <span class="floatright grey">6d</span>-->
                         </p>
                     </a>
                 </div>
-<!--                </ion-scroll>-->
-<!--
+                <!--                </ion-scroll>-->
+                <!--
                 <div class="separator list" ng-if="second==2">
                     <a class="item item-avatar" href="#">
                         <img class="img-circle" src="img/pp.jpg" />
@@ -240,7 +240,7 @@
                     </a>
                 </div>
 -->
-<!--                <div class="rale-semibold">12 more comments</div>-->
+                <!--                <div class="rale-semibold">12 more comments</div>-->
 
             </div>
             <div class="brdleft"></div>
