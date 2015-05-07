@@ -1,5 +1,5 @@
 <ion-view class="bghome">
-<!--
+    <!--
     <ion-nav-title>
         
         <form ng-submit="" ng-show="showSearch">
@@ -21,14 +21,14 @@
         <div id="profile" class="tac">
             <img class="profilepic" ng-if="user.image" ng-src="{{user.image}}" />
             <img class="menupic" ng-if="!(user.image)" src="img\default.jpg">
-<!--
+            <!--
             <div class="circle"><i class="icon ion-checkmark"></i>
             </div>
 -->
             <div class="light">
                 <h6 class="pname">{{userdetails.userdetails.name}}</h6>
-<!--                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>-->
-            <i class="icon ion-location" ng-if="city"></i><span class="pl5 rale-light f12" ng-if="city">
+                <!--                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>-->
+                <i class="icon ion-location" ng-if="city"></i><span class="pl5 rale-light f12" ng-if="city">
                 {{userdetails.userdetails.street}},{{userdetails.userdetails.city}}</span>
             </div>
         </div>
@@ -49,13 +49,12 @@
                 <!--                <div class="reviewed"></div>-->
                 <img src="img/review.png">
             </div>
-<!--
+
             <div class="col" ng-click="first=4" ng-class="{'active-tab': first==4}">
                 <h3 class="latobold light margin-0">{{userdetails.recommendcount}}</h3>
-                                <div class="recommend"></div>
+                <div class="recommend"></div>
                 <img src="img/recommend.png">
             </div>
--->
         </div>
 
 
@@ -126,14 +125,14 @@
                 <p>REVIEWED</p>
             </div>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
-<!--
+                <!--
                 <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
 -->
                 <div class="separator list">
                     <a class="item" href="#/app/details/{{movies.id}}">
-<!--                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />-->
-<!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
+                        <!--                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />-->
+                        <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
                         <p class="rale-regular">{{movies.comment}}
                             <span class="floatright grey" style="margin-right:0">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
@@ -154,7 +153,7 @@
 
             </ion-item>
 
-<!--
+            <!--
             <div class="dark-green menu-hd text-center" ng-if="first==4">
                 <p>RECOMMENDED</p>
             </div>
