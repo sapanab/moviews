@@ -1491,7 +1491,7 @@ top:0;
 
 .movie-cards .item {
     border: 0px;
-    padding: 5px 10px;
+    padding: 0px;
 }
 
 .movie-cards .menu-hd p {
@@ -1684,7 +1684,7 @@ input.search-bar {
     margin-left: 30%;
 }
 
-.rate-list .list .item {
+.rate-list .list .item,.review_pad {
     padding: 5px 10px;
 }
 
