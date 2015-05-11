@@ -108,6 +108,7 @@ h4,
 h5,
 h6,
 p,
+button,
 span {
     font-family: 'Raleway';
     font-weight: normal;
@@ -1240,8 +1241,9 @@ input[type=search] {
     background-color: #45639f;
     border: 0;
     color: white;
-    padding: 5px 0;
-    font-size: 25px;
+   font-size: 14px;
+    border-radius:0;
+    line-height: 2.6;
 }
 
 .landing-bg .twitt-color {
