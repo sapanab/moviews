@@ -5,13 +5,6 @@
     </ion-nav-buttons>
 
     <ion-content>
-       
-       <ion-item>
-           <i class="icon-star full"></i>
-           <i class="icon-star half"></i>
-           <i class="icon-star zero"></i>
-       </ion-item>
-       
         <div class="item-input-inset" ng-show="myVar">
             <div class="item-input-wrapper" placeholder="Search a user"><i class="icon ion-android-search white"></i>
                 <input type="search" placeholder="Search..." ng-model="searchmovie.s" ng-keypress="getsearchres($event)">
@@ -28,7 +21,7 @@
                 {{userdetails.userdetails.street}},{{userdetails.userdetails.city}}</span>
             </div>
         </div>
-
+        
         <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
             <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}">
                 <h3 class="latobold light margin-0">{{userdetails.watchcount}}</h3>
@@ -43,7 +36,7 @@
             <div class="col" ng-click="first=3" ng-class="{'active-tab': first==3}">
                 <h3 class="latobold light margin-0">{{userdetails.commentcount}}</h3>
                 <!--                <div class="reviewed"></div>-->
-                <img src="img/review.png">
+                <i class="icon icon-reviews"></i>
             </div>
 
             <div class="col" ng-click="first=4" ng-class="{'active-tab': first==4}">
@@ -82,36 +75,36 @@
 
                 <div class="mt5 pad-10">
                     <div class="lato-regular f12 font-black pull-left">{{movies.name}}</div>
-                    <div class="f12 pull-right" style="margin-right:60px">
+                    <div class="f12 pull-right">
                         <span class="pos" ng-if="movies.rating==0.5">
-                            <i class="icon half-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                           <i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==1">
-                            <i class="icon full-star s1"></i></i><i class="icon empty-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                           <i class="icon-star full"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==1.5">
-                            <i class="icon full-star s1"></i></i><i class="icon half-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==2">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon empty-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                           <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==2.5">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon half-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==3">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon empty-star s4"></i><i class="icon empty-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==3.5;">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon half-star s4"></i><i class="icon empty-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star half"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==4">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon empty-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star zero"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==4.5">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon half-star s5"></i>
+                            <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star half"></i>
                         </span>
                         <span class="pos" ng-if="movies.rating==5">
-                            <i class="icon full-star s1"></i></i><i class="icon full-star s2"></i><i class="icon full-star s3"></i><i class="icon full-star s4"></i><i class="icon full-star s5"></i>
+                           <i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i><i class="icon-star full"></i>
                         </span>
                     </div>
                     <div class="clear"></div>

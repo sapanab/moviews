@@ -581,7 +581,7 @@ a {
 
 .floatright {
     float: right;
-    margin-right: 50px;
+/*    margin-right: 50px;*/
 }
 
 .right button.ios-android-search:before {
@@ -743,6 +743,12 @@ input[type=password] {
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
+}
+.cmtbox .button.activated{
+    background-color: rgba(56, 126, 245, 0.45)!important;
+}
+.cmtbox .button-small .icon:before, .button-small.icon-left:before, .button-small.icon-right:before, .button-small.icon:before{
+    font-size: 12px!important;
 }
 
 .cmtbox .item-input-inset .item-input-wrapper input {
@@ -1055,7 +1061,7 @@ input[type=password] {
 }
 
 .menu-list .item {
-    padding: 0px 10px!important;
+    padding: 5px 10px!important;
     border: none!important;
     background-color: transparent!important;
 }
@@ -1070,7 +1076,7 @@ input[type=password] {
     position: absolute;
     right: 20px;
     top: 10px;
-    height: 32px;
+    height: 40px;
     widows: auto;
 }
 
@@ -1201,7 +1207,7 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 }
 
 .rating-pop {
-    background: rgba(255, 255, 255, 0.41)!important;
+    background: rgba(0, 0, 0, 0.71)!important;
 }
 
 input[type=search] {
@@ -1215,6 +1221,7 @@ input[type=search] {
 
 .landing-bg {
     background-color: rgba(0, 0, 0, 0.47);
+    height:100%;
 }
 
 .warning p {
@@ -1241,7 +1248,6 @@ input[type=search] {
     background-color: #45639f;
     border: 0;
     color: white;
-   font-size: 14px;
     border-radius:0;
     line-height: 2.6;
     font-family: inherit;
@@ -1377,7 +1383,6 @@ top:0;
 }
 
 .detail-btn .rate i {
-    font-size: 23px;
     margin-top: 2px;
 }
 
@@ -1684,7 +1689,7 @@ input.search-bar {
 }
 
 .rating-stars .pos span {
-    margin-left: 30%;
+    margin-left: 10px;
 }
 
 .rate-list .list .item,.review_pad {
