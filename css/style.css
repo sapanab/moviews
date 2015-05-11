@@ -1244,6 +1244,7 @@ input[type=search] {
    font-size: 14px;
     border-radius:0;
     line-height: 2.6;
+    font-family: inherit;
 }
 
 .landing-bg .twitt-color {
