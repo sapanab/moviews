@@ -1,18 +1,17 @@
 <ion-view class="bghome">
-    <!--
-    <ion-nav-title>
-        
-        <form ng-submit="" ng-show="showSearch">
-            <input type="text" placeholder="Search" class="search-bar">
-        </form>
 
-    </ion-nav-title>
--->
     <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-android-search" ng-click="toggle();"></button>
     </ion-nav-buttons>
 
     <ion-content>
+       
+       <ion-item>
+           <i class="icon-star full"></i>
+           <i class="icon-star half"></i>
+           <i class="icon-star zero"></i>
+       </ion-item>
+       
         <div class="item-input-inset" ng-show="myVar">
             <div class="item-input-wrapper" placeholder="Search a user"><i class="icon ion-android-search white"></i>
                 <input type="search" placeholder="Search..." ng-model="searchmovie.s" ng-keypress="getsearchres($event)">
@@ -21,10 +20,7 @@
         <div id="profile" class="tac">
             <img class="profilepic" ng-if="user.image" ng-src="{{user.image}}" />
             <img class="menupic" ng-if="!(user.image)" src="img\default.jpg">
-            <!--
-            <div class="circle"><i class="icon ion-checkmark"></i>
-            </div>
--->
+
             <div class="light">
                 <h6 class="pname">{{userdetails.userdetails.name}}</h6>
                 <!--                <i class="icon ion-location"></i><span class="pl5 rale-light f12">Miami Beach,FL</span>-->
@@ -65,7 +61,8 @@
             </div>
             <ion-item ng-if="first==1" ng-repeat="movies in userdetails.watched">
 
-                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
+                <a href="#/app/details/{{movies.id}}">
+                    <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
                 <div class="mt5 pad-10">
                     <div class="lato-regular f12 font-black pull-left">{{movies.name}}</div>
@@ -79,7 +76,8 @@
             </div>
             <ion-item ng-if="first==2" ng-repeat="movies in userdetails.ratings">
 
-                <a href="#/app/details/{{movies.id}}"><img ng-src="{{movies.image}}" height="auto" width="100%" />
+                <a href="#/app/details/{{movies.id}}">
+                    <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
 
                 <div class="mt5 pad-10">
@@ -125,42 +123,20 @@
                 <p>REVIEWED</p>
             </div>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
-                <!--
-                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
-                </a>
--->
                 <div class="separator list review_pad">
                     <a class="item" href="#/app/details/{{movies.id}}">
-                        <!--                        <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />-->
-                        <!--                        <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
+
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
                         <p class="rale-regular">{{movies.comment}}
                             <span class="floatright grey" style="margin-right:0">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
                     </a>
                 </div>
-                <!--
-                <div class="mt5">
-                    <div class="lato-regular f12 font-black pull-left pad-10">
-                        {{movies.moviename}}
-                    <p class="rale-regular">{{movies.comment}}
-                        <span class="floatright grey">6d</span>
-                        </p></div>
-                    <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
-                    <div class="clear"></div>
-                </div>
--->
-
             </ion-item>
 
-            <!--
-            <div class="dark-green menu-hd text-center" ng-if="first==4">
-                <p>RECOMMENDED</p>
-            </div>
--->
             <ion-item ng-if="first==4" ng-repeat="movies in userdetails.recommended">
-
-                <a href="#/app/details/{{movies.id}}"> <img ng-src="{{movies.image}}" height="auto" width="100%" />
+                <a href="#/app/details/{{movies.id}}">
+                    <img ng-src="{{movies.image}}" height="auto" width="100%" />
                 </a>
                 <div class="mt5">
                     <div class="lato-regular f12 font-black pull-left pad-10">{{movies.name}}</div>
