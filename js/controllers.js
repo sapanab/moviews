@@ -52,6 +52,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $scope.userdetails.reviewed[i].image = imgpath + $scope.userdetails.reviewed[i].image;
         }
         for (var i = 0; i < $scope.userdetails.comment.length; i++) {
+            
             $scope.userdetails.comment[i].image = imgpath + $scope.userdetails.comment[i].image;
         }
         for (var i = 0; i < $scope.userdetails.recommended.length; i++) {
