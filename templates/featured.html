@@ -48,7 +48,7 @@
 
                 <div class="mtitle gradientbg pl10">
                     <h6 class="margin-0 light rale-regular">FEATURED</h6>
-                    <h6 class="light rale-regular">{{intheatre.theatresthisweek[2].name}}</h6>
+                    <h6 class="light rale-regular" style="margin-top:5px;">{{intheatre.theatresthisweek[2].name}}</h6>
                 </div>
             </a>
         </div>
@@ -70,7 +70,7 @@
         <ion-list class="menu-list">
             <ion-item ng-repeat="movies in intheatre.theatresthisweek" ng-if="movies.isintheator==1">
                 <a href="#/app/details/{{movies.id}}">
-                    <img class="new-release" src="img/release.png">
+                    <img class="new-release" src="img/new-release.png">
                     <img ng-src="{{movies.image}}" height="auto" width="100%" />
                     <img class="watch-movie watch-opacity1" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id==userwatch.id">
                     <img class="watch-movie watch-opacity" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id!=userwatch.id">

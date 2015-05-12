@@ -82,6 +82,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
             }
         }
     })
+        
+    .state('app.privacypolicy', {
+        url: "/privacypolicy",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/privacypolicy.html",
+                controller: 'PrivacyCtrl'
+            }
+        }
+    })
 
     .state('app.changepassword', {
         url: "/changepassword",

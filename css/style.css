@@ -1068,7 +1068,7 @@ input[type=password] {
 
 .new-release {
     position: absolute;
-    top: -4px;
+    top: 2px;
     left: 6px;
 }
 
