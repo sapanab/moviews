@@ -81,9 +81,9 @@
 
                     <span class="f12 pull-right" ng-repeat="avgr in avgrate.allavgrating" ng-if="avgr.movie==movies.id">
 <!--                        <rating class="ptr-disable" ng-model="movies.rating" max="5"></rating>-->
-                        <span class="pos" ng-if="avgr.avg==0.5">
-                                   <i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
-                        </span>
+                    <span class="pos" ng-if="avgr.avg==0.5">
+                               <i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
+                    </span>
                     <span class="pos" ng-if="avgr.avg==1">
                             <i class="icon-star full"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
                         </span>
@@ -116,7 +116,7 @@
                         </span>
                     <!--                        <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>-->
                     </span>
-
+                    
                 </div>
             </ion-item>
         </ion-list>
