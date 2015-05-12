@@ -21,7 +21,7 @@
                 {{userdetails.userdetails.street}},{{userdetails.userdetails.city}}</span>
             </div>
         </div>
-        
+
         <div class="row tac light bgopacity mt-10 padding0 menu-tabs">
             <div class="col" ng-click="first=1" ng-class="{'active-tab': first==1}">
                 <h3 class="latobold light margin-0">{{userdetails.watchcount}}</h3>
@@ -118,11 +118,18 @@
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
                 <div class="separator list review_pad">
                     <a class="item" href="#/app/details/{{movies.id}}">
-
+                        <img ng-src="{{movies.image}}" height="auto" width="100%" />
+                        <div class="mt5 pad-10">
+                            <div class="lato-regular f12 font-black pull-left">{{movies.name}}</div>
+                            <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
+                            <div class="clear"></div>
+                        </div>
+                        <!--
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
                         <p class="rale-regular">{{movies.comment}}
                             <span class="floatright grey" style="margin-right:0">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
+-->
                     </a>
                 </div>
             </ion-item>
