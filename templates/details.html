@@ -204,7 +204,7 @@
                     <div class="separator list" ng-repeat="com in comments.usercomment" ng-if="(com.movie==movie.description.id && second==2)">
                         <a class="item item-avatar" href="#">
                             <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
-                            <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />
+<!--                            <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                             <span class="rale-regular cmt-title">{{name}}</span>
                             <p class="rale-regular">{{com.comment}}<span class="floatright grey" style="margin-right:0">{{ com.timestamp | date : 'dd MMM yyyy' }}</span>
                             </p>
