@@ -559,6 +559,5 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         }
     })
     .controller('SettingsCtrl', function ($scope, $stateParams) {
-
         $scope.uname = $.jStorage.get("user");
     })

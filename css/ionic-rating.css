@@ -7,13 +7,24 @@ ul.rating li {
 ul.rating li i {
     font-size: 30px;
 }
-i.icon-star.zero {
+i.icon-star.zero:before {
     color: #bcbcbc;
+    content: '\f2fc';
+    font-family: Ionicons;
+    font-size: 20px;
 }
-i.icon-star.full {
+i.icon-star.full:before {
     color: #165f55;
+    content:'\f2fc';
+    font-family: Ionicons;
+    font-size: 20px;
 }
-i.icon-star.half {
+i.icon-star.half:before {
+    color: #165f55;
+    content: '\f3ad';
+    font-family: Ionicons;
+    font-size: 20px;
+/*
     background: -webkit-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
     background: -moz-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
     background: -o-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
@@ -23,4 +34,5 @@ i.icon-star.half {
     -o-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+*/
 }
