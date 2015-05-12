@@ -1694,10 +1694,11 @@ input.search-bar {
 }
 
 .rate-list .list .item,.review_pad .item {
-    padding: 5px 10px;
+/*    padding: 5px 10px;*/
 }
 .review_pad{
 /*    border-bottom: 2px solid #0E0606;*/
+    padding:0!important;
 }
 
 .rate-list .list .item span {

@@ -117,12 +117,13 @@
             </div>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
                 <div class="separator list review_pad">
-                    <a class="item" href="#/app/details/{{movies.id}}">
+                    <a href="#/app/details/{{movies.id}}">
                         <img ng-src="{{movies.image}}" height="auto" width="100%" />
-                        <div class="mt5 pad-10">
-                            <div class="lato-regular f12 font-black pull-left">{{movies.moviename}}</div>
-                            <div class="dark-green rale-regular f12 white pull-right pad-10">Read reviews</div>
-                            <div class="clear"></div>
+                    </a>
+                        <div class="mt5">
+                            <div class="lato-regular pad-10 f12 font-black pull-left">{{movies.moviename}}</div>
+                            <div class="dark-green pad-10 rale-regular f12 white pull-right">Read reviews</div>
+<!--                            <div class="clear"></div>-->
                         </div>
                         <!--
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
@@ -130,7 +131,7 @@
                             <span class="floatright grey" style="margin-right:0">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
 -->
-                    </a>
+                    
                 </div>
             </ion-item>
 
