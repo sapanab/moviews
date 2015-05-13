@@ -27,9 +27,11 @@
 	content: "\e605";
 }
 
+/*
 .icon-star:before {
 	content: "\e604";
 }
+*/
 
 .icon-reviews:before {
 	content: "\e600";

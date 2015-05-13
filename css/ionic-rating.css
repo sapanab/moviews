@@ -7,6 +7,50 @@ ul.rating li {
 ul.rating li i {
     font-size: 30px;
 }
+i.icon-star.zero {
+  content: "";
+  background-image: url(../img/star-hd.png);
+  height: 17px;
+  width: 14px;
+  background-position: -32px 0;
+    display: inline-block;
+  background-size: auto 14px;
+    background-repeat: no-repeat;
+}
+i.icon-star.full {
+    content:"";
+    background: url(../img/star-hd.png)10px 0;
+     height: 17px;
+  width: 14px;
+  background-position: 0px 0;
+    display: inline-block;
+  background-size: auto 14px;
+    background-repeat: no-repeat;
+   
+}
+i.icon-star.half {
+    content:"";
+     background: url(../img/star-hd.png)20px 0;
+      height: 17px;
+  width: 14px;
+  background-position: -16px 0;
+    display: inline-block;
+  background-size: auto 14px;
+    background-repeat: no-repeat;
+/*
+    background: -webkit-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
+    background: -moz-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
+    background: -o-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
+    background: linear-gradient(90deg, #165f55 50%, #bcbcbc 50%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+*/
+}
+/*ionic icons*/
+/*
 i.icon-star.zero:before {
     color: #bcbcbc;
     content: '\f2fc';
@@ -24,15 +68,5 @@ i.icon-star.half:before {
     content: '\f3ad';
     font-family: Ionicons;
     font-size: 20px;
-/*
-    background: -webkit-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
-    background: -moz-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
-    background: -o-linear-gradient(0deg, #165f55 50%, #bcbcbc 50%);
-    background: linear-gradient(90deg, #165f55 50%, #bcbcbc 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-*/
 }
+*/
