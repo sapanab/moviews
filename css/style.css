@@ -1201,9 +1201,9 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 */
 
 .pop-width {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 18%;
+   padding: 7%;
+/*    margin: 0 auto;*/
+    margin-top: 17%;
 }
 
 .rating-pop {
@@ -1775,6 +1775,41 @@ input.search-bar {
     width: 50%;
     margin: 0 auto;
     padding: 5px;
+}
+.rate-list .item{
+    padding: 0 10px;
+}
+.pop-width button{
+    border:0;
+    width:100%;
+}
+.item-input-wrapper1{
+    background: #fff!important;
+}
+.rate-list input[type=search]{
+    display: inline-block;
+}
+.closepopup{
+    position: absolute;
+  top: 0px;
+  right: 10px;
+  height: 20px;
+  width: auto;
+}
+.pop-btn{
+    background: #0e544a;
+}
+.mt15{
+    margin-top:15px;
+}
+.rec-btn{
+    background: #0e544a;
+  color: #fff!important;
+  font-size: 10px!important;
+  padding: 5px 10px;
+}
+.list-bdr{
+    border-top: 2px solid #0e544a;
 }
 /*Jhol with IONIC*/
 
