@@ -1799,6 +1799,7 @@ input.search-bar {
 .pop-btn{
     background: #0e544a;
 }
+.pop-rating
 .mt15{
     margin-top:15px;
 }
@@ -1809,7 +1810,10 @@ input.search-bar {
   padding: 5px 10px;
 }
 .list-bdr{
-    border-top: 2px solid #0e544a;
+    border-top: 4px solid #0e544a;
+}
+.list-bdr .list{
+    padding:0;
 }
 /*Jhol with IONIC*/
 
