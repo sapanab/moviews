@@ -9,6 +9,8 @@ ul.rating li i {
 }
 i.icon-star.zero {
   content: "";
+    position: relative;
+    top:4px;
   background-image: url(../img/star-hd.png);
   height: 17px;
   width: 14px;
@@ -19,6 +21,8 @@ i.icon-star.zero {
 }
 i.icon-star.full {
     content:"";
+     position: relative;
+    top:4px;
     background: url(../img/star-hd.png)10px 0;
      height: 17px;
   width: 14px;
@@ -30,6 +34,8 @@ i.icon-star.full {
 }
 i.icon-star.half {
     content:"";
+     position: relative;
+    top:4px;
      background: url(../img/star-hd.png)20px 0;
       height: 17px;
   width: 14px;
