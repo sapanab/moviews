@@ -14,7 +14,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 .controller('HomeCtrl', function ($scope, $stateParams, MyServices, $location, $filter, $ionicLoading) {
     $scope.show = function () {
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner class="spinner-light"></ion-spinner>'
         });
     };
     $scope.hide = function () {
@@ -128,7 +128,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
         $scope.show = function () {
             $ionicLoading.show({
-                template: 'Loading...'
+                template: '<ion-spinner class="spinner-light"></ion-spinner>'
             });
         };
         $scope.hide = function () {
@@ -170,7 +170,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
     $scope.show = function () {
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner class="spinner-light"></ion-spinner>'
         });
     };
     $scope.hide = function () {
@@ -496,7 +496,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
         $scope.show = function () {
             $ionicLoading.show({
-                template: 'Loading...'
+                template: '<ion-spinner class="spinner-light"></ion-spinner>'
             });
         };
 

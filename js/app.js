@@ -6,12 +6,12 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
 
-.run(function ($ionicPlatform) {
-    $ionicPlatform.ready(function () {
+.run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
@@ -20,13 +20,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider) {
     $ionicConfigProvider.views.maxCache(0);
     $httpProvider.defaults.withCredentials = true;
+    $ionicConfigProvider.scrolling.jsScrolling(false);
     $ionicConfigProvider.views.swipeBackEnabled(false);
     $stateProvider
 
-        .state('app', {
+    .state('app', {
         url: "/app",
         abstract: true,
         templateUrl: "templates/menu.html",
@@ -82,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
             }
         }
     })
-        
+
     .state('app.privacypolicy', {
         url: "/privacypolicy",
         views: {

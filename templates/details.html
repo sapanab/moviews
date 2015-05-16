@@ -67,11 +67,13 @@
                             <!--                            <span class="user-cmt">{{star.text}}</span>-->
                         </label>
                     </ion-item>
+                    <!--
                     <ion-item class="text-center">
                         <button class="button rale-bold" ng-click="openeditfb();share();">
                             RECOMMEND
                         </button>
                     </ion-item>
+-->
                 </ion-list>
             </div>
 
@@ -191,36 +193,36 @@
                 <ion-scroll style="height:300px;width:93%;">
                     <!--                        <label class="latosemibold">TWITTER FEEDS</label>-->
                     <!--                <ion-scroll direction="y" style="height:300px">-->
-                    <div class="separator list" ng-repeat="reviews in movie.reviews|limitTo:2" ng-if="second==2">
-                        <a class="item item-avatar" href="#">
+                    <div class="separator list" ng-if="second==2">
+                        <ion-item class="item-avatar" ng-repeat="reviews in movie.reviews|limitTo:2">
                             <img class="img-circle" src="img/default.jpg" />
                             <span class="rale-regular cmt-title">{{reviews.name}}</span>
                             <p class="rale-regular">{{reviews.review}}
                                 <span class="floatright grey" style="margin-right:0">6d</span>
                             </p>
-                        </a>
+                        </ion-item>
                     </div>
 
-                    <div class="separator list" ng-repeat="com in comments.usercomment" ng-if="(com.movie==movie.description.id && second==2)">
-                        <a class="item item-avatar" href="#">
+                    <div class="separator list" ng-if="(com.movie==movie.description.id && second==2)">
+                        <ion-item class="item-avatar" ng-repeat="com in comments.usercomment">
                             <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
-<!--                            <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
+                            <!--                            <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                             <span class="rale-regular cmt-title">{{name}}</span>
                             <p class="rale-regular">{{com.comment}}<span class="floatright grey" style="margin-right:0">{{ com.timestamp | date : 'dd MMM yyyy' }}</span>
                             </p>
-                        </a>
+                        </ion-item>
                     </div>
 
                     <!--                <div class="rale-semibold" ng-if="(comments.usercomment.length==0 && second==2)">No Comments</div>-->
 
-                    <div class="separator list" ng-repeat="tweets in tweets.statuses" ng-if="second==1">
-                        <a class="item item-avatar" href="#">
+                    <div class="separator list" ng-if="second==1">
+                        <ion-item class="item-avatar" ng-repeat="tweets in tweets.statuses">
                             <img class="img-circle" ng-src="{{tweets.user.profile_image_url}}" />
                             <span class="rale-regular cmt-title">{{tweets.user.name}}</span>
                             <p class="rale-regular">{{tweets.text}}
                                 <!--                            <span class="floatright grey">6d</span>-->
                             </p>
-                        </a>
+                        </ion-item>
                     </div>
                     <!--                </ion-scroll>-->
                     <!--
