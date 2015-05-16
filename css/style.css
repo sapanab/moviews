@@ -1776,8 +1776,27 @@ input.search-bar {
     margin: 0 auto;
     padding: 5px;
 }
+/*
+.rating-pop{
+    width: 85%;
+  margin: 17% auto;
+}
+*/
+.close-pop{
+    background-color: #0e544a;
+  color: #fff;
+  height: 20px!important;
+  width: 15px!important;
+  border-radius: 50%;
+  padding: 0;
+  min-height: 20px!important;
+  min-width: 20px!important;
+  line-height: 1.4;
+  font-size: 12px;
+  font-weight: bold;
+}
 .rate-list .item{
-    padding: 0 10px;
+    padding: 5px 10px;
 }
 .pop-width button{
     border:0;
@@ -1789,10 +1808,14 @@ input.search-bar {
 .rate-list input[type=search]{
     display: inline-block;
 }
+.rating-pop .button.activated{
+    border-color: #0E544A;
+  background-color: #0E544A;
+}
 .closepopup{
     position: absolute;
-  top: 0px;
-  right: 10px;
+    top: -24px;
+  right: -1px;
   height: 20px;
   width: auto;
 }
