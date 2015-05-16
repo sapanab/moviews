@@ -1203,7 +1203,7 @@ input[type=search], input[type=text], input[type=password], input[type=datetime]
 .pop-width {
    padding: 7%;
 /*    margin: 0 auto;*/
-    margin-top: 17%;
+    padding-top: 25%;
 }
 
 .rating-pop {
