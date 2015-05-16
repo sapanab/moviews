@@ -1807,10 +1807,12 @@ input.search-bar {
 }
 .rate-list input[type=search]{
     display: inline-block;
+    color: black!important;
 }
 .rating-pop .button.activated{
     border-color: #0E544A;
   background-color: #0E544A;
+    color: #fff;
 }
 .closepopup{
     position: absolute;
