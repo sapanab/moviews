@@ -44,6 +44,8 @@
     <gap:plugin name="com.phonegap.plugin.statusbar" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <!-- Pushwoosh plugin -->
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" source="plugins.cordova.io" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
