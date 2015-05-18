@@ -72,9 +72,11 @@
                 <a href="#/app/details/{{movies.id}}">
                     <img class="new-release" src="img/new-release.png">
                     <img ng-src="{{movies.image}}" height="auto" width="100%" />
-                    <img class="watch-movie watch-opacity1" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id==userwatch.id">
-                    <img class="watch-movie watch-opacity" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id!=userwatch.id">
                 </a>
+                <img class="watch-movie watch-opacity1" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id==userwatch.id" ng-click="inwatch();">
+                <img class="watch-movie watch-opacity" src="img/watch.png" ng-repeat="userwatch in userdetails.watched" ng-if="movies.id!=userwatch.id" ng-click="setwatched(movies.id);">
+                <img class="watch-movie watch-opacity" src="img/watch.png" ng-if="userdetails.watched.length==0" ng-click="setwatched(movies.id);">
+
                 <div class="bgwhite detail">
 
                     {{movies.name}}
@@ -116,7 +118,7 @@
                         </span>
                     <!--                        <i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star rated"></i><i class="icon ion-star not-rated"></i>-->
                     </span>
-                    
+
                 </div>
             </ion-item>
         </ion-list>

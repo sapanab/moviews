@@ -52,7 +52,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $scope.userdetails.reviewed[i].image = imgpath + $scope.userdetails.reviewed[i].image;
         }
         for (var i = 0; i < $scope.userdetails.comment.length; i++) {
-            
+
             $scope.userdetails.comment[i].image = imgpath + $scope.userdetails.comment[i].image;
         }
         for (var i = 0; i < $scope.userdetails.recommended.length; i++) {
@@ -492,7 +492,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     $location.path("/landingpage");
 })
 
-.controller('FeaturedCtrl', function ($scope, $stateParams, MyServices, $window, $location, $ionicLoading) {
+.controller('FeaturedCtrl', function ($scope, $stateParams, MyServices, $window, $location, $ionicLoading, $ionicPopup, $timeout) {
 
         $scope.show = function () {
             $ionicLoading.show({
@@ -556,6 +556,37 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 $.jStorage.set("searchmovie", $scope.searchmovie.s);
                 $location.path("/app/search");
             }
+        }
+        var setwatchedcallback = function (data, status) {
+            console.log("in success");
+            if (data == "0") {
+                console.log("Not Saved in Watchedlist");
+            } else {
+                MyServices.userdetails(onusersuccess);
+                console.log("Saved in Watchlist");
+                var alertPopup = $ionicPopup.show({
+                    title: 'Added to your watchlist. Thank You !!',
+                    //                template: 'Login Successfull'
+                });
+                $timeout(function () {
+                    alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
+            }
+
+        };
+        $scope.setwatched = function (movieid) {
+            console.log(movieid);
+            MyServices.setuserwatch(movieid, setwatchedcallback);
+        };
+        $scope.inwatch = function () {
+
+            var alertPopup = $ionicPopup.show({
+                title: 'Already in your watchlist.',
+                //                template: 'Login Successfull'
+            });
+            $timeout(function () {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+            }, 3000);
         }
     })
     .controller('SettingsCtrl', function ($scope, $stateParams) {
