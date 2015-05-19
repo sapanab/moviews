@@ -42,13 +42,13 @@
         </form>
 -->
         </div>
-        <div class="pos moviebg">
-            <a href="#/app/details/{{intheatre.theatresthisweek[2].id}}">
-                <img ng-src="{{intheatre.theatresthisweek[2].image}}" height="auto" width="100%" />
+        <div class="pos moviebg" ng-repeat="featured in intheatre.theatresthisweek | limitTo:1" ng-if="featured.isfeatured==1">
+            <a href="#/app/details/{{featured.id}}">
+                <img ng-src="{{featured.image}}" height="auto" width="100%" />
 
                 <div class="mtitle gradientbg pl10">
                     <h6 class="margin-0 light rale-regular">FEATURED</h6>
-                    <h6 class="light rale-regular" style="margin-top:5px;">{{intheatre.theatresthisweek[2].name}}</h6>
+                    <h6 class="light rale-regular" style="margin-top:5px;">{{featured.name}}</h6>
                 </div>
             </a>
         </div>

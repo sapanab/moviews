@@ -185,6 +185,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     $scope.star = [];
     $scope.star1 = [];
     $scope.nocomments = 2;
+    var comcount = false;
 
     $ionicModal.fromTemplateUrl('templates/rating.html', {
         scope: $scope,
@@ -279,10 +280,6 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         } else {
             $scope.comments = data;
             $scope.name = user.name;
-            //            if ($scope.comments.usercomment.length == 0)
-            //                $scope.nocomments = 1;
-            //            else
-            //                $scope.nocomments = 0;
             console.log("Comment Length=" + $scope.comments.usercomment.length);
             for (var i = 0; i < $scope.comments.usercomment.length; i++) {
                 var scope = this;
@@ -305,9 +302,17 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 else
                     days = days + "d";
                 $scope.comments.usercomment[i].timestamp = days;
+                if ($scope.comments.usercomment.movie == $scope.movieid) {
+                    comcount = true;
+                }
             }
             console.log($scope.comments);
+            if ($scope.comments.usercomment.length == 0 && com==false)
+                $scope.nocomments = 1;
+            else
+                $scope.nocomments = 0;
         }
+
 
     };
     MyServices.getusercomments(commentscallback);

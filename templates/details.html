@@ -203,8 +203,8 @@
                         </ion-item>
                     </div>
 
-                    <div class="separator list" ng-if="(com.movie==movie.description.id && second==2)">
-                        <ion-item class="item-avatar" ng-repeat="com in comments.usercomment">
+                    <div class="separator list" ng-if="second==2">
+                        <ion-item class="item-avatar" ng-repeat="com in comments.usercomment" ng-if="com.movie==movie.description.id">
                             <img class="img-circle" nig-if="userdetails.userdetails.image" ng-src="{{userdetails.userdetails.image}}" />
                             <!--                            <img class="img-circle" nig-if="!(userdetails.userdetails.image)" src="img/default.jpg" />-->
                             <span class="rale-regular cmt-title">{{name}}</span>
@@ -213,7 +213,7 @@
                         </ion-item>
                     </div>
 
-                    <!--                <div class="rale-semibold" ng-if="(comments.usercomment.length==0 && second==2)">No Comments</div>-->
+                    <div class="rale-semibold" ng-if="(nocomments==1 && second==2)">No Reviews Yet</div>
 
                     <div class="separator list" ng-if="second==1">
                         <ion-item class="item-avatar" ng-repeat="tweets in tweets.statuses">
