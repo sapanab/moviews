@@ -32,16 +32,14 @@
     <preference name="KeepRunning" value="true" />
     <preference name="LoadUrlTimeoutValue" value="20000" />
     <preference name="DisallowOverscroll" value="true" />
-    
-     <!--Android-->
-<!--
+
+    <!--Android-->
     <icon src="icon/android/drawable-ldpi/ic_launcher.png" gap:platform="android" density="ldpi" />
     <icon src="icon/android/drawable-mdpi/ic_launcher.png" gap:platform="android" density="mdpi" />
     <icon src="icon/android/drawable-hdpi/ic_launcher.png" gap:platform="android" density="hdpi" />
     <icon src="icon/android/drawable-xhdpi/ic_launcher.png" gap:platform="android" density="xhdpi" />
     <icon src="icon/android/drawable-xxhdpi/ic_launcher.png" gap:platform="android" density="xxhdpi" />
     <icon src="icon/android/drawable-xxxhdpi/ic_launcher.png" gap:platform="android" density="xxxhdpi" />
--->
 
     <gap:splash src="screen/android/screen-port-hdpi.jpg" gap:platform="android" density="port-hdpi" />
     <gap:splash src="screen/android/screen-port-ldpi.jpg" gap:platform="android" density="port-ldpi" />
