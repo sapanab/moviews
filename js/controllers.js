@@ -324,7 +324,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             //MyServices.getmoviedetails($scope.movieid,detailscallback);
             console.log("Rating Saved");
             var alertPopup = $ionicPopup.show({
-                title: 'Your Rating is Saved. Thank You !!',
+                title: 'Cheers!',
             });
             $timeout(function () {
                 alertPopup.close(); //close the popup after 3 seconds for some reason
@@ -347,7 +347,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             console.log("No Comments");
         } else {
             var alertPopup = $ionicPopup.show({
-                title: 'Your comment is saved. Thank You !!',
+                title: 'ahh.. Thanks!',
                 //                template: 'Login Successfull'
             });
             $timeout(function () {
@@ -371,7 +371,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             MyServices.getmoviedetails($scope.movieid, detailscallback);
             console.log("Saved in Watchlist");
             var alertPopup = $ionicPopup.show({
-                title: 'Added to your watchlist. Thank You !!',
+                title: "Saved in your 'watched' movie history in your profile!",
                 //                template: 'Login Successfull'
             });
             $timeout(function () {
@@ -391,7 +391,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
     $scope.inwatch = function () {
 
         var alertPopup = $ionicPopup.show({
-            title: 'Already in your watchlist.',
+            title: "You've already added this movie!",
             //                template: 'Login Successfull'
         });
         $timeout(function () {
