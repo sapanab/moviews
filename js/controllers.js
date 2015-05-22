@@ -231,10 +231,6 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
             $scope.star1.rate = $window.Math.round(parseFloat($scope.movie.averageexpertrating));
             console.log("Rounded=" + $scope.star1.rate);
-            if ($scope.movie.reviews.length == 0)
-                $scope.nocomments = 1;
-            else
-                $scope.nocomments = 0;
             $scope.hide();
         }
 
@@ -302,15 +298,8 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 else
                     days = days + "d";
                 $scope.comments.usercomment[i].timestamp = days;
-                if ($scope.comments.usercomment.movie == $scope.movieid) {
-                    comcount = true;
-                }
             }
             console.log($scope.comments);
-            if ($scope.comments.usercomment.length == 0 && com==false)
-                $scope.nocomments = 1;
-            else
-                $scope.nocomments = 0;
         }
 
 

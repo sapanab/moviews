@@ -213,7 +213,7 @@
                         </ion-item>
                     </div>
 
-                    <div class="rale-semibold" ng-if="(nocomments==1 && second==2)">No Reviews Yet</div>
+                    <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="comments.usercomment.lenght==0 && movie.reviews.length==0">No Reviews Yet</div>
 
                     <div class="separator list" ng-if="second==1">
                         <ion-item class="item-avatar" ng-repeat="tweets in tweets.statuses">
