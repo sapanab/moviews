@@ -7,7 +7,7 @@
 
     <author href="http://www.ting.in" email="info@ting.in">Ting</author>
 
-    <!--    <gap:platform name="ios" />-->
+    <!--<gap:platform name="ios" />-->
     <gap:platform name="android" />
 
     <preference name="phonegap-version" />
