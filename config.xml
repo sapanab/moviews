@@ -47,7 +47,6 @@
     <gap:splash src="screen/android/screen-port-xhdpi.jpg" gap:platform="android" density="port-xhdpi" />
     <gap:splash src="screen/android/screen-port-xxhdpi.jpg" gap:platform="android" density="port-xxhdpi" />
 
-
     <icon src="img/icon.png" />
 
     <gap:splash src="img/splash-screen.png" />
