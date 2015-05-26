@@ -277,6 +277,18 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $scope.comments = data;
             $scope.name = user.name;
             console.log("Comment Length=" + $scope.comments.usercomment.length);
+            for(var i = 0; i < $scope.comments.usercomment.length; i++)
+            {
+                if($scope.comments.usercomment.movie==$scope.movieid)
+                {
+                    $scope.nocomments=0;
+                    break;
+                }
+                else
+                {
+                    $scope.nocomments=1;
+                }
+            }
             for (var i = 0; i < $scope.comments.usercomment.length; i++) {
                 var scope = this;
                 scope.firstdate = $filter('date')($scope.comments.usercomment[i].timestamp, 'dd/MM/yyyy');
