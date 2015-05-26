@@ -16,7 +16,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'jagruticontroller'])
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $httpProvider) {
     $ionicConfigProvider.views.maxCache(0);
     $httpProvider.defaults.withCredentials = true;
-    $ionicConfigProvider.scrolling.jsScrolling(false);
+    //    $ionicConfigProvider.scrolling.jsScrolling(false);
     $ionicConfigProvider.views.swipeBackEnabled(false);
     $stateProvider
 
