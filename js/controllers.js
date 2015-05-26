@@ -523,8 +523,13 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 $scope.intheatre = data;
                 //            console.log($scope.intheatre);
                 for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
+                    if($scope.intheatre.theatresthisweek.isfeatured=="1")
+                    {
+                        $scope.featuredcount=1;
+                    }
+                }
+                for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
                     $scope.intheatre.theatresthisweek[i].image = imgpath + $scope.intheatre.theatresthisweek[i].image;
-
                 }
                 console.log($scope.intheatre);
                 $scope.hide();
