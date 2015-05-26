@@ -42,7 +42,7 @@
         </form>
 -->
         </div>
-        <div class="rale-semibold" style="text-align:center;padding:10px;color:white" ng-if="featuredcount!='1'">No Featured Movies</div>
+<!--        <div class="rale-semibold" style="text-align:center;padding:10px;color:white" ng-if="featuredcount!='1'">No featured movies</div>-->
         <div class="pos moviebg" ng-repeat="featured in intheatre.theatresthisweek | limitTo:1" ng-if="featured.isfeatured==1">
            
             <a href="#/app/details/{{featured.id}}">

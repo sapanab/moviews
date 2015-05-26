@@ -355,10 +355,19 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         console.log("in success");
         if (data == "0") {
             console.log("Not Saved in Watchedlist");
+            $ionicLoading.hide();
+            var alertPopup = $ionicPopup.show({
+                title: "Not saved in your 'watched' movie history in your profile!",
+                //                template: 'Login Successfull'
+            });
+            $timeout(function () {
+                alertPopup.close(); //close the popup after 3 seconds for some reason
+            }, 3000);
         } else {
             MyServices.userdetails(onusersuccess);
             MyServices.getmoviedetails($scope.movieid, detailscallback);
             console.log("Saved in Watchlist");
+            $ionicLoading.hide();
             var alertPopup = $ionicPopup.show({
                 title: "Saved in your 'watched' movie history in your profile!",
                 //                template: 'Login Successfull'
@@ -370,6 +379,9 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
     };
     $scope.setwatched = function () {
+        $ionicLoading.show({
+            template: '<ion-spinner class="spinner-light"></ion-spinner>'
+        });
         MyServices.setuserwatch($scope.movieid, setwatchedcallback);
     };
 
@@ -523,9 +535,8 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                 $scope.intheatre = data;
                 //            console.log($scope.intheatre);
                 for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
-                    if($scope.intheatre.theatresthisweek.isfeatured=="1")
-                    {
-                        $scope.featuredcount=1;
+                    if ($scope.intheatre.theatresthisweek.isfeatured == "1") {
+                        $scope.featuredcount = 1;
                     }
                 }
                 for (var i = 0; i < $scope.intheatre.theatresthisweek.length; i++) {
@@ -560,11 +571,20 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             console.log("in success");
             if (data == "0") {
                 console.log("Not Saved in Watchedlist");
+                $ionicLoading.hide();
+                var alertPopup = $ionicPopup.show({
+                    title: "Not saved in your 'watched' movie history in your profile!",
+                    //                template: 'Login Successfull'
+                });
+                $timeout(function () {
+                    alertPopup.close(); //close the popup after 3 seconds for some reason
+                }, 3000);
             } else {
                 MyServices.userdetails(onusersuccess);
                 console.log("Saved in Watchlist");
+                $ionicLoading.hide();
                 var alertPopup = $ionicPopup.show({
-                    title: 'Added to your watchlist. Thank You !!',
+                    title: "Saved in your 'watched' movie history in your profile!",
                     //                template: 'Login Successfull'
                 });
                 $timeout(function () {
@@ -576,6 +596,9 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         $scope.setwatched = function (movieid) {
             console.log(movieid);
             MyServices.setuserwatch(movieid, setwatchedcallback);
+            $ionicLoading.show({
+                template: '<ion-spinner class="spinner-light"></ion-spinner>'
+            });
         };
         $scope.inwatch = function () {
 

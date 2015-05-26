@@ -53,7 +53,7 @@
                 <p>WATCHED</p>
             </div>
             <ion-item style="margin-bottom:0px;">
-                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.watched.length==0 && first==1">You have not Watched any Movies</div>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.watched.length==0 && first==1">No movie watched</div>
             </ion-item>
             <ion-item ng-if="first==1" ng-repeat="movies in userdetails.watched">
 
@@ -71,7 +71,7 @@
                 <p>RATED</p>
             </div>
             <ion-item style="margin-bottom:0px;">
-                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.ratings.length==0 && first==2">You have not Rated any Movies</div>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.ratings.length==0 && first==2">No movie rated</div>
             </ion-item>
             <ion-item ng-if="first==2" ng-repeat="movies in userdetails.ratings">
 
@@ -122,7 +122,7 @@
                 <p>REVIEWED</p>
             </div>
             <ion-item style="margin-bottom:0px;">
-                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.comment.length==0 && first==3">You have not Reviwed any Movies</div>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.comment.length==0 && first==3">No movie reviewed</div>
             </ion-item>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
                 <div class="separator list review_pad">
@@ -150,7 +150,7 @@
                 <p>RECOMMENDED</p>
             </div>
             <ion-item style="margin-bottom:0px;">
-                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.recommended.length==0 && first==4">You have not Recommended any Movies</div>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.recommended.length==0 && first==4">No movie recommended</div>
             </ion-item>
             <ion-item ng-if="first==4" ng-repeat="movies in userdetails.recommended">
                 <a href="#/app/details/{{movies.id}}">
