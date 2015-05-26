@@ -284,10 +284,6 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
                     $scope.nocomments=0;
                     break;
                 }
-                else
-                {
-                    $scope.nocomments=1;
-                }
             }
             for (var i = 0; i < $scope.comments.usercomment.length; i++) {
                 var scope = this;
@@ -316,7 +312,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
 
     };
-    MyServices.getusercomments(commentscallback);
+    MyServices.getusercomments($scope.movieid,commentscallback);
 
     var ratingcallback = function (data, status) {
         if (data == "false") {
@@ -359,6 +355,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
     };
     $scope.insertcomment = function () {
+        $scope.nocomments=0;
         MyServices.setusercomments($scope.movieid, $scope.movie.comment, setcommentscallback);
         $scope.movie.comment = "";
     };
