@@ -43,7 +43,7 @@
 -->
         </div>
         <!--        <div class="rale-semibold" style="text-align:center;padding:10px;color:white" ng-if="featuredcount!='1'">No featured movies</div>-->
-        <div class="pos moviebg" ng-repeat="featured in intheatre.theatresthisweek | limitTo:1" ng-if="featured.isfeatured==1">
+        <div class="pos moviebg" style="margin-bottom:30px;" ng-repeat="featured in intheatre.theatresthisweek" ng-if="featured.isfeatured==1">
 
             <a href="#/app/details/{{featured.id}}">
                 <img ng-src="{{featured.image}}" height="auto" width="100%" />
