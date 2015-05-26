@@ -52,6 +52,9 @@
             <div class="dark-green menu-hd text-center" ng-if="first==1">
                 <p>WATCHED</p>
             </div>
+            <ion-item>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.watched.length==0 && first==1">You have not Watched any Movies</div>
+            </ion-item>
             <ion-item ng-if="first==1" ng-repeat="movies in userdetails.watched">
 
                 <a href="#/app/details/{{movies.id}}">
@@ -67,6 +70,9 @@
             <div class="dark-green menu-hd text-center" ng-if="first==2">
                 <p>RATED</p>
             </div>
+            <ion-item>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.ratings.length==0 && first==2">You have not Rated any Movies</div>
+            </ion-item>
             <ion-item ng-if="first==2" ng-repeat="movies in userdetails.ratings">
 
                 <a href="#/app/details/{{movies.id}}">
@@ -115,27 +121,37 @@
             <div class="dark-green menu-hd text-center" ng-if="first==3">
                 <p>REVIEWED</p>
             </div>
+            <ion-item>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.comment.length==0 && first==3">You have not Reviwed any Movies</div>
+            </ion-item>
             <ion-item ng-if="first==3" ng-repeat="movies in userdetails.comment">
                 <div class="separator list review_pad">
                     <a href="#/app/details/{{movies.id}}">
                         <img ng-src="{{movies.image}}" height="auto" width="100%" />
                     </a>
-                        <div class="mt5">
-                            <div class="lato-regular pad-10 f12 font-black pull-left">{{movies.moviename}}</div>
-                            <a href="#/app/details/{{movies.id}}">
-                                <div class="dark-green pad-10 rale-regular f12 white pull-right">Read reviews</div></a>
-<!--                            <div class="clear"></div>-->
-                        </div>
-                        <!--
+                    <div class="mt5">
+                        <div class="lato-regular pad-10 f12 font-black pull-left">{{movies.moviename}}</div>
+                        <a href="#/app/details/{{movies.id}}">
+                            <div class="dark-green pad-10 rale-regular f12 white pull-right">Read reviews</div>
+                        </a>
+                        <!--                            <div class="clear"></div>-->
+                    </div>
+                    <!--
                         <span class="rale-regular cmt-title">{{movies.moviename}}</span>
                         <p class="rale-regular">{{movies.comment}}
                             <span class="floatright grey" style="margin-right:0">{{ movies.timestamp | date : 'dd MMM yyyy' }}</span>
                         </p>
 -->
-                    
+
                 </div>
             </ion-item>
 
+            <div class="dark-green menu-hd text-center" ng-if="first==4">
+                <p>RECOMMENDED</p>
+            </div>
+            <ion-item>
+                <div class="rale-semibold" style="text-align:center;padding:10px;" ng-if="userdetails.recommended.length==0 && first==4">You have not Recommended any Movies</div>
+            </ion-item>
             <ion-item ng-if="first==4" ng-repeat="movies in userdetails.recommended">
                 <a href="#/app/details/{{movies.id}}">
                     <img ng-src="{{movies.image}}" height="auto" width="100%" />
