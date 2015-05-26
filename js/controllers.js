@@ -603,7 +603,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
         $scope.inwatch = function () {
 
             var alertPopup = $ionicPopup.show({
-                title: 'Already in your watchlist.',
+                title: "You've already added this movie!",
                 //                template: 'Login Successfull'
             });
             $timeout(function () {
