@@ -350,7 +350,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
             $timeout(function () {
                 alertPopup.close(); //close the popup after 3 seconds for some reason
             }, 3000);
-            MyServices.getusercomments(commentscallback);
+            MyServices.getusercomments($scope.movieid,commentscallback);
         }
 
     };
