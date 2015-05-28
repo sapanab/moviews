@@ -179,7 +179,7 @@ angular.module('starter.controllers', ['myservices', 'ionic.rating', 'ngCordova'
 
     $scope.show();
     $scope.first = 1;
-    $scope.second = 2;
+    $scope.second = 1;
     $scope.movieid = $stateParams.id;
     console.log($scope.movieid);
     $scope.star = [];

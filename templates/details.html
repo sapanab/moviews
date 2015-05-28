@@ -90,7 +90,7 @@
             <div class="bdrleft">
 
 
-                <div class="rale-regular padding5" ng-if="first==1" ng-repeat="experts in movie.expertrating">{{experts.name}}
+                <div class="rale-regular padding5" ng-repeat="experts in movie.expertrating" ng-if="first==1 && experts.rating!=0">{{experts.name}}
                     <span class="floatright"><!--<rating class="ptr-disable" ng-model="experts.rating" max="5"></rating>-->
                                 <span class="pos" ng-if="experts.rating==0.5">
                                    <i class="icon-star half"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i><i class="icon-star zero"></i>
